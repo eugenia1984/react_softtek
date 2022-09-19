@@ -229,7 +229,7 @@ contraseña:
 
 ---
 
-##:star: FECHAS DE LOS EXAMENES
+## :star: FECHAS DE LOS EXAMENES
 
 - Cuestionario 1: 30 de Sep
 
