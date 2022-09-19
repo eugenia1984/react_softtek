@@ -228,4 +228,20 @@ contraseña:
 ```
 
 ---
+
+##:star: FECHAS DE LOS EXAMENES
+
+- Cuestionario 1: 30 de Sep
+
+- Cuestionario 2: 6 de Oct
+
+- Cuestionario 3: 12 de Oct
+
+- Cuestionario 4: 19 de Oct
+
+- Cuestionario 5: 1 de Nov
+
+- Examen sin nombre: 20Dec (trabajo finla grupal)
+
+---
  
