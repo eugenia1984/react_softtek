@@ -1,3 +1,8 @@
+# :star2: React con Sofftek y Siglo XXI :star2:
+
+---
+
+- Guadalupe Santellan de Sofftek, es Talent Development. Su e-mail: guadalupe.santellan@softtek.com
 
 
 ## Profesoras de Siglo XXI
