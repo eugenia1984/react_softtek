@@ -102,7 +102,7 @@ contraseña:
 ```
  
 
-## Módulo 3. Buscador y sección favoritos
+## [Módulo 3. Buscador y sección favoritos](https://github.com/eugenia1984/react_softtek/tree/main/modulo03)
 
 ### Unidad 6. Creando secciones
 ```
