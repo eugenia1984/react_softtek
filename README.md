@@ -2,10 +2,13 @@
 
 ---
 
+## :star: Referente de Softtek
+
 - Guadalupe Santellan de Sofftek, es Talent Development. Su e-mail: guadalupe.santellan@softtek.com
 
+---
 
-## Profesoras de Siglo XXI
+## :star: Profesoras de Siglo XXI
 
 ```
 Cris Soria (responsable academica de Siglo XXI)
@@ -26,15 +29,11 @@ Natalia Barrionuevo (Jefa de producto)
 - Etapa 2: aceleración práctica
 ```
 
----
-
-## Aprobación
+### Aprobación
 
 - 5 cuestionarios cerados con 3 intentos + 1 proyecto final grupalguadalupe.santellan@softtek.com
 
----
-
-## Plataforma
+### Plataforma
 
 - Entrando a https://siglo21.instructure/lohin/canvas
 
@@ -49,7 +48,7 @@ contraseña:
 
 ---
 
-##:star: PROGRAMA
+## :star: PROGRAMA
 
 ## Módulo 1. Incursionando en React JS
 
