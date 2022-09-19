@@ -123,7 +123,7 @@ contraseña:
 ```
  
 
-## Módulo 4. Diseño responsive & tests finales
+## [Módulo 4. Diseño responsive & tests finales](https://github.com/eugenia1984/react_softtek/tree/main/modulo04)
 
 ### Unidad 8. Modo responsive
 ```
@@ -168,7 +168,7 @@ contraseña:
 ```
  
 
-## Módulo 5. Modelando nuestra API final
+## [Módulo 5. Modelando nuestra API final](https://github.com/eugenia1984/react_softtek/tree/main/modulo05)
 
 ### Unidad 13. Integrando los registros
 ```
