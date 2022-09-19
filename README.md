@@ -1,4 +1,4 @@
-# :star2: React con Sofftek y Siglo XXI :star2:
+# :star2: React con Softtek y Siglo XXI :star2:
 
 ---
 
