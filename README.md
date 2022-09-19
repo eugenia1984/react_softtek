@@ -71,7 +71,7 @@ contraseña:
 ```
  
 
-## Módulo 2. Armado y diseño de nuestros componentes
+## [Módulo 2. Armado y diseño de nuestros componentes](https://github.com/eugenia1984/react_softtek/tree/main/modulo02)
 
 ### Unidad 3. Diseño de la estructura básica
 ```
