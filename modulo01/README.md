@@ -34,7 +34,7 @@
 ## :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Introducción a React: Configuración de Herramients y Estructura Básica
 
 
-- Mentores: Andreína Marcano y Rodrigo Tonso
+- Mentores: Andreína Marcano y Rodrigo Tonso ( tiene 5 años de experiencia en React y TS, e inclina más por las start-ups).
 
 Temas:
 ```
@@ -193,6 +193,30 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 ### Componentes de clases y Componentes Funcionales
 
 Actualmente se traabja con **componentes funcionales** y **hooks**, antes se trabajaba con **componentes de clases**, debían especificar muchas cosas, quedaba muy largo y complicado de entender o leer, mientras más funcionalidades tenían.
+
+---
+
+## Consejo
+
+- Utilizar buenas practicas
+
+- Ajustarse a al documentación y a lo que más se utiliza, asi se puede encontrar ayuda en la counidad.
+
+---
+
+## <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-terminal-computer-programming-flaticons-lineal-color-flat-icons.png"/> Comandos por terminal
+
+```mkdir nombre``` para crear carpeta, en nombre pongo el nombre de la carpeta que quiero
+
+``` cd ..``` para volver un directorio atras
+
+```cd .``` el directorio en el que estoy
+
+``` code .``` para abrir en VSD el directorio que tengo
+
+
+-> node, con **nvm** me permite ir cambiando de version de node
+
 
 ---
 ---
