@@ -24,6 +24,8 @@
 ```
 
 ---
+---
+
 
 ## :star: Clases
 
@@ -178,7 +180,7 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 9. index.js -> no lo vamos a modificar mucho
 
-10. .gitignore -> para que no se suban los node_modules, variables de entorno, etc.
+10. .gitignore -> para que no se suban los node_modules, variables de entorno (utilizarlas en un .env para agregar este archivo en la lista de lo ignorado), etc.
 
 11. public -> los archivos estáticos, puro HTML5, CSS3, JavaScript.
 
@@ -187,6 +189,9 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 13. package-lock.json -> es la configuración para el desarrollo (no se suele modificar)
 
 14. package.json -> esta la configuración, con los scripts y las dependencias
+
+15. App.test.js -> donde vamos a hacer los test por componentes, con unitesting y de integración.
+
 
 ---
 ---
