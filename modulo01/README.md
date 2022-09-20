@@ -29,7 +29,7 @@
 
 ---
 
-### Clase 20 Septiembre <img src="https://img.icons8.com/clouds/36/000000/react.png"/> Introducción a React: Configuración de Herramients y Estructura Básica
+### :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/36/000000/react.png"/> Introducción a React: Configuración de Herramients y Estructura Básica
 
 
 - Mentores: Andreína Marcano y Rodrigo Tonso
