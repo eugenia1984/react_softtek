@@ -141,7 +141,21 @@ Para utilizar esta librería hay que tener en cuenta:
 
 - prácticas en el uso de ECMAScript 6 (ES6) como : arrow functions, templates, métodos, desestructuración, spread operator, etc.
 
-- manipulación del HTMl, sus etiquetas y el DOM.
+- manipulación del HTMl, sus etiquetas y el DOM. BYTES -> CHARACTERS -> TOKENS -> NODES
+
+
+### React y el DOM Virtual
+
+
+El **DOM Virtual** es una representación del DOM en la memoria del navegador (no afecta al DOm real de la aplicación).
+
+Asi cuando interactuamos con el verdadero DOM, le pedimos únicamente los cambios que realmente necesitamos.
+
+
+#### ¿ Por qué crear un virtual DOM ?
+
+
+Actualizar el DOM es una operación costosa para el navegador y muchas veces solo es necesario actualizar secciones específicas en la aplicación. Por esta razón , React apuesta a hacer una copia en memoria del DOM para hacer sus cálculos y procesos de optimización y ofrecer un mejor rendimiento en las aplicaciones al renderizar solo el html modificado.
 
 
 ---
