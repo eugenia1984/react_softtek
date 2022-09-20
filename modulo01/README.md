@@ -31,7 +31,7 @@
 
 ---
 
-## :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/36/000000/react.png"/> Introducción a React: Configuración de Herramients y Estructura Básica
+## :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Introducción a React: Configuración de Herramients y Estructura Básica
 
 
 - Mentores: Andreína Marcano y Rodrigo Tonso
@@ -45,7 +45,7 @@ Temas:
 ```
 
 
-### ¿ Que tenemos ? <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/36/000000/external-lup-mutualiz-ui-essential-others-zufarizal-robiyanto.png"/>
+### <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/40/000000/external-lup-mutualiz-ui-essential-others-zufarizal-robiyanto.png"/>  ¿ Que tenemos ?
 
 
 - 5 modulos con teoría y práctica y al final los cuestionarios.
@@ -53,7 +53,7 @@ Temas:
 - un trabajo en grupo de una app en React.
 
 
-### Herramientas <img src="https://img.icons8.com/doodle/36/000000/maintenance.png"/>
+###  <img src="https://img.icons8.com/doodle/40/000000/maintenance.png"/>  Herramientas
 
 
 - **VSC**, editor de codigo para escribir codigo de programación. No es igual aun **IDE** (Entrno de Desarrollo Integrado, en general para un lenguaje específico, como por ejemplo IntelliJ, Eclipse, Wenstorm y PyCharm; son más robustos, con más herramientas, pero son pesados). En cambio con el Editor de código lo tenemos gratis, es ligero, y tienen pluggins para personalizar
@@ -109,7 +109,7 @@ Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, dato
 ---
 
 
-## <img src="https://img.icons8.com/clouds/36/000000/react.png"/> Introducción a React
+## <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Introducción a React
 
 - Librería de JavaScript
 
@@ -134,7 +134,7 @@ Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, dato
 ... facilidad a la hora de comprobar su funcionamiento, al integrar test tendremos buen codigo y buen funcionamiento.
 
 
-### Conocimientos importantes  <img src="https://img.icons8.com/color/36/000000/javascript--v1.png"/>
+###   <img src="https://img.icons8.com/color/40/000000/javascript--v1.png"/> Conocimientos importantes
 
 
 Para utilizar esta librería hay que tener en cuenta:
@@ -146,6 +146,7 @@ Para utilizar esta librería hay que tener en cuenta:
 - manipulación del HTMl, sus etiquetas y el DOM. BYTES -> CHARACTERS -> TOKENS -> NODES
 
 
+
 ### React y el DOM Virtual
 
 
@@ -154,10 +155,12 @@ El **DOM Virtual** es una representación del DOM en la memoria del navegador (n
 Asi cuando interactuamos con el verdadero DOM, le pedimos únicamente los cambios que realmente necesitamos.
 
 
+
 #### ¿ Por qué crear un virtual DOM ?
 
 
 Actualizar el DOM es una operación costosa para el navegador y muchas veces solo es necesario actualizar secciones específicas en la aplicación. Por esta razón , React apuesta a hacer una copia en memoria del DOM para hacer sus cálculos y procesos de optimización y ofrecer un mejor rendimiento en las aplicaciones al renderizar solo el html modificado.
+
 
 
 ### Estructura básica de un proyecto en React
