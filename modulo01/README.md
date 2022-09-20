@@ -192,6 +192,16 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 15. App.test.js -> donde vamos a hacer los test por componentes, con unitesting y de integración.
 
+---
+
+[Ejemplo de compoennte creado con JavaScript vanilla, sin JSX](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/opcion_con_plain_js.pdf)
+
+
+---
+
+### Compoenntes de clases y Componentes Funcionales
+
+Actualemnte se traabja con **componentes funcionales** y **hooks**, antes se trabajaba con **componentes de clases**, debían especificar muchas cosas, quedaba muy largo y complicado de entender o leer, mientras más funcionalidades tenían.
 
 ---
 ---
