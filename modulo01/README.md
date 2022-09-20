@@ -224,7 +224,8 @@ Actualmente se traabja con **componentes funcionales** y **hooks**, antes se tra
 
 Adapta lo que escribimos en ES6 a las versiones que tenga el navegador (más viejas).
 
-## Webpack
+
+## <img src="https://img.icons8.com/dusk/40/000000/webpack.png"/> Webpack
 
 Hace muchas cosas, nos ayuda para que no tengamos que configurar el proyecto. Trae **ESLint** que nos va mostrando warnings o errores las malas practicas en el codigo, apra ir corrijiendo.
 
