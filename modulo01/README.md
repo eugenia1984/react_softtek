@@ -229,6 +229,21 @@ Adapta lo que escribimos en ES6 a las versiones que tenga el navegador (más vie
 
 Hace muchas cosas, nos ayuda para que no tengamos que configurar el proyecto. Trae **ESLint** que nos va mostrando warnings o errores las malas practicas en el codigo, apra ir corrijiendo.
 
+### Creamos un proyecto
+
+```npx create-react-app my-app``` -> para crear mi proyecto, my-app es el nombre de la aplicación, el nombre no puede tener mayúscuar, ni espacios, ni caracteres especiales.
+
+``` cd my-app``` -> me tengo que ir adentro de mi app creada
+
+```npm start``` -> para arrancar el proyecto y verlo en la web.
+
+.gitignore es super importante, para no subir el node_modules y para no subir las variables de entorno
+
+- **dev dependencies** son las librerias con las que viene el proyecto creado con CRA .
+
+- **package.jon** las dependencias y los scrips ```npm run start ``` o ```npm star``` para arrancar el proyecto. ```npm build``` para buildear el proyecto. ```npm eject``` OJO al usar este. ``` npm i -D lodash```  para poner las dependencias en desarrollo, no estaran en producción.
+
+README.md -> es aaconsejable mantenerlo actualizado.
 
 ---
 ---
