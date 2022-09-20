@@ -115,6 +115,22 @@ Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, dato
 
 - Basada en **componentes**, un elemento o conjunto de elementos de un **interfaz de usuario** (UI) que posee su propio estado y apariencia.
 
+- Hay dos formas de crear componentes...
+
+... desde lo macro a lo micro
+
+... desde lo más mínimo a lo más general
+
+-> No hay una sola forma posible de armar los componentes, depende de la lógica que uno utilice, hay varias formas, por eso React es tan flexible.
+
+-> Usar un enfoque de componentes nos permite crear y adminsitrar una aplicación compleja de manera sencilla y entendible, las características de los componentes...
+
+... son reusables, se puede crear una sola vez y reusarlo en varias vistas.
+
+... permiten tneer un código más organizado y mantenible (hay carpetas, archivos, hya compoenntes padres, componentes hijos, componentes nietos)
+
+... facilidad a la hora de comprobar su funcionamiento, al integrar test tendremos buen codigo y buen funcionamiento.
+
 
 ---
 ---
