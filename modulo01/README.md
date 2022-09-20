@@ -38,19 +38,37 @@
 
 Temas:
 ```
-- Bienvenida
-- - Presentacion Modulo 1
-- Introducción a Herramientas
-- Estructura básica de React
+- Bienvenida e Introducción al Programa
+- Presentacion del Modulo 1
+-  Configuración de Herramientas
+- Introducción a React.
+- Estructura básica de un proyecto en React
 ```
 
 
 ### <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/40/000000/external-lup-mutualiz-ui-essential-others-zufarizal-robiyanto.png"/>  ¿ Que tenemos ?
 
+Repasemos brevemente qué contine el programa!
 
-- 5 modulos con teoría y práctica y al final los cuestionarios.
+- **5 módulos** con **videos** y **calses**. Teoría y práctica y al final un **cuestionario** de preguntas para evaluar el aprendizaje.
 
-- un trabajo en grupo de una app en React.
+- Talleres privados el inicio del proyecto. Un trabajo en grupo para desarrollar y entregar una app en React con los conocimientos obtenidos en la teoría.
+
+### Módulo 1 : Primeros pasos en React JS
+
+Es el inicio en la librería reconociendo su sintaxis, funcionalidades y componentes básicos.
+
+#### 1 - Herramientas
+
+Vamos a identificar, instalar y configurar las herramientas necesarias para el desarrollo de una aplicación.
+
+#### 2 Armado de un primer componente y validaciones
+
+Vamos a crear un componente Login, validar su formulario y enviar esos datos a una API para obtener un token de autenticación. 
+
+#### 3 Manejos de errores y redireccionamiento
+
+Vamos a implementar mensajes de error, ver cómo persistir el token obtenido de la API y hacer un redireccionamiento a un nuevo componente luego de la validación de credenciales.
 
 
 ###  <img src="https://img.icons8.com/doodle/40/000000/maintenance.png"/>  Herramientas
@@ -58,9 +76,20 @@ Temas:
 
 - **VSC**, editor de codigo para escribir codigo de programación. No es igual aun **IDE** (Entrno de Desarrollo Integrado, en general para un lenguaje específico, como por ejemplo IntelliJ, Eclipse, Wenstorm y PyCharm; son más robustos, con más herramientas, pero son pesados). En cambio con el Editor de código lo tenemos gratis, es ligero, y tienen pluggins para personalizar
 
-- **Node.js**, entorno de trabajo
+- **Node.js**, es un entorno de ejecución para JavaScript que nos va permitir usar este lenguaje de programación con React. Nos
+va a permitir ejecutar código JavaScript desde el lado del servidor (desde nuestra computadora). Veamos cómo instalarlo:
 
-- **CRA** (Create React App), para inicializar el proyecto, sin tener que configurarlo desde cero. Creamos un ambiente de dearrollo, permite crear una SPA (Single Page Aplication).
+Al entrar a la página de NodeJS nos aparecerán 2 botones, debemos hacer clic en el que indica LTS y automáticamente comenzará la descarga
+
+Durante el asistente, podremos cambiar la ruta de instalación y las características que se instalarán.
+
+Recomendamos no cambiar nada dejándolo como indica por defecto, en especial el apartado npm package manager que es el gestor de paquetes de Node.js y nos será de especial utilidad.
+
+- **CRA** (Create React App), es una interfaz de línea de comando (CLI) desarrollado por React que te permite inicializar un proyecto de forma rápida y haciendo las configuraciones necesarias automáticamente.
+
+Configura un ambiente de desarrollo de forma que puedas usar JavaScript, brindando una buena experiencia de desarrollo, y optimizando tu aplicación. Te permite crear una aplicación de página única (Single-Page Application/SPA).
+
+Para inicializar el proyecto, sin tener que configurarlo desde cero. Creamos un ambiente de dearrollo, permite crear una SPA (Single Page Aplication).
 
 Documentación oficial en [https://create-react-app-dev/](https://create-react-app-dev/)
 
@@ -97,6 +126,7 @@ Nació como respuesta al trabajo generalmente repetitivo al que se enfrentaban l
 ```npm install -g create-react-app my-app```
 
 ```create-react-app my-app```
+
 
 ### React Developer Tools
 
