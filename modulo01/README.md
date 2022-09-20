@@ -2,7 +2,9 @@
 
 ---
 
-## Unidad 1. Primeros pasos en React JS
+## :star:  Temass:
+
+### Unidad 1. Primeros pasos en React JS
 ```
 - 1.1. Setup de herramientas
 - 1.2. Introducción a React (parte 1)
@@ -11,7 +13,7 @@
 
 ---
 
-## Unidad 2. Creando nuestro primer componente
+##· Unidad 2. Creando nuestro primer componente
 ```
 - 2.1. Armado componente
 - 2.2. Validación de formulario
@@ -20,5 +22,15 @@
 - 2.5. Persistencia del token
 - 2.6. Redirección al componente "listado"
 ```
+
+---
+
+## :star: Clases
+
+---
+
+### Clase 20 Septiembre * Introducción a React: Configuración de Herramients y Estructura Básica
+
+- Mentores: Andreína Marcano y Rodrigo Tonso
 
 ---
