@@ -217,6 +217,17 @@ Actualmente se traabja con **componentes funcionales** y **hooks**, antes se tra
 
 -> node, con **nvm** me permite ir cambiando de version de node
 
+-> con node tenemos **npm** y con ello podemos utilizar CRA para armar el proyecto mucho más ráìdo que tneer que ir haciendo todo manual. Con **npx** tenemos **x** de ejecutable.
+
+
+## <img src="https://img.icons8.com/dusk/40/000000/babel.png"/> Babel
+
+Adapta lo que escribimos en ES6 a las versiones que tenga el navegador (más viejas).
+
+## Webpack
+
+Hace muchas cosas, nos ayuda para que no tengamos que configurar el proyecto. Trae **ESLint** que nos va mostrando warnings o errores las malas practicas en el codigo, apra ir corrijiendo.
+
 
 ---
 ---
