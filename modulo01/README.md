@@ -199,7 +199,7 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 ---
 
-### Compoenntes de clases y Componentes Funcionales
+### Componentes de clases y Componentes Funcionales
 
 Actualmente se traabja con **componentes funcionales** y **hooks**, antes se trabajaba con **componentes de clases**, debían especificar muchas cosas, quedaba muy largo y complicado de entender o leer, mientras más funcionalidades tenían.
 
