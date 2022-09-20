@@ -132,5 +132,17 @@ Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, dato
 ... facilidad a la hora de comprobar su funcionamiento, al integrar test tendremos buen codigo y buen funcionamiento.
 
 
+### Conocimientos importantes  <img src="https://img.icons8.com/color/36/000000/javascript--v1.png"/>
+
+
+Para utilizar esta librería hay que tener en cuenta:
+
+- comprensión de JavaScript
+
+- prácticas en el uso de ECMAScript 6 (ES6) como : arrow functions, templates, métodos, desestructuración, spread operator, etc.
+
+- manipulación del HTMl, sus etiquetas y el DOM.
+
+
 ---
 ---
