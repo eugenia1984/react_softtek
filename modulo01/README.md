@@ -60,15 +60,19 @@ Temas:
 
 - **CRA** (Create React App), para inicializar el proyecto, sin tener que configurarlo desde cero. Creamos un ambiente de dearrollo, permite crear una SPA (Single Page Aplication).
 
-Documentación oficial[https://create-react-app-dev/](https://create-react-app-dev/)
+Documentación oficial en [https://create-react-app-dev/](https://create-react-app-dev/)
 
 Nació como respuesta al trabajo generalmente repetitivo al que se enfrentaban los desarrolladores a la hora de configurar un entorno eficiente. Antes debían instalar manualmente: webpack, babel, ESLint, Jest, y luego estaba toda la configuración manual. Ahora con solo el comando : ```npx create-react-app``` ya está.
 
-**webpackk** crea unos bunfles, que es tu codigo optimizado para el deploy a producción.
+
+**webpack** crea unos bunfles, que es tu codigo optimizado para el deploy a producción.
+
 
 **Babel** es el compilador de JavaScript que permite transformar todo lo que escribimos desde ES% en adelante para que sea compatible en navegadores más viejos, que tiene el código anterior.
 
+
 **ESLint** nos ayuda a identificar si tenemos problema en el codigo, son los warnings que nos avisan si nos falta un ; o si lo tenemos mal identado.
+
 
 **Jest** es un framework para testing, teniendo codigo de prueba nos aseguramos que tenemos buen codigo.
 
@@ -85,14 +89,32 @@ Nació como respuesta al trabajo generalmente repetitivo al que se enfrentaban l
 
 ```npm start``` -> para arrancar el proyecto y verlo en la web.
 
+
 -> En el caso de tener una versión más vieja hay que hacerlo de forma global:
 
 ```npm install -g create-react-app my-app```
 
 ```create-react-app my-app```
 
+### React Developer Tools
+
+Nos ayudan mucho al hace debuging, vamos a ver como fluyen los datos entre los diferentes componentes de la aplicación.
+
+Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, datos y su estado) y **Profiles**
+
+
 
 ---
+
+
+## <img src="https://img.icons8.com/clouds/36/000000/react.png"/> Introducción a React
+
+- Librería de JavaScript
+
+- Creada por Facebook (Meta)
+
+- Basada en **componentes**, un elemento o conjunto de elementos de un **interfaz de usuario** (UI) que posee su propio estado y apariencia.
+
 
 ---
 ---
