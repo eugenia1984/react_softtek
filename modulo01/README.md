@@ -438,6 +438,12 @@ Es la base de cualquier intercambio de datos en la web. Nos permite enviar y rec
 
 El cliente (normalmente un navegador Web) inicia una **petición** de datos a un servidor Web. El servidor Web la recibe y este le envía una **respuesta** (favorable o no) al cliente.
 
+-> El Front se comunica con el Back mediante el protocolo, el servidor recibe la peticion y envia una respuesta.
+
+```
+USUARIO ---->   URL    -----> NAVEGADOR -----> PETICION HTTP  -----> SERVIDOR 
+       <----PAGINA WEB <-----           <----- RESPUESTA HTTP <----    WEB
+```
 
 ---
 ---
