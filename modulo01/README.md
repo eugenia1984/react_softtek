@@ -314,7 +314,26 @@ Hoy en día se pueden encontrar varios tipos de autenticación y uno de los más
 - **autenticación mutifactor(MFA)**: requiere 2 o más independientes para identificar a un usuario (códigos generados desde el teléfono inteligente del usuario, pruebas de Captcha, huellas dactilares, etc).
 
 - **autentificación basada en Token**: permiten a los usuarios ingresar sus credenciales una vez y recibir a cambio una cadena cifrada única de caracteres aleatorios. Luego puede usar el token para acceder.
-- 
+
+#### Tipos de Inicio de Sesión
+
+A partir de diferentes tipos de autenticación, existen diferentes formas de realizar un inicio de sesión.
+
+A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión.
+
+- Inicio de Sesión con usuario/email:
+
+-Autenticación basada en contraseña
+
+-Autenticación Multfactor (MFA)
+
+- Inicio de sesión con un link mágico a tu em-amil
+
+-Magic Link Email
+
+- Inicio de sesión con Redes Sociales
+
+-Aca se deben integrar las plataformas (los enpoints) de estas redes sociales, se hace un frujo de autenticación doble. Del sing in llamamos al endpoint o URL de la red social.
 
 ---
 
