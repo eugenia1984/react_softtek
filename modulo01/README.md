@@ -197,31 +197,20 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 ```
 1. Nombre de mi proyecto
-2. node_modules -> con todas las depndencias y librerias. 
-Tengo todos mis paquetes.
-3. src -> aca ven todos mis componentes, tambien puedo agrupar
-en *pages* y en *components* y dentro de components puedo agrupar 
-en carpetas los componentes.
+2. node_modules -> con todas las depndencias y librerias. Tengo todos mis paquetes.
+3. src -> aca ven todos mis componentes, tambien puedo agrupar en *pages* y en *components* y dentro de components puedo agrupar en carpetas los componentes.
 4. App.css
-5. App.js -> El primer componente, el componente macro, de el 
-salen los hijos y nietos.
+5. App.js -> El primer componente, el componente macro, de el salen los hijos y nietos.
 6. favicon.svg
-7. index.css -> el main(core) de los estilos, pero tambien se pueden 
-poner otros más dentro de las carpetas de los componentes o armarlos 
-en archivos css, pueden ser acorde a los componentes.
+7. index.css -> el main(core) de los estilos, pero tambien se pueden poner otros más dentro de las carpetas de los componentes o armarlos en archivos css, pueden ser acorde a los componentes.
 8. logo.svg
 9. index.js -> no lo vamos a modificar mucho
-10. .gitignore -> para que no se suban los node_modules, variables 
-de entorno (utilizarlas en un .env para agregar este archivo en la 
-lista de lo ignorado), etc.
+10. .gitignore -> para que no se suban los node_modules, variables de entorno (utilizarlas en un .env para agregar este archivo en la lista de lo ignorado), etc.
 11. public -> los archivos estáticos, puro HTML5, CSS3, JavaScript.
 12. index.html
-13. package-lock.json -> es la configuración para el desarrollo 
-(no se suele modificar)
-14. package.json -> esta la configuración, con los scripts y 
-las dependencias
-15. App.test.js -> donde vamos a hacer los test por componentes, 
-con unitesting y de integración.
+13. package-lock.json -> es la configuración para el desarrollo (no se suele modificar)
+14. package.json -> esta la configuración, con los scripts y las dependencias
+15. App.test.js -> donde vamos a hacer los test por componentes, con unitesting y de integración.
 ```
 
 ---
@@ -665,12 +654,10 @@ Luego de finalizar la instalación de React, nuestro sistema de archivos se pare
 
 ```
 -1. Nombre de mi proyecto: el nombre que le dimos al instalar vite.
--2. node_modules: es un directorio que se crea en la carpeta raíz de nuestro 
-proyecto cuando instalamos paquetes o dependencias mediante npm.
+-2. node_modules: es un directorio que se crea en la carpeta raíz de nuestro proyecto cuando instalamos paquetes o dependencias mediante npm.
 -3. src: directorio en donde se encontrarán todos los archivos referidos a React.
 -4. App.css: archivo de CSS que usa el archivo App.jsx (en las próximas lecturas veremos qué es JSX).
--5. App.js: este va a ser el archivo en el que trabajaremos inicialmente como "padre" de todos 
-los demás componentes que crearemos.
+-5. App.js: este va a ser el archivo en el que trabajaremos inicialmente como "padre" de todos los demás componentes que crearemos.
 -6. favicon.svg: si queremos que tenga un ícono como imagen la url al navegar por nuestro sitio.
 -7. index.css: archivo de CSS global que usa el sitio.
 -8. logo.svg: imagen que se encuentra en App.jsx.
@@ -678,14 +665,9 @@ los demás componentes que crearemos.
 -10. .gitignore: si vamos a usar GIT, ya tendremos este archivo preparado para no subir archivos 
 a github que no sean necesarios.
 -11. public: directorio en donde encontrarán todos los archivos referenciados a la vista.
--12. index.html: donde se inicializará nuestro proyecto, y podremos incluir en el "head" llamadas 
-a otros archivos, tales como CSS, JS, etc.
--13. package-lock.json: se genera automáticamente para cualquier operación en la que npm modifique 
-el árbol 1 node_modules o package.json. Describe una representación única de un árbol de dependencias 
-de modo que se garantice que los compañeros de equipo, las implementaciones y la integración 
-continua instalen exactamente las mismas dependencias.
--14. package.json: contiene todos los metadatos acerca del proyecto, tal como descripción, 
-licencia, dependencias y scripts.
+-12. index.html: donde se inicializará nuestro proyecto, y podremos incluir en el "head" llamadas a otros archivos, tales como CSS, JS, etc.
+-13. package-lock.json: se genera automáticamente para cualquier operación en la que npm modifique el árbol 1 node_modules o package.json. Describe una representación única de un árbol de dependencias de modo que se garantice que los compañeros de equipo, las implementaciones y la integración continua instalen exactamente las mismas dependencias.
+-14. package.json: contiene todos los metadatos acerca del proyecto, tal como descripción, licencia, dependencias y scripts.
 ```
 
 
@@ -896,15 +878,88 @@ La validación es el proceso que **nos permite corroborar** (como developers) **
 
 #### ¿Para qué sirve la validación de formularios?
 
-La validación de formularios nos permite corroborar que la información que estamos recibiendo y que posteriormente enviaremos al servidor sea correcta y no presente errores. En el desarrollo de aplicaciones siempre estaremos en la búsqueda constante de la optimización y no sería lógico ni performante enviar al servidor información errada, pues lo estaríamos sobrecargando con responsabilidades y tareas que podrías resolver fácilmente del lado del cliente. La validación de formularios, entonces, sirve para resolver en el entorno del cliente los posibles problemas que se puedan llegar a presentar.
+La validación de formularios nos permite **corroborar que la información que estamos recibiendo y que posteriormente enviaremos al servidor sea correcta y no presente errores**. 
+
+En el desarrollo de aplicaciones siempre estaremos en la búsqueda constante de la optimización y no sería lógico ni performante enviar al servidor información errada, pues lo estaríamos **sobrecargando** con responsabilidades y tareas que podrías resolver fácilmente del lado del cliente. La **validación de formularios**, entonces, sirve **para resolver en el entorno del cliente los posibles problemas que se puedan llegar a presentar**.
+
+
 
 #### ¿Qué ejemplos existen sobre la validación de formularios?
 
-El más común lo encontramos en los formularios de registro. En estos formularios, al momento de poner nuestra dirección de correo electrónico, se verifica que la misma coincida con el formato habitual: "user@server.ext". De no coincidir nuestra información ingresada con este formato, obtendremos algún mensaje alertándonos de este error.
+El más común lo encontramos en los **formularios de registro**. 
+
+En estos formularios, al momento de poner nuestra **dirección de correo electrónico**, se **verifica que la misma coincida con el formato habitual: "user@server.ext"**. 
+
+De no coincidir nuestra información ingresada con este formato, obtendremos algún mensaje alertándonos de este error.
+
+
 
 #### ¿Cómo se implementa la validación de formularios en un proyecto real?
 
-De la misma manera que lo haremos en esta clase. Siempre que deseemos verificar que la información ingresada por el usuario es la correcta, es entonces allí en donde necesitaremos de estos procesos de validación.
+De la misma manera que lo haremos en esta clase. 
+
+Siempre que deseemos verificar que la información ingresada por el usuario es la correcta, es entonces allí en donde necesitaremos de estos procesos de validación.
+
+1. Necesito ua función de tipo **handler** para que cuando se quiera ejecutar el formulario yo implemento toda la logica. En los **componentes funcionales** la lógica está al iniciod e la función, antes del return. Llamo a la función **submitHandler** y la voy a invocar dentro de la etiqueta del form **onSubmit={submitHandler}**
+
+2. Necesito evitar el comportamiento de recarga (re renderización) que toene el formulario al hacer click en el botón de typo submit. Mi **submitHandler**  va a tener que recibir el **evento** y dentro ejecutar el método **preventDefault()**. Si ahora hago click en Enviar no se me recarga la pagina.
+
+3. Ahora necesito capturar lo que se ingresa en el campo e-mail y password. Voy a guardar en las constantes, tomando lo que desencadena el **evento** con el **e.target** obtengo el campo y para agarrar el valor con **value** obtengo lo ingresado.
+
+4. Ahora con el valor capturado voy a validar con un simple if, para ver que no llegue vacio.
+
+```JSX
+const submitHandler = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    if(email === "" || password === "") {
+      console.warn("Los campos no pueden estar vacíos");
+    }
+}
+```
+
+5. Ahora quiero verificar con una **regEx** que el string que se escribio en el input email, tenga la forma de un correo electrónico. 
+```JavaScript
+const regExEmail =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+```
+Como voy a validar un String puedo utilizar le método **.test()** si lo que recibie por parametro cumple con mi RegEx, entonces me retorna true.
+
+Voy a tener que cambiar en mi innput de name email a **type="text"**
+
+```JSX
+const submitHandler = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const regExEmail =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if(email === "" || password === "") {
+      console.warn("Los campos no pueden estar vacíos");
+      return;
+    }
+    
+    if(email !== "" && !regExEmail.test(email)) {
+      console.log("Debes escribir una dirección de correo electrónico válida");
+      return;
+    }
+    
+    if(email !== "challenge@alkemy.org" || password !== "react") {
+    
+    }
+    
+}
+```
+
+-> Hago el return en el primer if, asi primero me quequea que los campos no esten vacios, de estar vacios entran aca, me lo consologuea y se termina por el return. Si los campos están completos, entonces ahi me va a quequear la regEx del correo que sea un formato valido.
+
+-> Ahora nos valta verificar la información que se ingresó. Voy a validarlo con **challenge@alkemy.org** al e-mail y con **react** el password.
+```JSX
+if(email !== "challenge@alkemy.org" || password !== "react")  {
+      console.warn("Credenciales inválidas");
+      return;
+}
+```
 
 ---
 
