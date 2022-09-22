@@ -216,8 +216,7 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 ---
 
 - [Acá se puede ver un ejemplo de componente creado con JavaScript vanilla, sin JSX](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/opcion_con_plain_js.pdf)
-
-![componente creado con JavaScript vanilla, sin JSX](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/opcion_con_plain_js.pdf)
+                                                                            
 
 ---
 
@@ -576,7 +575,7 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 - **Create React App (CRA)** configura un ambiente de desarrollo de forma que puedas usar JavaScript, brindando una buena experiencia de desarrollo y optimizando tu aplicación. Necesitarás tener **Node >= 14.0.0** y **npm >= 5.6** instalados en tu máquina. Para crear un proyecto ejecuta:
 
 ```
-npx create-react-app my-app .
+npx create-react-app my-app ./
 cd my-app
 nmp start
 ```
@@ -703,6 +702,49 @@ A continuación, simplemente estaremos modificando "App.js". Quizás notaste que
 
 Actualmente, el código de la imagen anterior es el que aparece cuando lo abrimos, sin embargo, debe quedar como el de la figura a continuación. Te habrás dado cuenta de que hay archivos que deberemos eliminar porque no los usaremos.
 
+```
+myfirstreactapp
+├── node_modules
+|
+├── public
+│ ├── favicon.ico
+│ ├── index.html
+│ └── robots.txt
+|
+├── src
+│ ├── App.js
+│ ├── index.js
+|
+├── .gititgnore
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+- index.js (define que va a renderizar mi aplicación):
+```JSX
+import React from "react";
+import ReactDOM from "react-dom";
+omport App from "./App";
+
+ReactDOM.render(
+  <React.StrcitMode >
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+```
+
+-App.js (donde vamosa  venir a codear todo y es el que se va a montar dentro del compoennte index)
+```JSX
+function App() {
+  return (
+    <h2> Hola Mundo </h2>
+  )
+}
+
+export default App;
+```
 ---
 
 ## :star: UNIDAD 2 - CREANDO NUESTRO PRIMER COMPONENTE
