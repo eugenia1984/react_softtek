@@ -552,20 +552,23 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 ## OBJETIVOS DEL MODULO
 
 ```
--Iniciar nuestros primeros pasos en la librería de React reconociendo su sintaxis, funcionalidades 
-y componentes básicos.
+-Iniciar nuestros primeros pasos en la librería de React reconociendo su sintaxis, 
+funcionalidades y componentes básicos.
 -Identificar las herramientas necesarias para el desarrollo de la aplicación.
 -Instalar las tecnologías indispensables para nuestro trabajo.
 -Configurar nuestro entorno de trabajo.
--Armar el componente login que permitirá a las personas que usan tu aplicación, loguearse en ella.
--Lograr validar el formulario de logueo para evitar que una persona con credenciales erradas pueda 
-hacer uso de la aplicación.
--Poder enviar los datos suministrados por la persona a una API para que de esta última puedas 
-obtener el token de autenticación.
+-Armar el componente login que permitirá a las personas que usan tu aplicación, 
+loguearse en ella.
+-Lograr validar el formulario de logueo para evitar que una persona con 
+credenciales erradas pueda hacer uso de la aplicación.
+-Poder enviar los datos suministrados por la persona a una API para que de 
+esta última puedas obtener el token de autenticación.
 -Implementar el manejo de mensajes de error con la librería Sweet Alert.
--Persistir el token obtenido de la API, en el almacenamiento local del navegador.
--Generar un redireccionamiento al componente "Listado" una vez las credenciales de usuario estén 
-validadas y la API haya entregado el respectivo token de autenticación.
+-Persistir el token obtenido de la API, en el almacenamiento local del 
+navegador.
+-Generar un redireccionamiento al componente "Listado" una vez las credenciales 
+de usuario estén validadas y la API haya entregado el respectivo 
+token de autenticación.
 ```
 
 ## :star: UNIDAD 1
