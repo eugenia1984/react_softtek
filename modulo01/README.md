@@ -534,7 +534,9 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 ---
 ---
 
-# :star2: TEORIA
+# :star2: TEORIA DE MODULO 1 - UNIDAD 1 Y 2
+
+---
 
 ## OBJETIVOS DEL MODULO
 
@@ -550,6 +552,10 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 -Persistir el token obtenido de la API, en el almacenamiento local del navegador.
 -Generar un redireccionamiento al componente "Listado" una vez las credenciales de usuario estén validadas y la API haya entregado el respectivo token de autenticación.
 ```
+
+## :star: UNIDAD 1
+
+---
 
 ## SET UP DE TOOLS  
 
@@ -640,20 +646,28 @@ Todo el mérito es para la representación del lado del servidor (SSR). Hemos es
 Luego de finalizar la instalación de React, nuestro sistema de archivos se parecerá a lo siguiente:
 
 ```
-1. Nombre de mi proyecto: el nombre que le dimos al instalar vite.
-2. node_modules: es un directorio que se crea en la carpeta raíz de nuestro proyecto cuando instalamos paquetes o dependencias mediante npm.
-3. src: directorio en donde se encontrarán todos los archivos referidos a React.
-4. App.css: archivo de CSS que usa el archivo App.jsx (en las próximas lecturas veremos qué es JSX).
-5. App.js: este va a ser el archivo en el que trabajaremos inicialmente como "padre" de todos los demás componentes que crearemos.
-6. favicon.svg: si queremos que tenga un ícono como imagen la url al navegar por nuestro sitio.
-7. index.css: archivo de CSS global que usa el sitio.
-8. logo.svg: imagen que se encuentra en App.jsx.
-9. index.js: este archivo no lo tocaremos nunca, lo dejaremos siempre así.
-10. .gitignore: si vamos a usar GIT, ya tendremos este archivo preparado para no subir archivos a github que no sean necesarios.
-11. public: directorio en donde encontrarán todos los archivos referenciados a la vista.
-12. index.html: donde se inicializará nuestro proyecto, y podremos incluir en el "head" llamadas a otros archivos, tales como CSS, JS, etc.
-13. package-lock.json: se genera automáticamente para cualquier operación en la que npm modifique el árbol 1 node_modules o package.json. Describe una representación única de un árbol de dependencias de modo que se garantice que los compañeros de equipo, las implementaciones y la integración continua instalen exactamente las mismas dependencias.
-14. package.json: contiene todos los metadatos acerca del proyecto, tal como descripción, licencia, dependencias y scripts.
+-1. Nombre de mi proyecto: el nombre que le dimos al instalar vite.
+-2. node_modules: es un directorio que se crea en la carpeta raíz de nuestro 
+proyecto cuando instalamos paquetes o dependencias mediante npm.
+-3. src: directorio en donde se encontrarán todos los archivos referidos a React.
+-4. App.css: archivo de CSS que usa el archivo App.jsx (en las próximas lecturas veremos qué es JSX).
+-5. App.js: este va a ser el archivo en el que trabajaremos inicialmente como "padre" de todos 
+los demás componentes que crearemos.
+-6. favicon.svg: si queremos que tenga un ícono como imagen la url al navegar por nuestro sitio.
+-7. index.css: archivo de CSS global que usa el sitio.
+-8. logo.svg: imagen que se encuentra en App.jsx.
+-9. index.js: este archivo no lo tocaremos nunca, lo dejaremos siempre así.
+-10. .gitignore: si vamos a usar GIT, ya tendremos este archivo preparado para no subir archivos 
+a github que no sean necesarios.
+-11. public: directorio en donde encontrarán todos los archivos referenciados a la vista.
+-12. index.html: donde se inicializará nuestro proyecto, y podremos incluir en el "head" llamadas 
+a otros archivos, tales como CSS, JS, etc.
+-13. package-lock.json: se genera automáticamente para cualquier operación en la que npm modifique 
+el árbol 1 node_modules o package.json. Describe una representación única de un árbol de dependencias 
+de modo que se garantice que los compañeros de equipo, las implementaciones y la integración 
+continua instalen exactamente las mismas dependencias.
+-14. package.json: contiene todos los metadatos acerca del proyecto, tal como descripción, 
+licencia, dependencias y scripts.
 ```
 
 
@@ -688,6 +702,129 @@ A continuación, simplemente estaremos modificando "App.js". Quizás notaste que
 
 Actualmente, el código de la imagen anterior es el que aparece cuando lo abrimos, sin embargo, debe quedar como el de la figura a continuación. Te habrás dado cuenta de que hay archivos que deberemos eliminar porque no los usaremos.
 
+---
+
+## :star: UNIDAD 2 - CREANDO NUESTRO PRIMER COMPONENTE
+
+---
+
+### 2.1 ARMANDO COMPONENTE
+
+#### ¿Qué es el componente "Login"?
+
+Este componente es el que va a permitir que las personas que usan la aplicación se logueen en la misma. El mismo estará compuesto por un breve formulario con dos campos: correo electrónico y contraseña, los cuales funcionarán como un mecanismo de entrada de información para el proceso de autenticación de usuarios.
+
+#### ¿Para qué sirve el componente "Login"?
+
+Este componente tiene como objetivo principal servir como un filtro de usuarios, para que, solamente aquellas personas que se loguean con las credenciales válidas puedan usar el completo de la aplicación.
+
+#### ¿Cómo se implementa el proceso de Login en un proyecto real?
+
+Esto es algo bastante habitual, pues muchas aplicaciones para que puedan ser usadas, necesitan autenticar al usuario para así proveer de toda su funcionalidad. Por ello es importante conocer cuáles son los pasos a dar para poder llevar adelante esta implementación, la cual, posteriormente seguramente usaremos en muchas ocasiones en nuestra vida diaria.
+
+---
+
+### 2.2 VALIDACION DE FORMULARIO 
+
+#### ¿Qué es la validación de formularios?
+
+La validación es el proceso que nos permite corroborar (como developers) que la información suministrada de parte del usuario y que requiere nuestro sistema para funcionar, sea la correcta.
+
+#### ¿Para qué sirve la validación de formularios?
+
+La validación de formularios nos permite corroborar que la información que estamos recibiendo y que posteriormente enviaremos al servidor sea correcta y no presente errores. En el desarrollo de aplicaciones siempre estaremos en la búsqueda constante de la optimización y no sería lógico ni performante enviar al servidor información errada, pues lo estaríamos sobrecargando con responsabilidades y tareas que podrías resolver fácilmente del lado del cliente. La validación de formularios, entonces, sirve para resolver en el entorno del cliente los posibles problemas que se puedan llegar a presentar.
+
+#### ¿Qué ejemplos existen sobre la validación de formularios?
+
+El más común lo encontramos en los formularios de registro. En estos formularios, al momento de poner nuestra dirección de correo electrónico, se verifica que la misma coincida con el formato habitual: "user@server.ext". De no coincidir nuestra información ingresada con este formato, obtendremos algún mensaje alertándonos de este error.
+
+#### ¿Cómo se implementa la validación de formularios en un proyecto real?
+
+De la misma manera que lo haremos en esta clase. Siempre que deseemos verificar que la información ingresada por el usuario es la correcta, es entonces allí en donde necesitaremos de estos procesos de validación.
+
+---
+
+## 2.3 ENVIO DE FORMULARIO
+
+#### ¿Qué es el envío de formularios vía HTTP?
+
+Los formularios en HTML no son nada más que presentacionales, y para poder usar la información suministrada por el usuario tendremos que enviar la misma a algún lugar, tradicionalmente a una API. Y para poder generar el envío de dicha información necesitaremos implementar algún método HTTP que nos permita hacer esto. 
+
+#### ¿Para qué sirve el envío de información vía HTTP?
+
+Tal como lo mencionamos anteriormente, un formulario HTML no es funcional si no enviamos su información a algún lugar. Y por este motivo es que los métodos HTTP tales como GET, POST o PUT nos van a ser de gran utilidad, pues con estos métodos tendremos la posibilidad de hacerle llegar al servidor aquellos datos que el usuario ha dejado en nuestra aplicación.
+
+#### ¿Dónde se pone en uso el envío de información vía HTTP?
+
+Generalmente, siempre que diligencies un formulario (como el de login, registro, contacto, etc) y des click en el botón "ENVIAR", allí mismo estás disparando un envío de la información vía HTTP, para que sea el servidor quien procese dicha información y pueda darte una respuesta dependiendo de la información suministrada.
+
+#### ¿Cómo se implementa el envío de información vía HTTP en un proyecto real?
+
+En los formularios de contacto, de registro, de logueo o en cualquier otra petición que obtenga o envíe datos desde y hacia el servidor se implementan este tipo de solicitudes HTTP.
+
+---
+
+#### 2.4 MANEJO DE ERRORES
+
+
+#### ¿Qué es el manejo de errores?
+
+El manejo de errores es la técnica a través de la cual como desarrolladores podemos manejar las distintas respuestas obtenidas después de enviar información a una API o incluso cuando nos encontramos validando la información de un formulario.
+
+#### ¿Para qué sirve el manejo de errores?
+
+Sirve para advertir a la persona que usa nuestra aplicación de los posibles errores que se encontraron en el procesamiento de la información, sea porque suministró información errada o quizás porque aun habiendo suministrado la información correcta, el servidor no pudo procesarla de manera satisfactoria.
+
+#### ¿Cómo se implementa el manejo de errores en un proyecto real?
+
+
+Existen diversas maneras de hacerlo, pero una muy común es hacerlo usando librerías que nos permitan disparar cajas modales que alerten e informen al usuario del error resultante de la operación. Puntualmente en esta clase implementaremos la librería "Sweet alert" para poder mostrar estos mensajes de una manera mucho más amigable para el usuario.
+
+
+---
+
+## 2.5 PERSISTENCIA DEL TOKEN
+
+#### ¿Qué es un token y qué significa la persistencia del mismo?
+
+Un token es un identificador único obtenido tras un proceso de autenticación que le permite saber al servidor que la persona que usa la aplicación se ha logueado satisfactoriamente. Por otro lado, persistir un token significa mantenerlo guardado en algún lugar para posteriormente usar su información. Para que, de esta manera, evitemos solicitar al usuario en cada momento sus credenciales de acceso.
+
+#### ¿Para qué sirve la persistencia del token?
+
+Cómo ya lo dijimos con anterioridad, sirve para evitar hacer múltiples solicitudes de autenticación al servidor, cada vez que el usuario de la aplicación desea llevar a cabo una determinada actividad. Por este motivo, el token es tan importante ya que lo obtendremos en el primer llamado de autenticación y desde ese momento en adelante usaremos el mismo cada vez que sea necesario.
+
+#### ¿Cómo se implementa la persistencia del token en un proyecto real?
+
+Existen algunos caminos para lograr este resultado, pero el más sencillo y cómodo para nosotros será guardar el mismo en el almacenamiento local del navegador, de esta manera aprovecharemos las múltiples ventajas de este tipo de almacenamiento.
+
+---
+
+## 2.6 REDIRECICONAMIENTO AL COMPONENTE "LISTADO"
+
+
+#### ¿Qué es un redireccionamiento?
+
+El redireccionamiento es un proceso mediante el cual, después de ejecutar una acción determinada, llevamos a la persona que usa nuestra aplicación a una ubicación específica. Es muy común de implementar en el proceso de logueo, en el cual después de validar las credenciales de una persona, le daremos acceso completo a la aplicación. Vale aclarar que una redirección también se puede generar cuando nos damos cuenta que sin tener los permisos correspondientes, una persona desea ingresar a una sección a la que no tiene permiso.
+
+#### ¿Para qué sirve la redirección?
+
+Sirve para enviar a la persona que usa nuestro sistema a un determinado lugar después de ejecutar una acción. Sirve puntualmente para proteger secciones de la aplicación que requieren que la persona usuaria tenga permisos específicos.
+
+#### ¿Qué ejemplos existen sobre el redireccionamiento?
+
+El más sencillo y el que puedes probar por tu cuenta es el siguiente: estando logueado en tu cuenta de correo, dirígete a la bandeja de entrada, allí copia la dirección presente en la barra de direcciones. Ahora, ve a una ventana de incógnito en tu navegador y pega la dirección que copiaste anteriormente. ¿Pudiste entrar a la bandeja de entrada de tu correo electrónico? Estamos seguros que no. Y que lo que sucedió fue que el sistema te redireccionó a la sección en donde debes loguearte en tu cuenta de correo. Si esto fue lo que sucedió, tienes un ejemplo claro de lo que es una redirección.
+Enlaces y documentación
+Visual Studio Code: Desde este enlace podrás descargar el editor de texto más utilizado por todo el mundo desde hace ya un par de años. Excelente para escribir código en cualquier lenguaje de programación.
+
+- **NodeJS**: Descarga este entorno de ejecución para JavaScript, que te permitirá construir cualquier tipo de aplicación usando JS.
+
+- **ReactJS**: Documentación oficial de esta librería para el manejo de interfaces en el Frontend. Siempre que tengas una duda, seguramente vendrás a este enlace.
+
+-**Axios**: Descubre la documentación oficial de la librería más utilizada en el ambiente del desarrollo para hacer peticiones asíncronas y aprende un poco más sobre la misma.
+
+-**Sweet Alert**: Descubre todo el poder de las cajas modales gracias a Sweet Alert.
+
+-**React router dom**: Si estás buscando construir una SPA (single page application) con React esta librería es infaltable. Ya que la misma te permite gestionar todo el sistema de ruteo de la misma. Con esta sencilla pero eficiente documentación, cualquier duda que tengas, será resuelta.
 
 ---
 ---
