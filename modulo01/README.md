@@ -534,3 +534,127 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 ---
 ---
 
+# :star2: TEORIA
+
+## OBJETIVOS DEL MODULO
+
+```
+-Iniciar nuestros primeros pasos en la librería de React reconociendo su sintaxis, funcionalidades y componentes básicos.
+-Identificar las herramientas necesarias para el desarrollo de la aplicación.
+-Instalar las tecnologías indispensables para nuestro trabajo.
+-Configurar nuestro entorno de trabajo.
+-Armar el componente login que permitirá a las personas que usan tu aplicación, loguearse en ella.
+-Lograr validar el formulario de logueo para evitar que una persona con credenciales erradas pueda hacer uso de la aplicación.
+-Poder enviar los datos suministrados por la persona a una API para que de esta última puedas obtener el token de autenticación.
+-Implementar el manejo de mensajes de error con la librería Sweet Alert.
+-Persistir el token obtenido de la API, en el almacenamiento local del navegador.
+-Generar un redireccionamiento al componente "Listado" una vez las credenciales de usuario estén validadas y la API haya entregado el respectivo token de autenticación.
+```
+
+## SET UP DE TOOLS  
+
+- [VSC](https://code.visualstudio.com/)
+
+- [Create Reaact App](https://es.reactjs.org/docs/create-a-new-react-app.html)
+
+- [Node.js]([Node.js](https://nodejs.org/es/))
+
+
+### 1.1 SET UP DE HERRAMIENTAS
+
+- extension en VSC: JS JSX Snippet 
+
+- Node.js en su ultima versión estable, con **node** se instala un **entorno de desarrollo**, para ver que esta bien instalado desde la terminal ponemos ```node -v``` o ```node -version``` y si ves la version de Node.js es que ya está instalado correctamente.
+
+- **Create React App (CRA)** configura un ambiente de desarrollo de forma que puedas usar JavaScript, brindando una buena experiencia de desarrollo y optimizando tu aplicación. Necesitarás tener **Node >= 14.0.0** y **npm >= 5.6** instalados en tu máquina. Para crear un proyecto ejecuta:
+
+```
+npx create-react-app my-app .
+cd my-app
+nmp start
+```
+
+- Create React App no se encarga de la lógica de backend o de bases de datos, tan solo crea un flujo de construcción para frontend, de manera que lo puedas usar con cualquier backend. Para ello internamente usa Babel y Webpack, pero no necesitas saber nada de estas herramientas para usar Create React App.
+
+- React Developer Tools. Si bien esta herramienta es opcional, constituye un gran aliado para poder ver cómo fluyen los datos entre componentes de React
+
+
+---
+
+## 1.2 Introduccion a React (parte 2)
+
+### ¿Qué es React? 
+
+Es una biblioteca desarrollada inicialmente por **Facebook** (ahora llamado **Meta**) y su principal ventaja es ser de software libre. Sus primeros usos fueron en aplicaciones como Facebook e Instagram. Otras empresas web de primer nivel también lo incorporaron, como Wallmart, Netflix, Airbnb, Dropbox, Spotify, etc.
+
+Se creó para hacer el **desarrollo de los componentes de las interfaces del usuario más fácil** y su requisito principal es **ofrecer un rendimiento mayor al de las otras alternativas existentes en el mercado**.
+
+### ¿Cómo funciona?
+
+#### Componentes
+
+Al ser una librería moderna, nos permite crear una aplicación con conceptos novedosos como la noción de **componentes**, que permite **dividir una aplicación en pequeñas partes para así poder crear y administrar una aplicación compleja de una manera mucho más sencilla y entendible**, ya que estos componentes de React tienen la ventaja de ser:
+
+- Reusables.
+
+- Fáciles de crear y usar.
+
+- Fáciles para comprobar su funcionamiento.
+
+Para utilizar esta librería necesitamos tener un par de requisitos básicos en cuenta: 
+
+- Manipulación de HTML: sus etiquetas y el DOM.
+
+- Compresión de JavaScript.
+
+- Práctica en el uso de ECMA6 como: arrow functions, template, métodos, etc.
+
+#### DOM Virtual
+
+React enfatiza la **necesidad de actualizar las vistas** cuando el desarrollador lo requiera y lo consigue mediante el **DOM Virtual**.
+
+El DOM Virtual es una de las características principales de React. Este hace referencia a **una representación del DOM**, pero en lugar de seguir la forma tradicional, **lo hace en la memoria**, es decir, que **rerenderizará solo el HTML modificado**.
+
+Se utiliza para aumentar el rendimiento de las aplicaciones y componentes con las que interactúa el usuario directamente. Así, se puede ofrecer una **mejor experiencia de usuario y una mayor fluidez**.
+
+#### (SPA) Aplicación de página única
+
+Una aplicación de página única (single-page application) es **una app que carga una única página HTML y todos los componentes necesarios (tales como JavaScript y CSS) para que se ejecute la aplicación**. Cualquier interacción con la página o páginas subsecuentes no requiere hacer solicitudes al servidor, lo que significa que **la página no es recargada**.
+
+Aunque se puede construir una aplicación de página única con React, esto no es un requerimiento. React también puede ser utilizado para mejorar pequeñas partes de sitios web existentes con interactividad adicional. 
+
+#### Las diferencias de crear un sitio común de cero
+
+Demos un paseo por el espacio de la tecnología antes de 2015, cuando el desarrollo web se trataba de secuencias de comandos y renderizado. La época en que lenguajes como HTML, CSS dominaban el frontend y PHP dominaba el backend.
+
+El desarrollo web era distinto en ese entonces. Todo lo que teníamos que hacer era maquetar páginas HTML estáticas en algunas carpetas y renderizar usando PHP. Aunque esa no es una forma única e intuitiva de desarrollar sitios web, aun pudiendo establecer una conexión bidireccional entre el cliente y el servidor.
+
+Todo el mérito es para la representación del lado del servidor (SSR). Hemos estado construyendo aplicaciones web de esta manera durante mucho tiempo, pero lo que no vimos venir es la revolución de los sitios web después de las librerías JavaScript como React.
+
+---
+
+## 1.3 INTRODUCCION A REACT (parte 3)
+
+### Sistema de archivos de React
+
+Luego de finalizar la instalación de React, nuestro sistema de archivos se parecerá a lo siguiente:
+
+```
+1. Nombre de mi proyecto: el nombre que le dimos al instalar vite.
+2. node_modules: es un directorio que se crea en la carpeta raíz de nuestro proyecto cuando instalamos paquetes o dependencias mediante npm.
+3. src: directorio en donde se encontrarán todos los archivos referidos a React.
+4. App.css: archivo de CSS que usa el archivo App.jsx (en las próximas lecturas veremos qué es JSX).
+5. App.js: este va a ser el archivo en el que trabajaremos inicialmente como "padre" de todos los demás componentes que crearemos.
+6. favicon.svg: si queremos que tenga un ícono como imagen la url al navegar por nuestro sitio.
+7. index.css: archivo de CSS global que usa el sitio.
+8. logo.svg: imagen que se encuentra en App.jsx.
+9. index.js: este archivo no lo tocaremos nunca, lo dejaremos siempre así.
+10. .gitignore: si vamos a usar GIT, ya tendremos este archivo preparado para no subir archivos a github que no sean necesarios.
+11. public: directorio en donde encontrarán todos los archivos referenciados a la vista.
+12. index.html: donde se inicializará nuestro proyecto, y podremos incluir en el "head" llamadas a otros archivos, tales como CSS, JS, etc.
+13. package-lock.json: se genera automáticamente para cualquier operación en la que npm modifique el árbol 1 node_modules o package.json. Describe una representación única de un árbol de dependencias de modo que se garantice que los compañeros de equipo, las implementaciones y la integración continua instalen exactamente las mismas dependencias.
+14. package.json: contiene todos los metadatos acerca del proyecto, tal como descripción, licencia, dependencias y scripts.
+```
+
+---
+---
