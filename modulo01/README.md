@@ -396,6 +396,19 @@ export default Login;
 
 ### Validación de formularios
 
+#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/>  ¿A qué nos referimos cuando hablamos de validación?
+
+Es el proceso que nos permite corroborar (como desarrolladores) que la información suministrada 
+
+#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/>  Ejemplo de validación de Formulario
+
+El más común lo encontramos en los formularios de registro. 
+
+Se verifica que la información coincida con un formato habitual o tipo de no coincidir, se genera un mensaje avisando de este error.
+
+Es decir tener una validación personalizada por cada input.
+
+
 ---
 
 ### Envío de formularios
