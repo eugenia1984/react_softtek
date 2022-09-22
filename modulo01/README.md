@@ -581,7 +581,7 @@ token de autenticación.
 
 - [Create Reaact App](https://es.reactjs.org/docs/create-a-new-react-app.html)
 
-- [Node.js]([Node.js](https://nodejs.org/es/))
+- [Node.js](https://nodejs.org/es/)
 
 
 ### 1.1 SET UP DE HERRAMIENTAS
@@ -757,7 +757,7 @@ ReactDOM.render(
 ```JSX
 function App() {
   return (
-    <h2> Hola Mundo </h2>
+    <h2>Hola Mundo </h2>
   )
 }
 
@@ -769,27 +769,130 @@ export default App;
 
 ---
 
-### 2.1 ARMANDO COMPONENTE
+### 2.1 ARMANDO COMPONENTE LOGIN
+
+- Voy a crear la carpeta **components** y dentro mi primer componente **Login.js**
+- 
+```
+├── src
+| |
+| |──components
+| |   |──Login.js
+| |
+│ ├── App.js
+│ ├── index.js
+```
+
+Y me queda así, con mi **form**, con los **input** para el e-mail y el password y el **burron** de Ingresar:
+
+```JSX
+function Login() {
+  return (
+    <form>
+      <input 
+        type="email" 
+        name="email"
+      />
+      <input
+        type="password"
+        name="password" 
+      />
+      <button
+        type="submit"
+      >
+        Ingresar
+      </button>
+    </form>  
+  )
+}
+
+export default Login;
+```
+
+- Ahora tengo que hacer que este Login se vea en el App, para lo cual debo importarlo e invocarlo:
+
+```JSX
+import "./styles.css";
+import Login from "./components/Login.js";
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Hello world!</h1>
+      <Login />
+    </div>
+  );
+}
+```
+
+- Ahora vuelvo a mi Login y voy a agregarle un header, al tener en el return al header y al form en el mismo nivel debo encerrarlos en un **fragment** ya que JSX solo retorna uno. Y voy a agregar **labels**:
+
+```JSX
+ return (
+    <>
+      <h1>Formulario de Login</h1>
+      <form>
+        <label>
+          <span>Correo electrónico:</span>
+          <input 
+            type="email" 
+            name="email"
+          />
+        </label>  
+        <br />
+        <label>
+          <span>Contraseña:</span>
+          <input
+            type="password"
+            name="password" 
+          />
+        </label>
+        <br />
+        <button
+          type="submit"
+        >
+          Ingresar
+        </button>
+      </form> 
+    </> 
+  )
+}
+
+export default Login;
+```
+
+-> Lo importante es tener los dos **input** que tengan sus respectivos **name** para poder luego capturar la información que llevan ingresada por el usuario.
+
+- ¿ Qué es un **componente funcional** ? Es una función.
+
 
 #### ¿Qué es el componente "Login"?
 
-Este componente es el que va a permitir que las personas que usan la aplicación se logueen en la misma. El mismo estará compuesto por un breve formulario con dos campos: correo electrónico y contraseña, los cuales funcionarán como un mecanismo de entrada de información para el proceso de autenticación de usuarios.
+Este componente es el que va a permitir que las personas que usan la aplicación se logueen en la misma.
+
+El mismo estará compuesto por un breve formulario con dos campos: **correo electrónico** y **contraseña**, los cuales funcionarán como un mecanismo de entrada de información para el proceso de autenticación de usuarios.
+
 
 #### ¿Para qué sirve el componente "Login"?
 
-Este componente tiene como objetivo principal servir como un filtro de usuarios, para que, solamente aquellas personas que se loguean con las credenciales válidas puedan usar el completo de la aplicación.
+Este componente tiene como objetivo principal servir como un **filtro de usuarios**, para que, **solamente aquellas personas que se loguean con las credenciales válidas puedan usar el completo de la aplicación**.
+
 
 #### ¿Cómo se implementa el proceso de Login en un proyecto real?
 
-Esto es algo bastante habitual, pues muchas aplicaciones para que puedan ser usadas, necesitan autenticar al usuario para así proveer de toda su funcionalidad. Por ello es importante conocer cuáles son los pasos a dar para poder llevar adelante esta implementación, la cual, posteriormente seguramente usaremos en muchas ocasiones en nuestra vida diaria.
+Esto es algo bastante habitual, pues muchas aplicaciones para que puedan ser usadas, necesitan autenticar al usuario para así proveer de toda su funcionalidad. 
+
+Por ello es importante conocer cuáles son los pasos a dar para poder llevar adelante esta implementación, la cual, posteriormente seguramente usaremos en muchas ocasiones en nuestra vida diaria.
 
 ---
 
 ### 2.2 VALIDACION DE FORMULARIO 
 
+
 #### ¿Qué es la validación de formularios?
 
-La validación es el proceso que nos permite corroborar (como developers) que la información suministrada de parte del usuario y que requiere nuestro sistema para funcionar, sea la correcta.
+La validación es el proceso que **nos permite corroborar** (como developers) **que la información suministrada de parte del usuario y que requiere nuestro sistema para funcionar, sea la correcta**.
+
 
 #### ¿Para qué sirve la validación de formularios?
 
