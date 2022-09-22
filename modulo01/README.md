@@ -277,3 +277,9 @@ README.md -> es aaconsejable mantenerlo actualizado.
 
 ---
 ---
+
+## :star2: Clase 22 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Armando de componente, validación y envío de formulario
+
+---
+---
+
