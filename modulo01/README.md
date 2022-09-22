@@ -449,14 +449,15 @@ USUARIO ---->   URL    -----> NAVEGADOR -----> PETICION HTTP  -----> SERVIDOR
 
 **GET**
 
-**POST**
+**POST** -> para crear el usuario, se recibe la informacion con el body.
 
-**PUT**
+**PUT** -> para actualizar, actualiza más cosas que patch, sobreescribe.
 
-**PATCH**
+**PATCH** -> para actualizar, modifica.
 
 **DELETE**
 
+-> **soft delete** en realidad no eliminas de la base de datos, sino haces un borrado logico, por ejemplo le guardas la fecha de eliminacion para no mostrarlo, pero sigue estando en la base de datos.
 
 ---
 ---
