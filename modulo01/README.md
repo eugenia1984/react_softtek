@@ -217,6 +217,7 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 - [Acá se puede ver un ejemplo de componente creado con JavaScript vanilla, sin JSX](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/opcion_con_plain_js.pdf)
 
+![componente creado con JavaScript vanilla, sin JSX](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/opcion_con_plain_js.pdf)
 
 ---
 
