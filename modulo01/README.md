@@ -352,7 +352,7 @@ A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión
 
 ### Implementación del componente <Login />
 
-- El formulario tiene un evento **onSubmit** que se invoca la hacer click en el button de type="submit". Ese **nSubmit** va a invocar a la función **handleSubmit** que va a usar el **preventDefault** para evitar que se envie de una los datos, para tner tiempo de capturarlos.
+- El formulario tiene un evento **onSubmit** que se invoca la hacer click en el button de type="submit". Ese **nSubmit** va a invocar a la función **handleSubmit** que va a usar el **preventDefault** para evitar que se envie de una los datos, para tener tiempo de capturarlos.
 
 ```JSX
 impor "../../components/App/App.css";
