@@ -173,7 +173,7 @@ Para utilizar esta librería hay que tener en cuenta:
 
 - prácticas en el uso de ECMAScript 6 (ES6) como : arrow functions, templates, métodos, desestructuración, spread operator, etc.
 
-- manipulación del HTMl, sus etiquetas y el DOM. BYTES -> CHARACTERS -> TOKENS -> NODES
+- manipulación del HTML, sus etiquetas y el DOM. BYTES -> CHARACTERS -> TOKENS -> NODES
 
 
 
@@ -367,6 +367,16 @@ function Login () {
     
     console.log(email);
     console.log(password);
+    
+    const emailRegex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    
+    if(email === "" && password === "") {
+      alert("Email y password no pueden ser vacíos");
+    }
+    
+    if(email !== "" && !emailRegex.test(email))
+      alert("No e sun email valido")
+    
     alert(`Email y contraseña: ${email} , ${contraseña}`);
   }
   
