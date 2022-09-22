@@ -197,14 +197,14 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 ```
 1. Nombre de mi proyecto
-2. node_modules -> con todas las depndencias y librerias. Tengo todos 
-mis paquetes.
-3. src -> aca ven todos mis componentes, tambien puedo agrupar en *pages* 
-y en *components* y dentro de components puedo agrupar en carpetas 
-los componentes.
+2. node_modules -> con todas las depndencias y librerias. 
+Tengo todos mis paquetes.
+3. src -> aca ven todos mis componentes, tambien puedo agrupar
+en *pages* y en *components* y dentro de components puedo agrupar 
+en carpetas los componentes.
 4. App.css
-5. App.js -> El primer componente, el componente macro, de el salen los 
-hijos y nietos.
+5. App.js -> El primer componente, el componente macro, de el 
+salen los hijos y nietos.
 6. favicon.svg
 7. index.css -> el main(core) de los estilos, pero tambien se pueden 
 poner otros más dentro de las carpetas de los componentes o armarlos 
