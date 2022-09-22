@@ -337,7 +337,7 @@ A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión
 
 ---
 
-### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> Armado del componente <Login />
+### Armado del componente <Login />
 
 - Se compone de dos campos:
 ```
@@ -351,6 +351,46 @@ A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión
 ---
 
 ### Implementación del componente <Login />
+
+- El formulario tiene un evento **onSubmit** que se invoca la hacer click en el button de type="submit". Ese **nSubmit** va a invocar a la función **handleSubmit** que va a usar el **preventDefault** para evitar que se envie de una los datos, para tner tiempo de capturarlos.
+
+```JSX
+impor "../../components/App/App.css";
+
+function Login () {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    const email = event.target.email.value;
+    const password = event.target.name.value;
+    
+    console.log(email);
+    console.log(password);
+    alert(`Email y contraseña: ${email} , ${contraseña}`);
+  }
+  
+  return (
+    <div className="login">
+      <h3>Formulario>
+      <form onSubmit={handleSubmit} classNAme="formulario">
+        <div>
+          <label htmlFor="email">Correo electrónico:</label>
+          <input type="email" name="email" placeholder="E-mail..."/>
+        </div>
+        <div>
+          <label htmlFor="password">Password</label>
+          <input type="password" name="password" placeholder="Passowrd..." />
+        </div>
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
+  )
+}
+
+export default Login;
+```
+
 
 ---
 
