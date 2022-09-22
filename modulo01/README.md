@@ -455,7 +455,7 @@ USUARIO ---->   URL    -----> NAVEGADOR -----> PETICION HTTP  -----> SERVIDOR
 Este protocolo posee un conjunto de métodos para indicar la acción que se desea realizar al momento de realizar una petición al servidor web. Los más usados son:
 
 
-- **GET** solicita una informacion específica. Las peticiones que usan el método GET sólo deben recuperar datos. -> Es como un READ.
+- **GET** -> solicita una informacion específica. Las peticiones que usan el método GET sólo deben recuperar datos. -> Es como un READ.
 
 - **POST** -> se utiliza para enviar una información que genera cambios en el estado o efectos secundarios en el servidor (para crear el usuario, se recibe la informacion con el body).
 
@@ -463,7 +463,7 @@ Este protocolo posee un conjunto de métodos para indicar la acción que se dese
 
 - **PATCH** -> es utilizado para aplicar moficicaciones o actualizaciones parciales a un recurso o información (para actualizar, modifica).
 
-- **DELETE** borra un recurso o información en específico.
+- **DELETE** -> borra un recurso o información en específico.
 
 -> **soft delete** en realidad no eliminas de la base de datos, sino haces un borrado logico, por ejemplo le guardas la fecha de eliminacion para no mostrarlo, pero sigue estando en la base de datos.
 
