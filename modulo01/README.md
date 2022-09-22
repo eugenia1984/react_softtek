@@ -418,10 +418,26 @@ Se verifica que la información coincida con un formato habitual o tipo de no co
 
 Es decir tener una validación personalizada por cada input.
 
+-> En realidad se utiliza el **useState** y el **useEffect**, pero... todavia no vimos los estados.
+
+->  Son muy importants en el front, como experincia de usuario. Pero es super importante hacerlas en el Back por seguridad.
+
+
 
 ---
 
 ### Envío de formularios
+
+### ¿ A dónde van los datos ?
+
+Cuando se validan los datos de un formulario, la acción siguiente es enviarlos. Tradicionalmente se envían usando un protocolo de comunicación llamado **HTTP**
+
+#### ¿ Que es HTTP (Hypertext Transfer Protocol)?
+
+Es la base de cualquier intercambio de datos en la web. Nos permite enviar y recibir datos y recursos, como pueden ser documentos HTML. Es un protocolo de estructura cliente-servidor.
+
+El cliente (normalmente un navegador Web) inicia una **petición** de datos a un servidor Web. El servidor Web la recibe y este le envía una **respuesta** (favorable o no) al cliente.
+
 
 ---
 ---
