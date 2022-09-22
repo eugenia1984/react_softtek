@@ -40,7 +40,7 @@ Temas:
 ```
 - Bienvenida e Introducción al Programa
 - Presentacion del Modulo 1
--  Configuración de Herramientas
+- Configuración de Herramientas
 - Introducción a React.
 - Estructura básica de un proyecto en React
 ```
@@ -109,7 +109,7 @@ Nació como respuesta al trabajo generalmente repetitivo al que se enfrentaban l
 
 ---
 
-### ¿ Cómo arrancar ?
+### <img src="https://img.icons8.com/plasticine/40/000000/question-mark.png"/> ¿ Cómo arrancar ?
 
 
 **npx** es un ejecutador, viene desde npm versión 5 en adelante, te permite utilizar un paquete y probarlo en un entorno de ejecución.
@@ -159,7 +159,7 @@ Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, dato
 
 ... son reusables, se puede crear una sola vez y reusarlo en varias vistas.
 
-... permiten tneer un código más organizado y mantenible (hay carpetas, archivos, hya compoenntes padres, componentes hijos, componentes nietos)
+... permiten tener un código más organizado y mantenible (hay carpetas, archivos, hya compoenntes padres, componentes hijos, componentes nietos)
 
 ... facilidad a la hora de comprobar su funcionamiento, al integrar test tendremos buen codigo y buen funcionamiento.
 
@@ -355,7 +355,7 @@ A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión
 - El formulario tiene un evento **onSubmit** que se invoca la hacer click en el button de type="submit". Ese **nSubmit** va a invocar a la función **handleSubmit** que va a usar el **preventDefault** para evitar que se envie de una los datos, para tener tiempo de capturarlos.
 
 ```JSX
-impor "../../components/App/App.css";
+import "../../components/App/App.css";
 
 function Login () {
 
@@ -383,7 +383,7 @@ function Login () {
   return (
     <div className="login">
       <h3>Formulario>
-      <form onSubmit={handleSubmit} classNAme="formulario">
+      <form onSubmit={handleSubmit} className="formulario">
         <div>
           <label htmlFor="email">Correo electrónico:</label>
           <input type="email" name="email" placeholder="E-mail..."/>
@@ -406,11 +406,11 @@ export default Login;
 
 ### Validación de formularios
 
-#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/>  ¿A qué nos referimos cuando hablamos de validación?
+#### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  ¿A qué nos referimos cuando hablamos de validación?
 
 Es el proceso que nos permite corroborar (como desarrolladores) que la información suministrada 
 
-#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/>  Ejemplo de validación de Formulario
+#### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  Ejemplo de validación de Formulario
 
 El más común lo encontramos en los formularios de registro. 
 
@@ -428,11 +428,11 @@ Es decir tener una validación personalizada por cada input.
 
 ### :star:  Envío de formularios
 
-### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿ A dónde van los datos ?
+###  <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/40/000000/external-https-internet-security-vitaliy-gorbachev-blue-vitaly-gorbachev.png"/> ¿ A dónde van los datos ?
 
 Cuando se validan los datos de un formulario, la acción siguiente es enviarlos. Tradicionalmente se envían usando un protocolo de comunicación llamado **HTTP**
 
-####  <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿ Que es HTTP (Hypertext Transfer Protocol)?
+####  <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/40/000000/external-https-internet-security-vitaliy-gorbachev-blue-vitaly-gorbachev.png"/> ¿ Que es HTTP (Hypertext Transfer Protocol)?
 
 Es la base de cualquier intercambio de datos en la web. Nos permite enviar y recibir datos y recursos, como pueden ser documentos HTML. Es un protocolo de estructura cliente-servidor.
 
@@ -463,11 +463,11 @@ USUARIO ---->   URL    -----> NAVEGADOR -----> PETICION HTTP  -----> SERVIDOR
 ### :star:  JSON JavaScript Object Notation
 
 
-#### ¿Qué es un objeto ?
+#### <img src="https://img.icons8.com/external-soft-fill-juicy-fish/40/000000/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"/> ¿Qué es un objeto ?
 
-#### La estructura de un objeto 
+####  <img src="https://img.icons8.com/external-soft-fill-juicy-fish/40/000000/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"/> La estructura de un objeto 
 
-#### ¿ Qué es un formulario ?
+####  <img src="https://img.icons8.com/external-soft-fill-juicy-fish/40/000000/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"/> ¿ Qué es un formulario ?
 
 -> es la forma de comunicación predilecta en JavaScript
 
