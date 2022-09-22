@@ -292,7 +292,7 @@ README.md -> es aaconsejable mantenerlo actualizado.
 
 ---
 
-### Ejercicio de repaso
+### :star: Ejercicio de repaso
 
 1. Partimos de un App.js con muchas etiquetas y las separamos en componentes.
 
@@ -302,10 +302,10 @@ README.md -> es aaconsejable mantenerlo actualizado.
 
 ---
 
-###  Inicio de sesion
+### :star: Inicio de sesion
 
 
-#### ¿Qué es ?
+#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿Qué es ?
 
 Hoy en día se pueden encontrar varios tipos de autenticación y uno de los más comunes son:
 
@@ -315,7 +315,7 @@ Hoy en día se pueden encontrar varios tipos de autenticación y uno de los más
 
 - **autentificación basada en Token**: permiten a los usuarios ingresar sus credenciales una vez y recibir a cambio una cadena cifrada única de caracteres aleatorios. Luego puede usar el token para acceder.
 
-#### Tipos de Inicio de Sesión
+####  <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> Tipos de Inicio de Sesión
 
 A partir de diferentes tipos de autenticación, existen diferentes formas de realizar un inicio de sesión.
 
@@ -337,7 +337,16 @@ A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión
 
 ---
 
-### Armado del componente <Login />
+### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> Armado del componente <Login />
+
+- Se compone de dos campos:
+```
+-Usuario
+-Contraseña
+```
+
+- Es un formulario con dos campos: correo electrónico y contraseña.
+
 
 ---
 
