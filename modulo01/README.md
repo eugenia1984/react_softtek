@@ -553,8 +553,7 @@ credenciales erradas pueda hacer uso de la aplicación.
 -Poder enviar los datos suministrados por la persona a una API para que de 
 esta última puedas obtener el token de autenticación.
 -Implementar el manejo de mensajes de error con la librería Sweet Alert.
--Persistir el token obtenido de la API, en el almacenamiento local del 
-navegador.
+-Persistir el token obtenido de la API, en el almacenamiento local del navegador.
 -Generar un redireccionamiento al componente "Listado" una vez las credenciales 
 de usuario estén validadas y la API haya entregado el respectivo 
 token de autenticación.
@@ -735,7 +734,7 @@ ReactDOM.render(
 );
 ```
 
--App.js (donde vamosa  venir a codear todo y es el que se va a montar dentro del compoennte index)
+-App.js (donde vamos a  venir a codear todo y es el que se va a montar dentro del compoennte index)
 ```JSX
 function App() {
   return (
@@ -960,6 +959,36 @@ if(email !== "challenge@alkemy.org" || password !== "react")  {
       return;
 }
 ```
+-> Me queda:
+
+```JSX
+const submitHandler = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const regExEmail =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if(email === "" || password === "") {
+      console.warn("Los campos no pueden estar vacíos");
+      return;
+    }
+
+    if(email !== "" && !regExEmail.test(email)) {
+      console.warn("Debes escribir una dirección de correo electrónico válida");
+      return;
+    }
+
+    if(email !== "challenge@alkemy.org" ||
+      password !== "react")  {
+        console.warn("Credenciales inválidas");
+        return;
+    }
+
+    console.log("Ok estamos listos para enviar la información");
+}
+```
+ 
+-> Cuando tanto el email como el password estén bien voy a ver: **console.log("Ok estamos listos para enviar la información");**
 
 ---
 
