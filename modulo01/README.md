@@ -459,6 +459,18 @@ USUARIO ---->   URL    -----> NAVEGADOR -----> PETICION HTTP  -----> SERVIDOR
 
 -> **soft delete** en realidad no eliminas de la base de datos, sino haces un borrado logico, por ejemplo le guardas la fecha de eliminacion para no mostrarlo, pero sigue estando en la base de datos.
 
+
+### :star:  JSON JavaScript Object Notation
+
+
+#### ¿Qué es un objeto ?
+
+#### La estructura de un objeto 
+
+#### ¿ Qué es un formulario ?
+
+-> es la forma de comunicación predilecta en JavaScript
+
 ---
 ---
 
