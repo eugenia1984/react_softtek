@@ -13,7 +13,7 @@
 
 ---
 
-##· Unidad 2. Creando nuestro primer componente
+## Unidad 2. Creando nuestro primer componente
 ```
 - 2.1. Armado componente
 - 2.2. Validación de formulario
@@ -31,7 +31,7 @@
 
 ---
 
-## :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Introducción a React: Configuración de Herramients y Estructura Básica
+## :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 1: Introducción a React: Configuración de Herramients y Estructura Básica
 
 
 - Mentores: Andreína Marcano y Rodrigo Tonso ( tiene 5 años de experiencia en React y TS, e inclina más por las start-ups).
@@ -278,7 +278,59 @@ README.md -> es aaconsejable mantenerlo actualizado.
 ---
 ---
 
-## :star2: Clase 22 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Armando de componente, validación y envío de formulario
+## :star2: Clase 22 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 2: Armando de componente, validación y envío de formulario
+
+## Agenda del dia
+```
+- Ejercicio de repaso
+- Inicio de sesion
+- Armado del componente <Login />
+- Implementación del componente <Login />
+- Validación de formularios
+- Envío de formularios
+```
+
+---
+
+### Ejercicio de repaso
+
+1. Partimos de un App.js con muchas etiquetas y las separamos en componentes.
+
+2. Tener un ```<Header />``` con sus componentes hijos:  ```<Logo />```, ```<Menu />```, ```<Search />```.
+
+3. Armamos el CSS
+
+---
+
+###  Inicio de sesion
+
+
+#### ¿Qué es ?
+
+Hoy en día se pueden encontrar varios tipos de autenticación y uno de los más comunes son:
+
+- **autenticación basada en contraseña**: es el método más común de autenticación. Las contraseñas pueden tener la forma de una cadena de letras, números o caracteres especiales. Una opción bastante usada actualmente son las contraseñas de un solo basadas en el tiempo (time-based one-time password, a.k.a. TOTP) -este ejemplo seria cuando te pasan una clave que expira-
+
+- **autenticación mutifactor(MFA)**: requiere 2 o más independientes para identificar a un usuario (códigos generados desde el teléfono inteligente del usuario, pruebas de Captcha, huellas dactilares, etc).
+
+- **autentificación basada en Token**: permiten a los usuarios ingresar sus credenciales una vez y recibir a cambio una cadena cifrada única de caracteres aleatorios. Luego puede usar el token para acceder.
+- 
+
+---
+
+### Armado del componente <Login />
+
+---
+
+### Implementación del componente <Login />
+
+---
+
+### Validación de formularios
+
+---
+
+### Envío de formularios
 
 ---
 ---
