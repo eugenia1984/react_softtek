@@ -406,9 +406,11 @@ export default Login;
 
 ### Validación de formularios
 
+
 #### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  ¿A qué nos referimos cuando hablamos de validación?
 
 Es el proceso que nos permite corroborar (como desarrolladores) que la información suministrada 
+
 
 #### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  Ejemplo de validación de Formulario
 
@@ -428,9 +430,11 @@ Es decir tener una validación personalizada por cada input.
 
 ### :star:  Envío de formularios
 
+
 ###  <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/40/000000/external-https-internet-security-vitaliy-gorbachev-blue-vitaly-gorbachev.png"/> ¿ A dónde van los datos ?
 
 Cuando se validan los datos de un formulario, la acción siguiente es enviarlos. Tradicionalmente se envían usando un protocolo de comunicación llamado **HTTP**
+
 
 ####  <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/40/000000/external-https-internet-security-vitaliy-gorbachev-blue-vitaly-gorbachev.png"/> ¿ Que es HTTP (Hypertext Transfer Protocol)?
 
@@ -447,42 +451,85 @@ USUARIO ---->   URL    -----> NAVEGADOR -----> PETICION HTTP  -----> SERVIDOR
 
 #### :star: Métodos de Petición HTTP
 
-**GET**
 
-**POST** -> para crear el usuario, se recibe la informacion con el body.
+Este protocolo posee un conjunto de métodos para indicar la acción que se desea realizar al momento de realizar una petición al servidor web. Los más usados son:
 
-**PUT** -> para actualizar, actualiza más cosas que patch, sobreescribe.
 
-**PATCH** -> para actualizar, modifica.
+- **GET** solicita una informacion específica. Las peticiones que usan el método GET sólo deben recuperar datos. -> Es como un READ.
 
-**DELETE**
+- **POST** -> se utiliza para enviar una información que genera cambios en el estado o efectos secundarios en el servidor (para crear el usuario, se recibe la informacion con el body).
+
+- **PUT** -> sirve para actualizar o modificar un recurso o información alojada en el servidor con datos nuevos que se encuentran en la petición (para actualizar, actualiza más cosas que patch, sobreescribe).
+
+- **PATCH** -> es utilizado para aplicar moficicaciones o actualizaciones parciales a un recurso o información (para actualizar, modifica).
+
+- **DELETE** borra un recurso o información en específico.
 
 -> **soft delete** en realidad no eliminas de la base de datos, sino haces un borrado logico, por ejemplo le guardas la fecha de eliminacion para no mostrarlo, pero sigue estando en la base de datos.
 
 
 ### :star:  JSON JavaScript Object Notation
 
+La notación por excelencia para la comunicación en JavaScript es JSON, no es más que enviar la información como objetos literales.
+
 
 #### <img src="https://img.icons8.com/external-soft-fill-juicy-fish/40/000000/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"/> ¿Qué es un objeto ?
 
+La definición y concepto de objeto puede ser muy amplio dependiendo el enfoque al que querramos hacer referencia, pero en nuestro caso lo vamos a considerar una estructura de datos.
+
+(Por le momento lo podemos pensar como un tipo de dato más auqnue esto es incorrecto).
+
+
 ####  <img src="https://img.icons8.com/external-soft-fill-juicy-fish/40/000000/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"/> La estructura de un objeto 
+
+
+```JavaScript
+{
+  user: "Jhon",
+  lastName: "Doe"
+}
+```
 
 ####  <img src="https://img.icons8.com/external-soft-fill-juicy-fish/40/000000/external-json-microservices-soft-fill-soft-fill-juicy-fish.png"/> ¿ Qué es un formulario ?
 
--> es la forma de comunicación predilecta en JavaScript
+Un formulario es un elemento gráfico para que un usuario introduzca **datos estructurados**.
+
 
 
 ### :star: Network en el navegador
 
+El dominar las herramientas que nos dan los navegadores para desarrollar puede facilitar demasiado el trabajo.
+
+Algo de lo que disponemos es de la sección **network** que nos permite ver la comunicación de nuestra web.
+
 
 #### ¿Donde encontrarlo ?
 
--> [Estados](https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP)
+
+1. Abrir el navegador en la página que se desea y apretar F12 o click derecho y luego inspeccionar.
+
+2. Se abrirá un menú con diferentes opciones, seleccionar en la parte superior la tab network.
+
+3. Se podrá ver mucha información y opciones entre las que se destaca un listado de todas las peticiones realizadas.
+
+-> [Listado de los estados](https://es.wikipedia.org/wiki/Anexo:C%C3%B3digos_de_estado_HTTP)
+
+4. Al clickear en una de las peticiones se puede ver su detalle.
+
+
 
 ### Consideración de seguridad
 
+El protocolo de comunicaicón HTTP es conssiderado inseguro, hoy se utiliza el protocolo **HTTPS** que es prácticamente igual pero la información viaja cifrada, autenticada e integra. Hoy en día es prácticamente obligatorio su uso en proyectos que ya estén publicados.
+
+
 #### ¿ Cómo utilizar un protocolo HTTP ?
 
+Para utilizar un protocolo HTTPS se necesita obtener un **certificado SSL** de una certificadora reconocida.Hoy en día es muy fácil obtener el certificado de cualquier proveedor de hosting o cloud.
+
+También existe la opción de obtenerlo de proveedores gratuitos donde destaca https://letsencrypt.org.
+
+Comunmente la implementación de estos certificados no es llevada por los desarrolladores Front-End pero es importante que conozcan su importancia.
 
 ---
 ---
