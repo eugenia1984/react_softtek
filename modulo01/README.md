@@ -581,7 +581,7 @@ nmp start
 
 ---
 
-## 1.2 Introduccion a React (parte 2)
+## 1.2 INTRODUCCION A REACT (parte 2)
 
 ### ¿Qué es React? 
 
@@ -655,6 +655,39 @@ Luego de finalizar la instalación de React, nuestro sistema de archivos se pare
 13. package-lock.json: se genera automáticamente para cualquier operación en la que npm modifique el árbol 1 node_modules o package.json. Describe una representación única de un árbol de dependencias de modo que se garantice que los compañeros de equipo, las implementaciones y la integración continua instalen exactamente las mismas dependencias.
 14. package.json: contiene todos los metadatos acerca del proyecto, tal como descripción, licencia, dependencias y scripts.
 ```
+
+
+Y me queda:
+```
+myfirstreactapp
+├── node_modules
+├── public
+│ ├── favicon.ico
+│ ├── index.html
+│ └── robots.txt
+├── src
+│ ├── App.css
+│ ├── App.js
+│ ├── App.test.js
+│ ├── index.css
+│ ├── index.js
+│ ├── logo.svg
+│ ├── serviceWorker.js
+│ └── setupTests.js
+├── .gititgnore
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+#### Iniciar el servidor de desarrollo de aplicaciones React
+
+¡Comencemos juntos con nuestro primer código usando React!
+
+A continuación, simplemente estaremos modificando "App.js". Quizás notaste que está en mayúsculas, pero eso lo veremos más adelante. 
+
+Actualmente, el código de la imagen anterior es el que aparece cuando lo abrimos, sin embargo, debe quedar como el de la figura a continuación. Te habrás dado cuenta de que hay archivos que deberemos eliminar porque no los usaremos.
+
 
 ---
 ---
