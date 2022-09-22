@@ -445,6 +445,19 @@ USUARIO ---->   URL    -----> NAVEGADOR -----> PETICION HTTP  -----> SERVIDOR
        <----PAGINA WEB <-----           <----- RESPUESTA HTTP <----    WEB
 ```
 
+#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> Métodos de Petición HTTP
+
+**GET**
+
+**POST**
+
+**PUT**
+
+**PATCH**
+
+**DELETE**
+
+
 ---
 ---
 
