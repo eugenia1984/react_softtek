@@ -197,20 +197,31 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 ```
 1. Nombre de mi proyecto
-2. node_modules -> con todas las depndencias y librerias. Tengo todos mis paquetes.
-3. src -> aca ven todos mis componentes, tambien puedo agrupar en **pages** y en **components** y dentro de components puedo agrupar en carpetas los componentes.
+2. node_modules -> con todas las depndencias y librerias. Tengo todos 
+mis paquetes.
+3. src -> aca ven todos mis componentes, tambien puedo agrupar en *pages* 
+y en *components* y dentro de components puedo agrupar en carpetas 
+los componentes.
 4. App.css
-5. App.js -> El primer componente, el componente macro, de el salen los hijos y nietos.
+5. App.js -> El primer componente, el componente macro, de el salen los 
+hijos y nietos.
 6. favicon.svg
-7. index.css -> el main(core) de los estilos, pero tambien se pueden poner otros más dentro de las carpetas de los componentes o armarlos en archivos css, pueden ser acorde a los componentes.
+7. index.css -> el main(core) de los estilos, pero tambien se pueden 
+poner otros más dentro de las carpetas de los componentes o armarlos 
+en archivos css, pueden ser acorde a los componentes.
 8. logo.svg
 9. index.js -> no lo vamos a modificar mucho
-10. .gitignore -> para que no se suban los node_modules, variables de entorno (utilizarlas en un .env para agregar este archivo en la lista de lo ignorado), etc.
+10. .gitignore -> para que no se suban los node_modules, variables 
+de entorno (utilizarlas en un .env para agregar este archivo en la 
+lista de lo ignorado), etc.
 11. public -> los archivos estáticos, puro HTML5, CSS3, JavaScript.
 12. index.html
-13. package-lock.json -> es la configuración para el desarrollo (no se suele modificar)
-14. package.json -> esta la configuración, con los scripts y las dependencias
-15. App.test.js -> donde vamos a hacer los test por componentes, con unitesting y de integración.
+13. package-lock.json -> es la configuración para el desarrollo 
+(no se suele modificar)
+14. package.json -> esta la configuración, con los scripts y 
+las dependencias
+15. App.test.js -> donde vamos a hacer los test por componentes, 
+con unitesting y de integración.
 ```
 
 ---
