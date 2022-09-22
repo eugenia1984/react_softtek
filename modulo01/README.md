@@ -426,13 +426,13 @@ Es decir tener una validación personalizada por cada input.
 
 ---
 
-### Envío de formularios
+### :star:  Envío de formularios
 
-### ¿ A dónde van los datos ?
+### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿ A dónde van los datos ?
 
 Cuando se validan los datos de un formulario, la acción siguiente es enviarlos. Tradicionalmente se envían usando un protocolo de comunicación llamado **HTTP**
 
-#### ¿ Que es HTTP (Hypertext Transfer Protocol)?
+####  <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿ Que es HTTP (Hypertext Transfer Protocol)?
 
 Es la base de cualquier intercambio de datos en la web. Nos permite enviar y recibir datos y recursos, como pueden ser documentos HTML. Es un protocolo de estructura cliente-servidor.
 
