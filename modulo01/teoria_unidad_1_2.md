@@ -641,6 +641,77 @@ Y que lo que sucedió fue que el sistema te redireccionó a la sección en donde
 
 ---
 
+-> **React-Router-Dom** vamos a instalar la versión 6, en el video trabajan con la versión 5.
+
+-> Lo instalamos con ```npm install react-ruter-dom```` ó ```npm i react-ruter-dom````
+
+-> En el **index.js** voy a importar **BrowserRouter**:
+```JSX
+import { BrowserRouter } from "react-router-dom";
+```
+
+-> Voy a generar un envoltorio para todo mi componente App.
+
+```JSX
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { BrowserRouter } from "react-router-dom";
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter >
+      <App/> 
+    </BrowserRouter>
+  </React.StrictMode>
+);
+```
+
+-> Me va a permitir gestionar una SPA.
+
+-> Vuelvo a mi componente **App.js**, donde vamos a definir que compoennte se va a cargar dependneidno de la ruta.
+
+Importamos dos componentes: **Route** y **Routes**:
+
+```JSX
+import { Routes, Route } from "react-router-dom";
+```
+
+Van a ser como un switcher que dependiendo la URL muestro cierto componente.
+
+Para ello vamos a crear un nuevo componente llamado **Listado** y lo vamos a lalmar en App.js:
+
+```JSX
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./components/login/Login";
+import Listado from "./components/listado/Listado";
+```
+
+-> Voy a tener a **Route** (ex Switch en version 5) con las rutas dentro con **Route** y cada una tendrá el **path** (la direccion de URL) y el **element**(ex component en version 5) que va a decir que componente renderizar
+
+```JSX
+import { Routes, Route } from "react-router-dom";
+
+import Login from "./components/login/Login.js";
+import Listado from "./components/listado/Listado.js";
+
+function App() {
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={Login}/>
+        <Route path="/listado" element={Listado}/>
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
+```
+---
+
 ### Enlaces y documentación
 
 - [**Visual Studio Code**](https://code.visualstudio.com/): Desde este enlace podrás descargar el editor de texto más utilizado por todo el mundo desde hace ya un par de años. Excelente para escribir código en cualquier lenguaje de programación.
