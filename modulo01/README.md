@@ -554,6 +554,8 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 
 ## 1 - Ejercicio de reapso
 
+Coo poner el en index.js los componentes para importarlos y no tener que poner todo el path.
+
 index.js:
 ```JSX
 export { default as Logo} from "./Logo";
@@ -568,9 +570,76 @@ import {Header} from "/components/Header";
 
 ## 2 - Manejo de errores
 
+### ¿ Qué es ?
+
+Es la técnica que usamos como desarrolladores para controlar los errores durante la ejecución de un programa.
+
+Cuando ocurre cierto timepo de error, nosotros podemos programar en el sistema un fragmento de código que resuelve la situación.
+
+Ejemplos de estos pueden ser cuando retornamos un mensaje de error
+
+
+### Maneras de manejar errores en aplicaciones React
+
+Existen varias formas y vamos a explicar un poco algunas de ellas:
+
+- **Alertas visuales (páginas de error, notificaciones, etc)**: son aquellos elementos en la interfaz de usuario que 
+
+- **Método try-catch**: es una gran herramienta para detectar el código que se comporta mal y garantizar que nuestra aplicaicón no deje de funcionar inesperadamente. Señala un bloque de instrucciones a intentar (**try**) y especifica una respuesta si se produce una excepción (**Catch**).
+
+Veamos un ejemplo:
+
+```JavaScript
+try {
+  somethingBadMightHAppend();
+} catch(error) {
+  console.log("Something bad happend");
+  console.error(error);
+}
+```
+
+```JavaScript
+try {
+
+} catch(error){
+
+}
+```
+
+-> También podemos usarlo dentro de una función manejadora de eventos
+```JavaScript
+const handlerCLick = () => {
+  try {
+    throw Error("Oh, no");
+  }catch(error) {
+    setError(error);
+  }
+}
+```
+
+-> Y en las llamadas de setTimeOut:
+```JavaScript
+const handlerCLick = () => {
+  setTimeOut(() => {
+    try {
+      throw error("Oh, no, an error: (*));
+    } catch(error) {
+      setError(error);
+    }
+  }, 1880);
+}
+```
+
+
 ---
 
 ## 3 - Agregar manejo de errores al componente <Login />
+
+Con los if voy validando que no estén vacios,  o con RegEx que cumpla con el formato de un formulario, por ejemplo.
+
+Una vez que este ok el ingreso de los datos de los input dle login y los tengo en valores, me armo otra carpeta **Services** con el archivo **UserServices.js** donde voy a tener el **fetch** (con **async** - **await**) o uso **Axios** para hacer la llamada al servidor, lo encapsulo en una **promesa** y lo guardo.
+
+-> Tenemos la librería **Sweet Alert** para tener una ventanas lindas al avisar al usuario que es lo que tiene el error.
 
 ---
 
