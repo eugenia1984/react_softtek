@@ -493,7 +493,7 @@ Sirve para advertir a la persona que usa nuestra aplicación de los posibles err
 
 Existen diversas maneras de hacerlo, pero una muy común es hacerlo usando librerías que nos permitan disparar cajas modales que alerten e informen al usuario del error resultante de la operación. Puntualmente en esta clase implementaremos la librería [**Sweet alert**](https://sweetalert.js.org/guides/) para poder mostrar estos mensajes de una manera mucho más amigable para el usuario.
 
--> [Docmuentation https://sweetalert2.github.io/](https://sweetalert2.github.io/)
+-> [Docmuentacion: https://sweetalert2.github.io/](https://sweetalert2.github.io/)
 
 -> Intalacion: ```npm install sweetalert2``` o por CDN : ```<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>```
 
@@ -611,27 +611,49 @@ localStorage.clear()
 
 #### ¿Qué es un redireccionamiento?
 
-El redireccionamiento es un proceso mediante el cual, después de ejecutar una acción determinada, llevamos a la persona que usa nuestra aplicación a una ubicación específica. Es muy común de implementar en el proceso de logueo, en el cual después de validar las credenciales de una persona, le daremos acceso completo a la aplicación. Vale aclarar que una redirección también se puede generar cuando nos damos cuenta que sin tener los permisos correspondientes, una persona desea ingresar a una sección a la que no tiene permiso.
+El redireccionamiento **es un proceso mediante el cual, después de ejecutar una acción determinada, llevamos a la persona que usa nuestra aplicación a una ubicación específica**. Es muy común de implementar en el proceso de logueo, en el cual después de validar las credenciales de una persona, le daremos acceso completo a la aplicación.
+
+Vale aclarar que una redirección también se puede generar cuando nos damos cuenta que sin tener los permisos correspondientes, una persona desea ingresar a una sección a la que no tiene permiso.
+
 
 #### ¿Para qué sirve la redirección?
 
-Sirve para enviar a la persona que usa nuestro sistema a un determinado lugar después de ejecutar una acción. Sirve puntualmente para proteger secciones de la aplicación que requieren que la persona usuaria tenga permisos específicos.
+Sirve para enviar a la persona que usa nuestro sistema a un determinado lugar después de ejecutar una acción.
+
+**Sirve puntualmente para proteger secciones de la aplicación que requieren que la persona usuaria tenga permisos específicos**.
+
 
 #### ¿Qué ejemplos existen sobre el redireccionamiento?
 
-El más sencillo y el que puedes probar por tu cuenta es el siguiente: estando logueado en tu cuenta de correo, dirígete a la bandeja de entrada, allí copia la dirección presente en la barra de direcciones. Ahora, ve a una ventana de incógnito en tu navegador y pega la dirección que copiaste anteriormente. ¿Pudiste entrar a la bandeja de entrada de tu correo electrónico? Estamos seguros que no. Y que lo que sucedió fue que el sistema te redireccionó a la sección en donde debes loguearte en tu cuenta de correo. Si esto fue lo que sucedió, tienes un ejemplo claro de lo que es una redirección.
-Enlaces y documentación
-Visual Studio Code: Desde este enlace podrás descargar el editor de texto más utilizado por todo el mundo desde hace ya un par de años. Excelente para escribir código en cualquier lenguaje de programación.
+El más sencillo y el que puedes probar por tu cuenta es el siguiente: 
 
-- **NodeJS**: Descarga este entorno de ejecución para JavaScript, que te permitirá construir cualquier tipo de aplicación usando JS.
+-estando logueado en tu cuenta de correo
 
-- **ReactJS**: Documentación oficial de esta librería para el manejo de interfaces en el Frontend. Siempre que tengas una duda, seguramente vendrás a este enlace.
+-dirígete a la bandeja de entrada
 
--**Axios**: Descubre la documentación oficial de la librería más utilizada en el ambiente del desarrollo para hacer peticiones asíncronas y aprende un poco más sobre la misma.
+-allí copia la dirección presente en la barra de direcciones. 
 
--**Sweet Alert**: Descubre todo el poder de las cajas modales gracias a Sweet Alert.
+-Ahora, ve a una ventana de incógnito en tu navegador y pega la dirección que copiaste anteriormente. 
 
--**React router dom**: Si estás buscando construir una SPA (single page application) con React esta librería es infaltable. Ya que la misma te permite gestionar todo el sistema de ruteo de la misma. Con esta sencilla pero eficiente documentación, cualquier duda que tengas, será resuelta.
+¿Pudiste entrar a la bandeja de entrada de tu correo electrónico? Estamos seguros que no. 
+
+Y que lo que sucedió fue que el sistema te redireccionó a la sección en donde debes loguearte en tu cuenta de correo. Si esto fue lo que sucedió, tienes un ejemplo claro de lo que es una redirección.
+
+---
+
+### Enlaces y documentación
+
+- [**Visual Studio Code**](https://code.visualstudio.com/): Desde este enlace podrás descargar el editor de texto más utilizado por todo el mundo desde hace ya un par de años. Excelente para escribir código en cualquier lenguaje de programación.
+
+- [**NodeJS**](https://nodejs.org/en/): Descarga este entorno de ejecución para JavaScript, que te permitirá construir cualquier tipo de aplicación usando JS.
+
+- [**ReactJS**](https://reactjs.org/): Documentación oficial de esta librería para el manejo de interfaces en el Frontend. Siempre que tengas una duda, seguramente vendrás a este enlace.
+
+- [**Axios**](https://axios-http.com/): Descubre la documentación oficial de la librería más utilizada en el ambiente del desarrollo para hacer peticiones asíncronas y aprende un poco más sobre la misma.
+
+- [**Sweet Alert**](https://sweetalert.js.org/): Descubre todo el poder de las cajas modales gracias a Sweet Alert.
+
+- [**React router dom**](https://reactrouter.com/en/main): Si estás buscando construir una SPA (single page application) con React esta librería es infaltable. Ya que la misma te permite gestionar todo el sistema de ruteo de la misma. Con esta sencilla pero eficiente documentación, cualquier duda que tengas, será resuelta.
 
 ---
 ---
