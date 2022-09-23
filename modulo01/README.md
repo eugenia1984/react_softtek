@@ -599,11 +599,14 @@ try {
 ```
 
 ```JavaScript
-try {
-
-} catch(error){
-
+const fetchData = async () = {
+  try {
+    return await fetch("https://some-url-that-might-fail.com");
+  } catch(error){
+    console.log(error); // You might send an exception to your tracker like AssSignal
+  }
 }
+
 ```
 
 -> También podemos usarlo dentro de una función manejadora de eventos
