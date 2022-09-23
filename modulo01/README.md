@@ -557,7 +557,7 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 ## Temas a ver
 
 ```
-- Ejercicio de reapso
+- Ejercicio de repaso
 - Manejo de errores
 - Agregar manejo de errores al componente <Login />
 - Persistencia del Token de Autenticación
