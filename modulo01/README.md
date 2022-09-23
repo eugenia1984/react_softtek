@@ -550,7 +550,7 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 ---
 
 
-## :star2: Clase 23 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 1: Introducción a React :star2:
+## :star2: Clase 23 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 2: Armando de componente, validación y envío de formulario :star2:
 
 ---
 
@@ -707,13 +707,54 @@ Estos tokens tienene la particularidad de conservar la estructura definida y est
 2. **payload** : cadena de caracteres basada en Base24 generado a partir de un JSON.
 
 
-3. **signature**: se genera uniendo los anteriores dos campos (header, payload) en Base24 y una key secreta (que solo se sepa en los servidores que creen o usen en JWT ) para usar un algoritmo de encriptación.
+3. **signature**: se genera uniendo los anteriores dos campos (header, payload) en Base24 y una key secreta (que solo se sepa en los servidores que creen o usen en JWT ) para usar un algoritmo de encriptación. Valida que el header y el payload se manda del front.
+
+-> Esta en Base24, pero no está cifrado, es facil de cifrar, no es seguro.
 
 -> Link de interés [jwt.io](http://jwt.io)
+
+-> Hay buenas librerías para trabajar con JWT y ya tiene sus métodos que va a ir verificando la signature que es la suma de header y payload.
+
+
+#### <img src="https://img.icons8.com/ios/40/000000/token-card-code.png"/> ¿ Cómo persistir el token en el navegador?
+
+A cotinucación te presentaremos las opciones que posee un navegador web para almacenar un token o otra informaicón necesaria dependiendo del caso.
+
+##### LocalStorage
+
+Comunmente los JWT son almacenados en el local storage de los navegadores y esto funciona bien para la mayoria de los casos.
+
+##### Session Storage 
+
+Es similar al localStorage pero se borra en el instante en que el usuario cierra el navegador.
+
+##### Cookie
+
+Podemos almacenar un token en una cookie, pero el tamaño máximo de una cookie es de 4kb.
 
 ---
 
 ### :star:  5 - Redireccionamiento
+
+
+#### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-redirect-seo-flaticons-lineal-color-flat-icons.png"/> ¿Qué es el redireccionamiento?
+
+Es el proceso donde después de ejecutar una acción determinada, llevamos a la persona que usa nuestra aplicación a una ubicación específica. Uno de los casos más comunes de redireccionamiento se da cuando después de validar las credenciales de una persona, le damos acceso completo a la aplicación.
+
+
+-> React al redireccionar no carga de nuevo la pagina, cambia la url en el navegador y renderiza lo nuevo.
+
+##### ¿Para qué sirve la redirección?
+
+Sirve para enviar a la persona que usa nuestro sistem a un determinado lugar después de que ejecuta una acción. Sirve puntualmente para proteger secciones de la aplicación que requieren que la persona usuaria tenga permisos específicos.
+
+
+#### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-redirect-seo-flaticons-lineal-color-flat-icons.png"/> React-Router-Dom
+
+A partir del uso de redireccionamiento, vamos a estar trabajando con más de un componente en nuestra aplicación.
+
+Esta librería es muy útil y potente para realizar navegación entre componentes, enviando valores como parámetros o estados.
+
 
 ---
 
