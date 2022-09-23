@@ -567,9 +567,9 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 
 ---
 
-### 1 - Ejercicio de reapso
+### :star:  1 - Ejercicio de reapso
 
-Coo poner el en index.js los componentes para importarlos y no tener que poner todo el path.
+Como poner el en index.js los componentes para importarlos y no tener que poner todo el path.
 
 index.js:
 ```JSX
@@ -583,7 +583,7 @@ import {Header} from "/components/Header";
 
 ---
 
-### 2 - Manejo de errores
+### :star:  2 - Manejo de errores
 
 #### ¿ Qué es ?
 
@@ -655,7 +655,7 @@ const handlerCLick = () => {
 
 ---
 
-### 3 - Agregar manejo de errores al componente <Login />
+### :star: 3 - Agregar manejo de errores al componente <Login />
 
 Con los if voy validando que no estén vacios,  o con RegEx que cumpla con el formato de un formulario, por ejemplo.
 
@@ -665,7 +665,7 @@ Una vez que este ok el ingreso de los datos de los input dle login y los tengo e
 
 ---
 
-### 4 - Persistencia del Token de Autenticación
+### :star: 4 - Persistencia del Token de Autenticación
 
 
 #### <img src="https://img.icons8.com/ios/40/000000/token-card-code.png"/> ¿Qué es un token?
@@ -693,13 +693,31 @@ localStorage: Storage
     
 ```
 
+#### <img src="https://img.icons8.com/ios/40/000000/token-card-code.png"/>  ¿Qué es una autenticación basada en token?
+
+Cuando decimos uqe una autenticación está basada en token, generalmente nos estamos refiriendo al proceso de validación usando los  **JWT**(**JSON Web Token**).
+
+Estos tokens tienene la particularidad de conservar la estructura definida y estandar basada en 3 partes:
+
+**header.payload.signature**
+
+1. **header**: cadena de caracteres en Base24 generado a partir de un JSON. Contiene la información del tipo de token, tipo de contenido y el algoritmo usado para filmar token.
+
+
+2. **payload** : cadena de caracteres basada en Base24 generado a partir de un JSON.
+
+
+3. **signature**: se genera uniendo los anteriores dos campos (header, payload) en Base24 y una key secreta (que solo se sepa en los servidores que creen o usen en JWT ) para usar un algoritmo de encriptación.
+
+-> Link de interés [jwt.io](http://jwt.io)
+
 ---
 
-### 5 - Redireccionamiento
+### :star:  5 - Redireccionamiento
 
 ---
 
-### 6 - Redireccionamiento al componente <Listado />
+### :star:  6 - Redireccionamiento al componente <Listado />
 
 ---
 ---
