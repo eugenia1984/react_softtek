@@ -2,7 +2,7 @@
 
 ---
 
-## :star:  Temas:
+## :star:  Temas :star: 
 
 ### Unidad 1. Primeros pasos en React JS
 ```
@@ -26,24 +26,24 @@
 
 ---
 
-## :star: <img src="https://img.icons8.com/color/48/000000/video.png"/> Teroía del campus con los videos
+## :star:  Teoría del campus con los videos :star: 
 
-- [Aca se puede ver la teoria y la práctica que tenemos con los videos del Alkemy Challenge](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/teoria_unidad_1_2.md)
-
----
----
-
-
-## :star: Clases
+- <img src="https://img.icons8.com/color/40/000000/video.png"/> [Aca se puede ver la teoria y la práctica que tenemos con los videos del Alkemy Challenge](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/teoria_unidad_1_2.md)
 
 ---
+---
 
-## :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 1: Introducción a React: Configuración de Herramients y Estructura Básica
+
+## :star: Clases :star: 
+
+---
+
+### :star2: Clase 20 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 1: Introducción a React: Configuración de Herramients y Estructura Básica  :star2: 
 
 
 - Mentores: Andreína Marcano y Rodrigo Tonso ( tiene 5 años de experiencia en React y TS, e inclina más por las start-ups).
 
-Temas:
+- Temas:
 ```
 - Bienvenida e Introducción al Programa
 - Presentacion del Modulo 1
@@ -53,7 +53,7 @@ Temas:
 ```
 
 
-### <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/40/000000/external-lup-mutualiz-ui-essential-others-zufarizal-robiyanto.png"/>  ¿ Que tenemos ?
+#### <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/40/000000/external-lup-mutualiz-ui-essential-others-zufarizal-robiyanto.png"/>  ¿ Que tenemos ?
 
 Repasemos brevemente qué contine el programa!
 
@@ -61,24 +61,26 @@ Repasemos brevemente qué contine el programa!
 
 - Talleres privados el inicio del proyecto. Un trabajo en grupo para desarrollar y entregar una app en React con los conocimientos obtenidos en la teoría.
 
-### Módulo 1 : Primeros pasos en React JS
+---
+
+#### Módulo 1 : Primeros pasos en React JS
 
 Es el inicio en la librería reconociendo su sintaxis, funcionalidades y componentes básicos.
 
-#### 1 - Herramientas
+##### 1 - Herramientas
 
 Vamos a identificar, instalar y configurar las herramientas necesarias para el desarrollo de una aplicación.
 
-#### 2 Armado de un primer componente y validaciones
+##### 2 - Armado de un primer componente y validaciones
 
 Vamos a crear un componente Login, validar su formulario y enviar esos datos a una API para obtener un token de autenticación. 
 
-#### 3 Manejos de errores y redireccionamiento
+##### 3 - Manejos de errores y redireccionamiento
 
 Vamos a implementar mensajes de error, ver cómo persistir el token obtenido de la API y hacer un redireccionamiento a un nuevo componente luego de la validación de credenciales.
 
 
-###  <img src="https://img.icons8.com/doodle/40/000000/maintenance.png"/>  Herramientas
+#####  <img src="https://img.icons8.com/doodle/40/000000/maintenance.png"/>  Herramientas
 
 
 - **VSC**, editor de codigo para escribir codigo de programación. No es igual aun **IDE** (Entrno de Desarrollo Integrado, en general para un lenguaje específico, como por ejemplo IntelliJ, Eclipse, Wenstorm y PyCharm; son más robustos, con más herramientas, pero son pesados). En cambio con el Editor de código lo tenemos gratis, es ligero, y tienen pluggins para personalizar
@@ -116,7 +118,7 @@ Nació como respuesta al trabajo generalmente repetitivo al que se enfrentaban l
 
 ---
 
-### <img src="https://img.icons8.com/plasticine/40/000000/question-mark.png"/> ¿ Cómo arrancar ?
+##### <img src="https://img.icons8.com/plasticine/40/000000/question-mark.png"/> ¿ Cómo arrancar ?
 
 
 **npx** es un ejecutador, viene desde npm versión 5 en adelante, te permite utilizar un paquete y probarlo en un entorno de ejecución.
@@ -135,7 +137,7 @@ Nació como respuesta al trabajo generalmente repetitivo al que se enfrentaban l
 ```create-react-app my-app```
 
 
-### React Developer Tools
+##### React Developer Tools
 
 Nos ayudan mucho al hace debuging, vamos a ver como fluyen los datos entre los diferentes componentes de la aplicación.
 
@@ -146,7 +148,7 @@ Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, dato
 ---
 
 
-## <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Introducción a React
+##### <img src="https://img.icons8.com/clouds/40/000000/react.png"/> Introducción a React
 
 - Librería de JavaScript
 
@@ -170,8 +172,9 @@ Tenemos **Components** (vamos a poder ver los componentes, sus propiedades, dato
 
 ... facilidad a la hora de comprobar su funcionamiento, al integrar test tendremos buen codigo y buen funcionamiento.
 
+---
 
-###   <img src="https://img.icons8.com/color/40/000000/javascript--v1.png"/> Conocimientos importantes
+#####   <img src="https://img.icons8.com/color/40/000000/javascript--v1.png"/> Conocimientos importantes
 
 
 Para utilizar esta librería hay que tener en cuenta:
@@ -183,8 +186,9 @@ Para utilizar esta librería hay que tener en cuenta:
 - manipulación del HTML, sus etiquetas y el DOM. BYTES -> CHARACTERS -> TOKENS -> NODES
 
 
+---
 
-### React y el DOM Virtual
+##### React y el DOM Virtual
 
 
 El **DOM Virtual** es una representación del DOM en la memoria del navegador (no afecta al DOm real de la aplicación).
@@ -193,14 +197,14 @@ Asi cuando interactuamos con el verdadero DOM, le pedimos únicamente los cambio
 
 
 
-#### ¿ Por qué crear un virtual DOM ?
+##### ¿ Por qué crear un virtual DOM ?
 
 
 Actualizar el DOM es una operación costosa para el navegador y muchas veces solo es necesario actualizar secciones específicas en la aplicación. Por esta razón , React apuesta a hacer una copia en memoria del DOM para hacer sus cálculos y procesos de optimización y ofrecer un mejor rendimiento en las aplicaciones al renderizar solo el html modificado.
 
+---
 
-
-### Estructura básica de un proyecto en React
+##### Estructura básica de un proyecto en React
 
 ```
 1. Nombre de mi proyecto
@@ -227,13 +231,13 @@ Actualizar el DOM es una operación costosa para el navegador y muchas veces sol
 
 ---
 
-### Componentes de clases y Componentes Funcionales
+##### Componentes de clases y Componentes Funcionales
 
 Actualmente se traabja con **componentes funcionales** y **hooks**, antes se trabajaba con **componentes de clases**, debían especificar muchas cosas, quedaba muy largo y complicado de entender o leer, mientras más funcionalidades tenían.
 
 ---
 
-## Consejo
+##### Consejo
 
 - Utilizar buenas practicas
 
@@ -241,7 +245,7 @@ Actualmente se traabja con **componentes funcionales** y **hooks**, antes se tra
 
 ---
 
-## <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-terminal-computer-programming-flaticons-lineal-color-flat-icons.png"/> Comandos por terminal
+##### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-terminal-computer-programming-flaticons-lineal-color-flat-icons.png"/> Comandos por terminal
 
 ```mkdir nombre``` para crear carpeta, en nombre pongo el nombre de la carpeta que quiero
 
@@ -257,16 +261,18 @@ Actualmente se traabja con **componentes funcionales** y **hooks**, antes se tra
 -> con node tenemos **npm** y con ello podemos utilizar CRA para armar el proyecto mucho más ráìdo que tneer que ir haciendo todo manual. Con **npx** tenemos **x** de ejecutable.
 
 
-## <img src="https://img.icons8.com/dusk/40/000000/babel.png"/> Babel
+##### <img src="https://img.icons8.com/dusk/40/000000/babel.png"/> Babel
 
 Adapta lo que escribimos en ES6 a las versiones que tenga el navegador (más viejas).
 
 
-## <img src="https://img.icons8.com/dusk/40/000000/webpack.png"/> Webpack
+##### <img src="https://img.icons8.com/dusk/40/000000/webpack.png"/> Webpack
 
 Hace muchas cosas, nos ayuda para que no tengamos que configurar el proyecto. Trae **ESLint** que nos va mostrando warnings o errores las malas practicas en el codigo, apra ir corrijiendo.
 
-### Creamos un proyecto
+---
+
+##### Creamos un proyecto
 
 ```npx create-react-app my-app``` -> para crear mi proyecto, my-app es el nombre de la aplicación, el nombre no puede tener mayúscuar, ni espacios, ni caracteres especiales.
 
@@ -285,9 +291,9 @@ README.md -> es aaconsejable mantenerlo actualizado.
 ---
 ---
 
-## :star2: Clase 22 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 2: Armando de componente, validación y envío de formulario
+## :star2: Clase 22 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 2: Armando de componente, validación y envío de formulario :star2:
 
-## Agenda del dia
+### Agenda del dia
 ```
 - Ejercicio de repaso
 - Inicio de sesion
@@ -299,7 +305,7 @@ README.md -> es aaconsejable mantenerlo actualizado.
 
 ---
 
-### :star: Ejercicio de repaso
+##·# :star: Ejercicio de repaso :star:
 
 1. Partimos de un App.js con muchas etiquetas y las separamos en componentes.
 
@@ -309,10 +315,10 @@ README.md -> es aaconsejable mantenerlo actualizado.
 
 ---
 
-### :star: Inicio de sesion
+#### :star: Inicio de sesion :star:
 
 
-#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿Qué es ?
+##### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿Qué es ?
 
 Hoy en día se pueden encontrar varios tipos de autenticación y uno de los más comunes son:
 
@@ -322,7 +328,7 @@ Hoy en día se pueden encontrar varios tipos de autenticación y uno de los más
 
 - **autentificación basada en Token**: permiten a los usuarios ingresar sus credenciales una vez y recibir a cambio una cadena cifrada única de caracteres aleatorios. Luego puede usar el token para acceder.
 
-####  <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> Tipos de Inicio de Sesión
+#####  <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> Tipos de Inicio de Sesión
 
 A partir de diferentes tipos de autenticación, existen diferentes formas de realizar un inicio de sesión.
 
@@ -344,7 +350,7 @@ A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión
 
 ---
 
-### Armado del componente <Login />
+#### Armado del componente <Login />
 
 - Se compone de dos campos:
 ```
@@ -357,7 +363,7 @@ A su vez, una plataforma te puede ofrecer una o más formas de inicio de sesión
 
 ---
 
-### Implementación del componente <Login />
+#### Implementación del componente <Login />
 
 - El formulario tiene un evento **onSubmit** que se invoca la hacer click en el button de type="submit". Ese **nSubmit** va a invocar a la función **handleSubmit** que va a usar el **preventDefault** para evitar que se envie de una los datos, para tener tiempo de capturarlos.
 
@@ -411,15 +417,15 @@ export default Login;
 
 ---
 
-### Validación de formularios
+#### Validación de formularios
 
 
-#### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  ¿A qué nos referimos cuando hablamos de validación?
+##### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  ¿A qué nos referimos cuando hablamos de validación?
 
 Es el proceso que nos permite corroborar (como desarrolladores) que la información suministrada 
 
 
-#### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  Ejemplo de validación de Formulario
+##### <img src="https://img.icons8.com/fluency/48/000000/password-check.png"/>  Ejemplo de validación de Formulario
 
 El más común lo encontramos en los formularios de registro. 
 
@@ -438,7 +444,7 @@ Es decir tener una validación personalizada por cada input.
 ### :star:  Envío de formularios
 
 
-###  <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/40/000000/external-https-internet-security-vitaliy-gorbachev-blue-vitaly-gorbachev.png"/> ¿ A dónde van los datos ?
+####  <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/40/000000/external-https-internet-security-vitaliy-gorbachev-blue-vitaly-gorbachev.png"/> ¿ A dónde van los datos ?
 
 Cuando se validan los datos de un formulario, la acción siguiente es enviarlos. Tradicionalmente se envían usando un protocolo de comunicación llamado **HTTP**
 
@@ -474,6 +480,7 @@ Este protocolo posee un conjunto de métodos para indicar la acción que se dese
 
 -> **soft delete** en realidad no eliminas de la base de datos, sino haces un borrado logico, por ejemplo le guardas la fecha de eliminacion para no mostrarlo, pero sigue estando en la base de datos.
 
+---
 
 ### :star:  JSON JavaScript Object Notation
 
@@ -502,6 +509,7 @@ La definición y concepto de objeto puede ser muy amplio dependiendo el enfoque 
 Un formulario es un elemento gráfico para que un usuario introduzca **datos estructurados**.
 
 
+---
 
 ### :star: Network en el navegador
 
@@ -523,7 +531,7 @@ Algo de lo que disponemos es de la sección **network** que nos permite ver la c
 
 4. Al clickear en una de las peticiones se puede ver su detalle.
 
-
+---
 
 ### Consideración de seguridad
 
@@ -542,7 +550,7 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 ---
 
 
-## :star2: Clase 23 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 1: Introducción a React:
+## :star2: Clase 23 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 1: Introducción a React :star2:
 
 ---
 
@@ -559,7 +567,7 @@ Comunmente la implementación de estos certificados no es llevada por los desarr
 
 ---
 
-## 1 - Ejercicio de reapso
+### 1 - Ejercicio de reapso
 
 Coo poner el en index.js los componentes para importarlos y no tener que poner todo el path.
 
@@ -575,9 +583,9 @@ import {Header} from "/components/Header";
 
 ---
 
-## 2 - Manejo de errores
+### 2 - Manejo de errores
 
-### ¿ Qué es ?
+#### ¿ Qué es ?
 
 Es la técnica que usamos como desarrolladores para controlar los errores durante la ejecución de un programa.
 
@@ -585,12 +593,12 @@ Cuando ocurre cierto timepo de error, nosotros podemos programar en el sistema u
 
 Ejemplos de estos pueden ser cuando retornamos un mensaje de error o devolvemos un error por defecto.
 
-### ¿ Para qué sirve ?
+#### ¿ Para qué sirve ?
 
 Sirve para advertir a los usuarios que usan nuestra aplicación de los posibles errores que se encontraron en el procesamiento de la información, ya sea porque se suministro información errada o el servidor no pudo procesar la misma de manera setisfactoria.
 
 
-### Maneras de manejar errores en aplicaciones React
+#### Maneras de manejar errores en aplicaciones React
 
 Existen varias formas y vamos a explicar un poco algunas de ellas:
 
@@ -647,7 +655,7 @@ const handlerCLick = () => {
 
 ---
 
-## 3 - Agregar manejo de errores al componente <Login />
+### 3 - Agregar manejo de errores al componente <Login />
 
 Con los if voy validando que no estén vacios,  o con RegEx que cumpla con el formato de un formulario, por ejemplo.
 
@@ -657,15 +665,41 @@ Una vez que este ok el ingreso de los datos de los input dle login y los tengo e
 
 ---
 
-## 4 - Persistencia del Token de Autenticación
+### 4 - Persistencia del Token de Autenticación
+
+
+#### <img src="https://img.icons8.com/ios/40/000000/token-card-code.png"/> ¿Qué es un token?
+
+Es un identificador y firmado digitalmente. Lo usamos habitualmente durante toda la comunicación entre un cliente (navegador) y un servidor web para poder identificar el usuario que realiza las peticiones.
+
+#### <img src="https://img.icons8.com/ios/40/000000/token-card-code.png"/>¿Dónde solemos encontrarlos?
+
+Suele persistir en el **localStorage** del navegador para mantener el login y en los encabezados de las peticiones al servidor para validar.
+
+```
+localStorage: Storage
+  lenght: 0
+  _proto_: Storage
+    clear: f clear()
+    getItem: f getItem()
+    key: f key()
+      lenght: (...)
+    removeItem: f removeItem()
+    setItem: f setItem()
+    constructor: f Storage()
+    Symbol(Symbol.toStringTag): "Storage"
+    get lenght: f length()
+    _proto_: Object
+    
+```
 
 ---
 
-## 5 - Redireccionamiento
+### 5 - Redireccionamiento
 
 ---
 
-## 6 - Redireccionamiento al componente <Listado />
+### 6 - Redireccionamiento al componente <Listado />
 
 ---
 ---
