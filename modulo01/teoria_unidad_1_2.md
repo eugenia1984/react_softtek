@@ -491,8 +491,51 @@ Sirve para advertir a la persona que usa nuestra aplicación de los posibles err
 #### ¿Cómo se implementa el manejo de errores en un proyecto real?
 
 
-Existen diversas maneras de hacerlo, pero una muy común es hacerlo usando librerías que nos permitan disparar cajas modales que alerten e informen al usuario del error resultante de la operación. Puntualmente en esta clase implementaremos la librería "Sweet alert" para poder mostrar estos mensajes de una manera mucho más amigable para el usuario.
+Existen diversas maneras de hacerlo, pero una muy común es hacerlo usando librerías que nos permitan disparar cajas modales que alerten e informen al usuario del error resultante de la operación. Puntualmente en esta clase implementaremos la librería [**Sweet alert**](https://sweetalert.js.org/guides/) para poder mostrar estos mensajes de una manera mucho más amigable para el usuario.
 
+-> [Docmuentation https://sweetalert2.github.io/](https://sweetalert2.github.io/)
+
+-> Intalacion: ```npm install sweetalert2``` o por CDN : ```<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>```
+
+Y al usarla con React nos recomiendan también tener [Sweet Alert with React](https://www.npmjs.com/package/@sweetalert/with-react), que la instalamos asi: ```npm install @sweetalert/with-react```
+
+Si nos da error probar con: ``` npm i @sweetalert/with-react --force```
+
+-> Para poder usarlo lo importo en mi LoginForm:
+
+```JSX
+import swAlert from "sweetalert2";
+```
+
+-> Cada vez que queiera lanzar un alert utilizo la constante como funcion:
+
+```JSX
+swAlert.fire("Esto va a funcionar")
+```
+
+-> Entonces ahora reemplazamos los console.log con los alertas de weet alert.
+
+---
+
+### Axios
+
+[https://axios-http.com/docs/intro](https://axios-http.com/docs/intro)
+
+- Instalacion: ```npm i react```
+
+- Lo importo:
+```JSX
+import Axios from "react";``` 
+para poder utilizarlo
+
+```JSX
+axios
+  .post("https://challenge-react.alkemy.org", {email, password})
+  .then(res => {
+    swAlert.fire("Perfecto, estás dentro")
+    console.log(res.data);
+  })
+```
 
 ---
 
@@ -500,15 +543,66 @@ Existen diversas maneras de hacerlo, pero una muy común es hacerlo usando libre
 
 #### ¿Qué es un token y qué significa la persistencia del mismo?
 
-Un token es un identificador único obtenido tras un proceso de autenticación que le permite saber al servidor que la persona que usa la aplicación se ha logueado satisfactoriamente. Por otro lado, persistir un token significa mantenerlo guardado en algún lugar para posteriormente usar su información. Para que, de esta manera, evitemos solicitar al usuario en cada momento sus credenciales de acceso.
+Un token es **un identificador único obtenido tras un proceso de autenticación que le permite saber al servidor que la persona que usa la aplicación se ha logueado satisfactoriamente**. 
+
+Por otro lado, **persistir un token** significa **mantenerlo guardado en algún lugar para posteriormente usar su información**. Para que, de esta manera, evitemos solicitar al usuario en cada momento sus credenciales de acceso.
+
 
 #### ¿Para qué sirve la persistencia del token?
 
-Cómo ya lo dijimos con anterioridad, sirve para evitar hacer múltiples solicitudes de autenticación al servidor, cada vez que el usuario de la aplicación desea llevar a cabo una determinada actividad. Por este motivo, el token es tan importante ya que lo obtendremos en el primer llamado de autenticación y desde ese momento en adelante usaremos el mismo cada vez que sea necesario.
+Cómo ya lo dijimos con anterioridad, sirve **para evitar hacer múltiples solicitudes de autenticación al servidor**, cada vez que el usuario de la aplicación desea llevar a cabo una determinada actividad. Por este motivo, el token es tan importante ya que lo obtendremos en el primer llamado de autenticación y desde ese momento en adelante usaremos el mismo cada vez que sea necesario.
+
+-> El token es como la puerta de entrada a la siguiente petición, de modo que no voy a estar enviando constantemente la información de logueo, se manda una vez, se guarda y se usa esa información.
+
 
 #### ¿Cómo se implementa la persistencia del token en un proyecto real?
 
-Existen algunos caminos para lograr este resultado, pero el más sencillo y cómodo para nosotros será guardar el mismo en el almacenamiento local del navegador, de esta manera aprovecharemos las múltiples ventajas de este tipo de almacenamiento.
+Existen algunos caminos para lograr este resultado, pero el más sencillo y cómodo para nosotros será **guardar el mismo en el almacenamiento local del navegador**, de esta manera aprovecharemos las múltiples ventajas de este tipo de almacenamiento.
+
+```JSX
+axios
+  .post("http://challenge-react.alkemy.org", {email, password})
+  .then(res => {
+    swAlert.fire("Perfecto, ingresaste correctamente");
+    console.log(res.data);
+  })
+  ```
+
+ -> Ya la API me esta dando el token.
+ 
+ -> Vamos a almacenar el token directamente en el navegador. Para eso hay dos opciones, una vez recibida la información cpn **Res.data** y de ahi accedo a **token**:
+ 
+ ```JSX
+ const token = res.data.token;
+ ```
+ 
+ Ahora lo voy a almacenar directamente en el navegador a través del **localStorage** (aquello que el navegador nos provee para almacenar información). LocalStorage es un objeto que ya existe, por eso lo llamo y le voy a setear un item con **setItem**, y va a recibir dos argumentos...
+ 
+ ... el 1ro va a setear el nombre de la propiedad bajo la cual voy a guardar la información.
+ 
+ ... 2do es la informaicón que quiero guardar en él.
+ 
+ ```JSX
+ localStorage.setItem("token", token);
+ ```
+ 
+ -> Me queda seteado el token recibido de la API en la constante, gracias al metodo **setItem**. El token recibido es un String.
+
+
+
+- ¿Cómo se que el token efectivamente quedó guardado?
+
+-> Cuando quiera acceder al mismo lo hago con **getItem**.
+
+```JAX
+localStorage.getItem("token")
+```
+
+-> Si lo quiero borrar:
+
+```JSX
+localStorage.clear()
+```
 
 ---
 
