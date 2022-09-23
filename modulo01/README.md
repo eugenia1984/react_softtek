@@ -755,6 +755,14 @@ A partir del uso de redireccionamiento, vamos a estar trabajando con más de un 
 
 Esta librería es muy útil y potente para realizar navegación entre componentes, enviando valores como parámetros o estados.
 
+#### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-redirect-seo-flaticons-lineal-color-flat-icons.png"/> Actualización de la librería
+
+A fines del 2021 la versión 6 de la librería **react-router-dom** comenzó a ser más estable y muchas aplicaciones decidieron mudarse a lo largo del 2022.
+
+Mantener actualizadas las librerías que utiliza una aplicación es uno de los desafíos con los que suelen encontrarse quienes desarrollan.
+
+Generalmente las personas responsables de los proyectos publican buenos manuales de como hacer el upgrade de versines y cuales son sus ventajas, react-router-dom no es la excepcion.
+
 
 ---
 
