@@ -531,6 +531,59 @@ También existe la opción de obtenerlo de proveedores gratuitos donde destaca h
 
 Comunmente la implementación de estos certificados no es llevada por los desarrolladores Front-End pero es importante que conozcan su importancia.
 
+
+---
+
+
+## :star2: Clase 23 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> UNIDAD 1: Introducción a React:
+
+---
+
+## Temas a ver
+
+```
+- Ejercicio de reapso
+- Manejo de errores
+- Agregar manejo de errores al componente <Login />
+- Persistencia del Token de Autenticación
+- Redireccionamiento
+- Redireccionamiento al componente <Listado />
+```
+
+---
+
+## 1 - Ejercicio de reapso
+
+index.js:
+```JSX
+export { default as Logo} from "./Logo";
+```
+
+App.js:
+```JSX
+import {Header} from "/components/Header";
+```
+
+---
+
+## 2 - Manejo de errores
+
+---
+
+## 3 - Agregar manejo de errores al componente <Login />
+
+---
+
+## 4 - Persistencia del Token de Autenticación
+
+---
+
+## 5 - Redireccionamiento
+
+---
+
+## 6 - Redireccionamiento al componente <Listado />
+
 ---
 ---
 
@@ -895,7 +948,8 @@ De no coincidir nuestra información ingresada con este formato, obtendremos alg
 
 #### ¿Cómo se implementa la validación de formularios en un proyecto real?
 
-De la misma manera que lo haremos en esta clase. 
+De la misma manera que lo haremos en esta 
+. 
 
 Siempre que deseemos verificar que la información ingresada por el usuario es la correcta, es entonces allí en donde necesitaremos de estos procesos de validación.
 
