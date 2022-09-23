@@ -26,7 +26,7 @@
 
 ---
 
-## :star: 
+## :star: <img src="https://img.icons8.com/color/48/000000/video.png"/> Teroía del campus con los videos
 
 - [Aca se puede ver la teoria y la práctica que tenemos con los videos del Alkemy Challenge](https://github.com/eugenia1984/react_softtek/blob/main/modulo01/teoria_unidad_1_2.md)
 
