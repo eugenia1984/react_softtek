@@ -576,14 +576,18 @@ Es la técnica que usamos como desarrolladores para controlar los errores durant
 
 Cuando ocurre cierto timepo de error, nosotros podemos programar en el sistema un fragmento de código que resuelve la situación.
 
-Ejemplos de estos pueden ser cuando retornamos un mensaje de error
+Ejemplos de estos pueden ser cuando retornamos un mensaje de error o devolvemos un error por defecto.
+
+### ¿ Para qué sirve ?
+
+Sirve para advertir a los usuarios que usan nuestra aplicación de los posibles errores que se encontraron en el procesamiento de la información, ya sea porque se suministro información errada o el servidor no pudo procesar la misma de manera setisfactoria.
 
 
 ### Maneras de manejar errores en aplicaciones React
 
 Existen varias formas y vamos a explicar un poco algunas de ellas:
 
-- **Alertas visuales (páginas de error, notificaciones, etc)**: son aquellos elementos en la interfaz de usuario que 
+- **Alertas visuales (páginas de error, notificaciones, etc)**: son aquellos elementos en la interfaz de usuario que poseen mensajes que el usuario puede leer y entender, es decir, no muestra el mensaje original cuando ocurre un error.
 
 - **Método try-catch**: es una gran herramienta para detectar el código que se comporta mal y garantizar que nuestra aplicaicón no deje de funcionar inesperadamente. Señala un bloque de instrucciones a intentar (**try**) y especifica una respuesta si se produce una excepción (**Catch**).
 
