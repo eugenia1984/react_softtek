@@ -742,6 +742,16 @@ axios
 })
 ```
 
+-> Como en el video utilizan la versión 5 en vez de el useNavigate usan el **useHistory**, por eso importa el useHIstory, crea una constante history e invoca al metodo .push() para redireccionar a /listado. Pero al usar la version 6 lo hago con el useNavigate
+
+-> Quiero que solo ingrese a listado si tengo el token. Entonces tengo que modificar Listado. Voy a tener que levantar lo que tengo en localStorage
+:
+
+```JSX
+const token = localStorage.getItem("item");
+```
+
+
 
 ---
 
