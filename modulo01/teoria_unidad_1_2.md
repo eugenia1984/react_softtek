@@ -693,23 +693,56 @@ import Listado from "./components/listado/Listado";
 
 ```JSX
 import { Routes, Route } from "react-router-dom";
-
 import Login from "./components/login/Login.js";
 import Listado from "./components/listado/Listado.js";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Routes>
-        <Route path="/" element={Login}/>
-        <Route path="/listado" element={Listado}/>
+        <Route path="/" element={<Login />} />
+        <Route path="/listado" element={<Listado />} />
       </Routes>
-    </div>
+    </>
   );
 }
 
 export default App;
 ```
+
+-> Pero si me logueo con el usuario y la clave correcta veo el cartel de sweet alert que me da el ok, pero... no estoy renderizando todavia el componente de Listado.
+
+Volvemos al componente Login, lo que queremos es que una vez que ingreso el email y el password correcto me renderice el Listado. Para lo que voy a importar: 
+```JSX
+import { Redirect } from "react-router-dom";
+```
+
+Entonces despues de setear el token en el localStorage voy a hacer la redireccion con **Redirect**, tambi´ne como con el **Link** voy a tener que poner**to** para indicar a donde me voy a redirigir. Pero... esto es para la version 5, en la version 6 vamos a usar **useNavigate**:
+
+```JSX
+import { useNavigate } from "react-router-dom";
+```
+
+Me creo la constante
+```JSX
+const navigate = useNavigate();
+```
+
+Y dentro de submitHandler :
+
+```JSX
+axios
+.post("http://challenge-react.alkemy.org", {email, password})
+.then(res => {
+  swAlert.fire("Felicitaciones", "Ingresaste correctamente","success");
+  console.log(res.data);
+  const tokenRecibido = res.data.token;
+  localStorage.setItem("token", tokenRecibido);
+  navigate("/listado");
+})
+```
+
+
 ---
 
 ### Enlaces y documentación
