@@ -474,7 +474,7 @@ Este protocolo posee un conjunto de métodos para indicar la acción que se dese
 
 - **PUT** -> sirve para actualizar o modificar un recurso o información alojada en el servidor con datos nuevos que se encuentran en la petición (para actualizar, actualiza más cosas que patch, sobreescribe).
 
-- **PATCH** -> es utilizado para aplicar moficicaciones o actualizaciones parciales a un recurso o información (para actualizar, modifica).
+- **PATCH** -> es utilizado para aplicar modificcaciones o actualizaciones parciales a un recurso o información (para actualizar, modifica).
 
 - **DELETE** -> borra un recurso o información en específico.
 
