@@ -112,7 +112,24 @@ En React , la relación entre un **componente padre** con sus **componentes hijo
 
 La composición es el acto de combinar partes o elementos para formar un todo. React posee un modelo potente de composición el cual se puede usar para dividir un componente complejo en componentes más pequeños y luego estructurar estos en componentes más pequeños para completar la aplicación.
 
-### <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/40/000000/external-family-vacation-planning-trip-abroad-flaticons-flat-flat-icons-3.png"/> ¿ Qué son los components hijos (Children)?
+### <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/40/000000/external-family-vacation-planning-trip-abroad-flaticons-flat-flat-icons-3.png"/> ¿ Qué son los componentes hijos (Children)?
+
+Los componentes hijos son aquellos elementos que se encuentran dentro de un componente padre.
+
+Un componente hijo puede ser de varios tipos que vamos a ver a continuación:
+
+- **componentes**: un componente hijo puede ser a su vez un componente padre.
+
+- **elementos JSX**: aquellos que poseen la sintaxis de JSX.
+
+- **objetos o vlaores de JavaScript**: como arrays, funciones, etc.
+
+
+```
+<Component > ---> un componente que acepta hijos
+ //.....  ------>componentes / elementos (etiquetas HTML) / texto, numeros.
+</Component
+```
 
 ---
 
