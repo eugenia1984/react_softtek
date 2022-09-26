@@ -128,7 +128,7 @@ Un componente hijo puede ser de varios tipos que vamos a ver a continuación:
 ```
 <Component > ---> un componente que acepta hijos
  //.....  ------>componentes / elementos (etiquetas HTML) / texto, numeros.
-</Component
+</Component>
 ```
 
 ---
