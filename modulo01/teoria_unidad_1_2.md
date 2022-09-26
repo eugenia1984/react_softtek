@@ -606,7 +606,7 @@ localStorage.clear()
 
 ---
 
-## 2.6 REDIRECICONAMIENTO AL COMPONENTE "LISTADO"
+## 2.6 REDIRECCIONAMIENTO AL COMPONENTE "LISTADO"
 
 
 #### ¿Qué es un redireccionamiento?
@@ -748,10 +748,28 @@ axios
 :
 
 ```JSX
-const token = localStorage.getItem("item");
+const token = localStorage.getItem("token");
 ```
 
+---
 
+### Otro modo es con el componente Navigate
+
+```JSX
+const Listado = () => {
+  const navigate = useNavigate();
+  let token = localStorage.clear("token");
+}
+
+return(
+  <>
+    {!token && <Navigate replace to="/" />}
+    <div>
+      <h2>Listado</h2>
+    </div>
+  </>
+)
+```
 
 ---
 
