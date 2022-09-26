@@ -40,20 +40,20 @@
 
 ## Temas a ver en clase:
 ```
-- Presentación del Módulo 2
-- Repasamos: importancia de los componentes
-- Los componentes padres e hijos ( Children)
-- Los props en REact
-- Componentes Layout
-- Estilos en React
-- Principales librerías de estilo
+- 1 - Presentación del Módulo 2
+- 2 - Repasamos: importancia de los componentes
+- 3 - Los componentes padres e hijos ( Children)
+- 4 - Los props en React
+- 5 - Componentes Layout
+- 6 - Estilos en React
+- 7 - Principales librerías de estilo
 ```
 
 ---
 
-## MODULO 2 * 
+## MODULO 2 *  DISEÑO Y ARMADO DE COMPONENTES
 
-###  <img src="https://img.icons8.com/material-outlined/40/000000/add-property-1.png"/> Módulo 2 : Diseño y armado de componentes
+###  <img src="https://img.icons8.com/material-outlined/40/000000/add-property-1.png"/> 1 - PRESENTACION DEL MODULO
 
 En este módulo vamos a profundizar en la utilización de compoenntes como estructura básica de nuestro sitio web e implementar estilos a nuestro sitio web.
 
