@@ -33,3 +33,26 @@
 ```
 
 ---
+---
+
+# :star: Clase 26/9 * Modulo 2 * Unidad 3
+---
+
+## Temas a ver en clase:
+```
+- Presentación del Módulo 2
+- Repasamos: importancia de los componentes
+- Los componentes padres e hijos ( Children)
+- Los props en REact
+- Componentes Layout
+- Estilos en React
+- Principales librerías de estilo
+```
+
+---
+
+## MODULO 2 * 
+
+### ¿ Qué son las props en React?
+
+---
