@@ -125,3 +125,17 @@ Es un **componente genérico que se utiliza para compartir una sección común e
 ### <img src="https://img.icons8.com/ios/40/000000/template.png"/> Implementación del Layout
 
 ---
+
+### Estilos
+
+### <img src="https://img.icons8.com/office/100/000000/rgb-circle-2.png"/> Estilos con React
+
+Los estilos en React los manejamos con **CSS**.
+
+El CSS plano carece de ciertas funcionalidades que podrían hacer que el mantenimiento fuese más sencillo.
+
+Por esta razón, axisten los llamados **preprocesadores** de CSS:
+
+En React es posible usar varios tipos de preprocesadores como **Less**, **Sass**, **Stylus**, o **PostCSS**.
+
+---
