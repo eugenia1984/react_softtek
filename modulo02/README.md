@@ -220,9 +220,9 @@ La principal ventaja es la rapidez con la que podemos construir nuestra aplicaci
 
 Algunas de las librerías más populares (incluyendo librerías de componentes) son:
 
-- Bootstrap CSS
+- Bootstrap CSS, es muy usado en el mercado
 
-- Tailwind CSS
+- Tailwind CSS, es muy usado en el mercado.
 
 - Styled Components
 
@@ -233,5 +233,21 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
 -> **Bootstrap** se utiliza en el mercado laboral, **Bulma** también se usa la igual que **Style components**. Se ven en proyectos más viejos.
 
 -> **Tailwind** y **Chakra** se usan en proyectos más nuevos.
+
+---
+
+-> **Libreria de componentes**, una librería es un codigo desarrollado por alguien más.
+
+---
+
+-> Atomizar bien los estilos.
+
+---
+
+-> Evitar de usar **!important**
+
+---
+
+-> [Para poder comparar tendencias en: https://npmtrends.com/](https://npmtrends.com/)
 
 ---
