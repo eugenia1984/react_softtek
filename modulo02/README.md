@@ -53,21 +53,66 @@
 
 ## MODULO 2 *  DISEÑO Y ARMADO DE COMPONENTES
 
-###  <img src="https://img.icons8.com/material-outlined/40/000000/add-property-1.png"/> 1 - PRESENTACION DEL MODULO
+####  <img src="https://img.icons8.com/material-outlined/40/000000/add-property-1.png"/> 1 - PRESENTACION DEL MODULO
 
 En este módulo vamos a profundizar en la utilización de compoenntes como estructura básica de nuestro sitio web e implementar estilos a nuestro sitio web.
 
-### 1 - Armado de components y el flujo de información
+**1 - Armado de components y el flujo de información**
 
 Vamos a implementar varios componentes y ver cómo se integra el flujo de información entre ellos.
 
-### 2 - Agregar estilos a nuestros componentes
+**2 - Agregar estilos a nuestros componentes**
 
 Vamos a ver cómo agregar estilos a cada uno de los componentes que vamos creando para que sean atractivos a los usuarios.
 
-### 3 - Renderización de la información
+**3 - Renderización de la información**
 
 Vamos a ver diferentes técnicas para mostrar la información de nuestros componentes de acuerdo a cómo están almacenados en las estructuras de objetos que nos provee JavaScript.
+
+---
+
+#### 2 - REPASAMOS: IMPORTANCIA DE LOS COMPONENTES
+
+#### <img src="https://img.icons8.com/ios/40/000000/block.png"/> Los componentes permiten separar la interfaz de usuario en piezas independeintes, reutilizables y pensar en cada pieza de forma aislada.
+
+Si por ejemplo estamos renderizando una calculadora, vamos a tener:
+
+- Display number component
+
+- Display Screen component
+
+-> Toda la calculadora tiene un componente que envuelve a los otros subcompoenntes.
+
+Documentación oficial de React: "no tengas miedo de dividir los componentes en otros más pequeños".
+
+
+#### <img src="https://img.icons8.com/ios/40/000000/block.png"/> Repasamos la importancia de los Componentes
+
+```
+¿Se utiliza varias veces?                       ¿Es demasiado complejo?
+Button  <---------------  ¿ Cuál es un    ----> App
+Fields  <---------------  candidato a una ---->  Formularios
+Labels  <---------------  extracción de   ----> Enrutamientos
+Avatars <---------------  un componente?  ----> Chats
+Menu    <--------------                  -----> Editor de imagenes
+```
+
+---
+
+### 3 - LOS COMPONENTES PADRES E HIJOS (CHILDRENS)
+
+#### <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/40/000000/external-family-vacation-planning-trip-abroad-flaticons-flat-flat-icons-3.png"/> ¿ Qué es un componente padre ?
+
+Un componente padre es un componente principal que puede o no tener secundarios (hijos).
+
+
+En React , la relación entre un **componente padre** con sus **componentes hijos** no se da mediante herencia sino por **composición**.
+
+#### ¿Qué es la composición ?
+
+La composición es el acto de combinar partes o elementos para formar un todo. React posee un modelo potente de composición el cual se puede usar para dividir un componente complejo en componentes más pequeños y luego estructurar estos en componentes más pequeños para completar la aplicación.
+
+### <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/40/000000/external-family-vacation-planning-trip-abroad-flaticons-flat-flat-icons-3.png"/> ¿ Qué son los components hijos (Children)?
 
 ---
 
@@ -137,5 +182,14 @@ El CSS plano carece de ciertas funcionalidades que podrían hacer que el manteni
 Por esta razón, axisten los llamados **preprocesadores** de CSS:
 
 En React es posible usar varios tipos de preprocesadores como **Less**, **Sass**, **Stylus**, o **PostCSS**.
+
+---
+
+#### Principales librerías de estilo en React
+
+
+-> **Bootstrap** se utiliza en el mercado laboral, **Bulma** también se usa la igual que **Style components**. Se ven en proyectos más viejos.
+
+-> **Tailwind** y **Chakra** se usan en proyectos más nuevos.
 
 ---
