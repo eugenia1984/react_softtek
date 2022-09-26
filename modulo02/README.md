@@ -95,9 +95,9 @@ React tiene una propiedad especial llamada **children** que permite pasar a sus 
 
 ## Layout
 
-### ¿ A qué nos referimos con Layout ?
+### <img src="https://img.icons8.com/ios/40/000000/template.png"/>  ¿ A qué nos referimos con Layout ?
 
-Es un **componente genérico que se utiliza para compartir una sección común entre varias páginas.
+Es un **componente genérico que se utiliza para compartir una sección común entre varias páginas**.
 
 -> El Header y Footer que se repite en todas las paginas.
 
@@ -122,6 +122,6 @@ Es un **componente genérico que se utiliza para compartir una sección común e
 ---
 
 
-## Implementación del Layout
+### <img src="https://img.icons8.com/ios/40/000000/template.png"/> Implementación del Layout
 
 ---
