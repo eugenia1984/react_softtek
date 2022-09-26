@@ -133,15 +133,24 @@ Un componente hijo puede ser de varios tipos que vamos a ver a continuación:
 
 ---
 
-### <img src="https://img.icons8.com/material-outlined/40/000000/add-property-1.png"/> ¿ Qué son las props en React?
+### 4 - LAS PROPS EN REACT
 
-Las **props** en REact se refiere al conjunto de **propiedades**, es decir, al **conjunto de datos que podemos compartir de un componente a otro** (**Desde un compoennte pare a un compoennte hijo**).
+#### <img src="https://img.icons8.com/material-outlined/40/000000/add-property-1.png"/> ¿ Qué son las props en React?
+
+Las **props** en React se refiere al conjunto de **propiedades**, es decir, al **conjunto de datos que podemos compartir de un componente a otro** (**Desde un compoennte pare a un componente hijo**).
 
 Las props son como **argumentos** que pasan a una función.
 
 Las props pueden recordarte a los atributos HTML, pero en este caso puedes pasar cualquier valor de JavaScript a través de ellos, incluidos objetos, matrices, funciones e incluso JSX.
 
 -> Las props no deben cambiar. Las variables de estado si pueden variar.
+
+
+```
+props ----> COMPONENT  ----> DOM
+```
+
+-> Las props solo se reciben del padre y son **read only**:
 
 ---
 
@@ -155,7 +164,8 @@ React tiene una propiedad especial llamada **children** que permite pasar a sus 
 
 ---
 
-## Layout
+## 5 COMPONENTE LAYOUT
+
 
 ### <img src="https://img.icons8.com/ios/40/000000/template.png"/>  ¿ A qué nos referimos con Layout ?
 
@@ -188,9 +198,9 @@ Es un **componente genérico que se utiliza para compartir una sección común e
 
 ---
 
-### Estilos
+### 6 - ESTILOS EN REACT
 
-### <img src="https://img.icons8.com/office/100/000000/rgb-circle-2.png"/> Estilos con React
+### <img src="https://img.icons8.com/office/40/000000/rgb-circle-2.png"/> Estilos con React
 
 Los estilos en React los manejamos con **CSS**.
 
@@ -202,8 +212,23 @@ En React es posible usar varios tipos de preprocesadores como **Less**, **Sass**
 
 ---
 
-#### Principales librerías de estilo en React
+#### <img src="https://img.icons8.com/office/40/000000/rgb-circle-2.png"/> Principales librerías de estilo en React
 
+Una librería de CSS es una serie de archivos que ya vienen preparadospara ser usados directamente, sin pensar en escribir siquiera una sola línea de código en CSS.
+
+La principal ventaja es la rapidez con la que podemos construir nuestra aplicación, pensando particularmente en el código funcional, más no en el visual.
+
+Algunas de las librerías más populares (incluyendo librerías de componentes) son:
+
+- Bootstrap CSS
+
+- Tailwind CSS
+
+- Styled Components
+
+- Chakra
+
+- MUI
 
 -> **Bootstrap** se utiliza en el mercado laboral, **Bulma** también se usa la igual que **Style components**. Se ven en proyectos más viejos.
 
