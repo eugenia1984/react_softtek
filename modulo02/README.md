@@ -403,6 +403,31 @@ Para mandar información de hijos a padres, se usan los eventos, se pasan como p
  
  ## 5 - Ejemplo: flujo de Datos entre Hermanos (Lifting)
  
+Como sabemos, cada componente en React tiene su propio estado. Debido a esto, a veces los datos pueden ser redundantes e inconsistentes. Entonces, al elevar el estado, hacemos que el estado del componente principal sea una fuente unica de verdad.
+ 
+ 
+ 
+ ---
+ 
+ ## Armado de Vista Listado
+ 
+ ### La key
+ 
+ Al crear componentes en React mediante algún bucle, serás advertido que una **key* debería ser proporcionada para ítems de lista. Una "key" es un **atributo** especial string que se debe incluir al crear una lista de elementos.
+ 
+ Las keys ayudan a React a identificar qué ítems han cambiado, son agregados o son eliminados. Las keys deben ser dadas a los elementos dentro del array para darle a los elementos una identidad estable.
+ 
+ ```JSX
+ const listItem = numbers.map((number) => {
+  <li key={number.toString()}>
+     {number}
+  </li>
+ })
+ ```
+ 
+ - Evita usar indices para keys si el orden de los items puede cambiar.
+ 
+ 
  ---
  
  ##  6 - Protección de una ruta
