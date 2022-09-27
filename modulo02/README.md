@@ -253,7 +253,7 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
 ---
 ---
 
-# :star2: Clase 27/9 * Modulo 2 -  Unidad 4. Armado de la vista de Listado
+# :star: Clase 27/9 * Modulo 2 -  Unidad 4. Armado de la vista de Listado
 
 ## ESTADO DE LOS COMPONENTES, PROTECCIÓN DE UNA RUTA, OBTENCIÓN DE DATOS DE UNA API
 
@@ -266,6 +266,75 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
 3. Usando una libreria extra, con **MySwal.fire(<Alert variant="warning" style=({font-size:30px}>)**
 
 ---
+ 
+ ## Temas:
+ 
+ ```
+- 1 - Ejercicio de repaso
+- 2 - Estados en los COmpoenntes de React
+- 3 - Hooks
+- 4 - Flujo de datos en React
+- 5 - Ejemplo: flujo de Datos entre Hermanos (Lifting)
+- 6 - Protección de una ruta
+- 7 - Obtener datos de una API
+ ```
+ 
+ ---
+ 
+ ## - 1 - Ejercicio de repaso
+ 
+- Vemos el codigo y pensamos como refactorizar, hay un titulo, un avatar y una lista, se pueden armar 3 compoenntes: Title, Avatar, List y el estilo guardarlo aparte.
+ 
+- Tiene estilo en linea, es mejor pasarlos por **className** 
+ 
+---
+ 
+ ## 2 - Estados en los Compoenntes de React
+
+ 
+### Introducción a los estados
+ 
+Hasta ahora hemos usado lo somponentes prácticamente como plantillas HTML, que podemospersonalizar con props.
+ 
+ 
+### ¿ Qué es el estado ?
+ 
+El estado son los datos que necesitamos para representar el comportamiento de un componente en un momento específico, es decir, son todos aquellos que varían de acuerdo a eventos que ocurren mientrs el componente se encuentra renderizado.
+ 
+ Por ejemplo el email de entrada del Gmail...
+ 
+ ... cuando un correo está marcado como favorito para mostrar la estrella completa o vacia
+ 
+ ... al marcar algún correo con un check y muestre nuevas opciones
+ 
+ ## ¿Qué colocar en el estado ?
+ 
+ Como regla general deberíamos colocar en el estado del componente
+ 
+ -> Con los hooks nos podemos comunicar entre el componente padre e hijo sin tener efectos secundarios.
+ 
+---
+ 
+ ## 3 - Hooks
+ 
+ ---
+ 
+ ## 4 - Flujo de datos en React
+ 
+ ---
+ 
+ ## 5 - Ejemplo: flujo de Datos entre Hermanos (Lifting)
+ 
+ ---
+ 
+ ##  6 - Protección de una ruta
+ 
+ ---
+ 
+ ##  7 - Obtener datos de una API
+ 
+ ---
+ ---
 
 
 
