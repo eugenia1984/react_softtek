@@ -281,7 +281,7 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
  
  ---
  
- ## - 1 - Ejercicio de repaso
+ ## 1 - Ejercicio de repaso
  
 - Vemos el codigo y pensamos como refactorizar, hay un titulo, un avatar y una lista, se pueden armar 3 compoenntes: Title, Avatar, List y el estilo guardarlo aparte.
  
@@ -293,10 +293,10 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
  
 ---
  
- ## 2 - Estados en los Compoenntes de React
+ ## 2 - Estados en los Componentes de React
 
  
-### Introducción a los estados
+### <img src="https://img.icons8.com/doodle/48/000000/checked-checkbox.png"/> Introducción a los estados
  
 Hasta ahora hemos usado lo somponentes prácticamente como plantillas HTML, que podemospersonalizar con props.
  
@@ -304,7 +304,7 @@ También hemos visto cómo pueden reaccionar a acciones (por ejemplo, el uso de 
 
 En esta sesión iremos un paso más allá y veremos cómo cada componente puede tener una pequeña memoria que le permitirá tener actividad por sí mismo.
 
-### ¿ Qué es el estado ?
+### <img src="https://img.icons8.com/doodle/48/000000/checked-checkbox.png"/> ¿ Qué es el estado ?
  
 El estado son los datos que necesitamos para representar el comportamiento de un componente en un momento específico, es decir, son todos aquellos que varían de acuerdo a eventos que ocurren mientrs el componente se encuentra renderizado.
  
@@ -315,7 +315,7 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  ... al marcar algún correo con un check y muestre nuevas opciones
  
  
- ## ¿Qué colocar en el estado ?
+ ## <img src="https://img.icons8.com/doodle/48/000000/checked-checkbox.png"/> ¿Qué colocar en el estado ?
  
  Como regla general deberíamos colocar en el estado del componente a todas aquellas características que van a ser modificadas en su parte visual, es decir, cosas que afectan la representación visual de la página.
  
@@ -483,7 +483,9 @@ Para mandar información de hijos a padres, se usan los eventos, se pasan como p
  
  ## 5 - Ejemplo: flujo de Datos entre Hermanos (Lifting)
  
-Como sabemos, cada componente en React tiene su propio estado. Debido a esto, a veces los datos pueden ser redundantes e inconsistentes. Entonces, al elevar el estado, hacemos que el estado del componente principal sea una fuente unica de verdad.
+Como sabemos, cada componente en React tiene su propio estado. Debido a esto, a veces los datos pueden ser redundantes e inconsistentes. Entonces, al elevar el estado, hacemos que el estado del componente principal sea una fuente unica de verdad y pasamos los datos del padre a sus hijos.
+
+EL concepto de lifting es muy importante para desacoplar logic Y PARA RELACIONAR COMPONENTES ENTRE SI, DESDE ACA NACEN LOS OCNCEPTOS DE LOS PROVIDERS (rEACT cONTEXT) Y LIBRERIAS COMO rEDUX.
  
  
  
@@ -491,7 +493,7 @@ Como sabemos, cada componente en React tiene su propio estado. Debido a esto, a 
  
  ## Armado de Vista Listado
  
- ### La key
+ ### <img src="https://img.icons8.com/office/40/000000/key.png"/> La key
  
  Al crear componentes en React mediante algún bucle, serás advertido que una **key* debería ser proporcionada para ítems de lista. Una "key" es un **atributo** especial string que se debe incluir al crear una lista de elementos.
  
@@ -512,14 +514,81 @@ Como sabemos, cada componente en React tiene su propio estado. Debido a esto, a 
  
  ##  6 - Protección de una ruta
  
+ 
+ ### Casos típicos de protección de rutas
+
+Existen varios casos en los que se decide proteger una ruta, comúnmente se debe a:
+
+● Sólo acceden usuarios autenticados
+
+● Sólo acceden usuarios con cierto roles
+
+● Sólo accede un usuario particular
+
+
+### ¿Dónde proteger las rutas?
+
+Una de las prácticas habituales es crear un componente (con posibles componentes hijos) que sea el responsable de manejar toda la lógica del enrutamiento prácticamente a nivel raíz de la app.
+
+```JSX
+<Routes>
+ <Route path="/" element={<CustomRoute component={MainPage}} />
+ <Route path="/private" element={<CustomRoute component ={PrivatePage}} />
+ <Route path="/admin" element={<CustomRoute component ={AdminPage}} />
+</Routes>
+```
+
+Y el componente simplificado podría ser:
+
+```JSX
+import React from "react";
+import getUser from "service/userServices";
+import Error401 from "pages/UnauthorizedPage";
+import Error403 from "pages(ForbiddenPage";
+
+const CustomRoute = (props) => {
+ const user = getUser();
+ const token = localStorage.getItem("user");
+ 
+ if(!props.auth &&  token) return <Error401 />;
+ 
+ if(
+  props.roles?.length &&
+  !props.roles.some((rol)=> user?.roles?.includes(rol))
+ )
+  return <Error403 />;
+ return <props.component />
+};
+
+export default CuntomRoute;
+```
+
  ---
  
  ##  7 - Obtener datos de una API
  
  
+ ### Axios vs Fetch
+ 
+ JavaScript (Ecma) viene con métodos nativos para realizar peticiones HTTP, la forma de realizarlas es mediante el uso del método **fetch()**, pero habiendo un método nativo de JavaScript ¿Por qué usar una llamada como Axios?
+ 
+ **Axios** proporciona una biblioteca fácil de usar en un paquete pequeño con una interfaz muy extensible.
+ 
+ Es decir que es simple de configurar para distintos escenarios ayudándonos a mantener un código legible y reduciendo la propensión a errores.
+ 
+ ### Promesas en JavaScript
+ 
+ Repasamos algunos conceptos:
+ 
+ - Bo bloquean el hilo de ejecución (nuestro programa seguirá ejecutándose mienstra en otro hilo se resuelve la promesa)
+ 
+ - Se recomienda la sintaxis **async/await** que solamente es una forma más estética de trabajar con **promesas .then()**
+ 
+ - Muchas veces se pierde rendimiento por solicitar que se espere resoluciones de promesas que no se necesitan.
+ 
  -> Lo importante es el **asincronismo**, va a ir trabajando y cuando tenga la respuesta la usa.
 
--> Con fetch hay que configurar mucho, por eos se usa **axios**.
+-> Con fetch hay que configurar mucho, por eso se usa **axios**.
  
  ---
  ---
