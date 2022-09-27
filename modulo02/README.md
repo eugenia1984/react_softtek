@@ -436,6 +436,11 @@ Como sabemos, cada componente en React tiene su propio estado. Debido a esto, a 
  
  ##  7 - Obtener datos de una API
  
+ 
+ -> Lo importante es el **asincronismo**, va a ir trabajando y cuando tenga la respuesta la usa.
+
+-> Con fetch hay que configurar mucho, por eos se usa **axios**.
+ 
  ---
  ---
 
