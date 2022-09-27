@@ -488,7 +488,7 @@ Como sabemos, cada componente en React tiene su propio estado. Debido a esto, a 
 EL concepto de lifting es muy importante para desacoplar logic Y PARA RELACIONAR COMPONENTES ENTRE SI, DESDE ACA NACEN LOS OCNCEPTOS DE LOS PROVIDERS (rEACT cONTEXT) Y LIBRERIAS COMO rEDUX.
  
  
- 
+ -> Ejemplo de Lifting: [https://codesandbox.io/s/lifting-example-parent-children-communication-gq1h5y](https://codesandbox.io/s/lifting-example-parent-children-communication-gq1h5y)
  ---
  
  ## Armado de Vista Listado
@@ -593,6 +593,9 @@ export default CuntomRoute;
  ---
  ---
 
+-> Actualización de la app que se esta creando en los videos de los módulos con llamada a un API de peliculas + Renderización de esta información en el componente: [https://codesandbox.io/s/first-react-form-2rys7b](https://codesandbox.io/s/first-react-form-2rys7b)
 
+---
+---
 
 
