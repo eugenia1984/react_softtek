@@ -251,3 +251,22 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
 -> [Para poder comparar tendencias en: https://npmtrends.com/](https://npmtrends.com/)
 
 ---
+---
+
+# :star2: Clase 27/9 * Modulo 2 -  Unidad 4. Armado de la vista de Listado
+
+## ESTADO DE LOS COMPONENTES, PROTECCIÓN DE UNA RUTA, OBTENCIÓN DE DATOS DE UNA API
+
+### ¿ Cómo ersonalizar los Pop Ups de Sweet Alet 2 ?
+
+1. Se usa el ```<Template>```
+
+2. Se puede usar un **Theme** (tema), se instala y hay estilos similares a Bootstrap, Bulme, Materia-ui y otros estilos como minimalista, etc.
+
+3. Usando una libreria extra, con **MySwal.fire(<Alert variant="warning" style=({font-size:30px}>)**
+
+---
+
+
+
+
