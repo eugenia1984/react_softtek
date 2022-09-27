@@ -35,7 +35,8 @@
 ---
 ---
 
-# :star: Clase 26/9 * Modulo 2 * Unidad 3
+# :star2: Clase 26 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * UNIDAD 3 :star2: 
+
 ---
 
 ## Temas a ver en clase:
@@ -253,7 +254,8 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
 ---
 ---
 
-# :star: Clase 27/9 * Modulo 2 -  Unidad 4. Armado de la vista de Listado
+# :star2: Clase 27 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * UNIDAD 4  ( Armado de la vista de Listado) :star2: 
+
 
 ## ESTADO DE LOS COMPONENTES, PROTECCIÓN DE UNA RUTA, OBTENCIÓN DE DATOS DE UNA API
 
@@ -598,6 +600,12 @@ export default CuntomRoute;
 ---
 ---
 
+
+# :star2: Clase 28 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * UNIDAD 4  ( Armado de la vista de Listado) :star2: 
+
+
+---
+---
 
 [**TEORIA DEL MODULO 2 Y VIDEOS**](https://github.com/eugenia1984/react_softtek/blob/main/modulo02/modulo2_teoria.md)
 
