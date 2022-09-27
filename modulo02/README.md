@@ -287,6 +287,10 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
  
 - Tiene estilo en linea, es mejor pasarlos por **className** 
  
+->  Ejercicio de Repaso de mejoras de estilos: [https://codesandbox.io/s/ejercicio-repaso-mejora-estilos-9fdndc](https://codesandbox.io/s/ejercicio-repaso-mejora-estilos-9fdndc)
+
+-> [Opciones de SweetAlert para componentes en React: https://codesandbox.io/s/sweetalert-options-for-react-components-3yxyxo](https://codesandbox.io/s/sweetalert-options-for-react-components-3yxyxo)
+ 
 ---
  
  ## 2 - Estados en los Compoenntes de React
@@ -296,7 +300,10 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
  
 Hasta ahora hemos usado lo somponentes prácticamente como plantillas HTML, que podemospersonalizar con props.
  
- 
+También hemos visto cómo pueden reaccionar a acciones (por ejemplo, el uso de navigate de la librería de react-router-dom).
+
+En esta sesión iremos un paso más allá y veremos cómo cada componente puede tener una pequeña memoria que le permitirá tener actividad por sí mismo.
+
 ### ¿ Qué es el estado ?
  
 El estado son los datos que necesitamos para representar el comportamiento de un componente en un momento específico, es decir, son todos aquellos que varían de acuerdo a eventos que ocurren mientrs el componente se encuentra renderizado.
@@ -306,6 +313,7 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  ... cuando un correo está marcado como favorito para mostrar la estrella completa o vacia
  
  ... al marcar algún correo con un check y muestre nuevas opciones
+ 
  
  ## ¿Qué colocar en el estado ?
  
@@ -317,7 +325,7 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  
  - elemento actual o seleccionado (la pestaña actaul, la fila seleccionada)
  
- - datos del servidor (una lista de productos, el número de me gusta / favoritos)
+ - datos del servidor (una lista de productos, el número de me gusta / favoritos en una pagina)
  
  - estado abierto / cerrado ( modal abierto / cerado o barra lateral expandida/oculta)
  
@@ -327,7 +335,7 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  
  ## 3 - Hooks
  
- ### ¿ Qué son los hooks  ?
+ ### <img src="https://img.icons8.com/emoji/40/000000/hook.png"/> ¿ Qué son los hooks  ?
  
  Es una **función especial** que permite **modificar o añadir/enganchar características de React a un componente**.
  
@@ -337,11 +345,11 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  
  Los hooks **no funcionan dentro de clases**, sólo en funciones (no se pueden usar en componentes de clase).
  
- ### ¿ Cuándo usar un hook ?
+ ### <img src="https://img.icons8.com/emoji/40/000000/hook.png"/> ¿ Cuándo usar un hook ?
  
  Si tienens un componente (de función) y te das cuenta que necesitas agregarle algún estado o manejar efectos o eventos. Anteriormente, si querías hacer esto, tenías que convertir en función en una clase.
  
- ### Reglas especiales para los hooks
+ ### <img src="https://img.icons8.com/emoji/40/000000/hook.png"/> Reglas especiales para los hooks
  
  La documentación oficial de React nos proporciona esta información.
  
@@ -351,17 +359,89 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  
  2. **Solamente llamar a los hooks en componentes de función** es decir, puedes llamarlos desde los componentes y desde hooks creados por vos (custom). Haciendo esto garantizas que sea legible y visible la lógica de los estados del componente.
  
- ### El hook useState
+ 
+```JSX
+function Form() {
+ // 1 Use the name state variable
+ const [name, setName] = useState("Mary");
+ 
+ // 2 Use an effect for persistinf the form
+ useEffect(function persistForm() {
+  localStorage.setItem("formData", name);
+ });
+ 
+ // 3 Use the surname state variable
+ const [surname, setSurname] = useState("Pippins");
+ 
+ // 4 Use an effect for updating the title
+ useEffect(function updateTitle() {
+  document.title = name + " " + surname;
+ })
+}
+```
+
+
+```JSX
+// ---------
+// First render
+// ---------
+useState("Mary")        // 1. Initialize the name state variable with Mary
+useEffect(persistForm)  // 2 . Add an effect for persisting the form
+useState("Popins")      // 3 . Initialize the surname state variable with "Poppins"
+useEffect(updateTitle)  // 4 . Add an effect for updating the title
+
+// -------
+// Second render
+// -------
+useState("Mary")        // 1. Read the name state variable (argument is ignore)
+useEffect(persistForm)  // 2 . Replace the effect for persisting the form
+useState("Popins")      // 3 . Read the surname state variable (argument is ignore)
+useEffect(updateTitle)  // 4 . Replace the effect for updating the title
+
+```
+
+ ### <img src="https://img.icons8.com/emoji/40/000000/hook.png"/> El hook useState
  
  La llamada de este Hook declara una **variable de estado**. Esta es una forma de "preservar" algunos valores entre lasllamadas de la función.
  
- Normalmente, las variables "desaparecen" cuando sale de la función.
+ Normalmente, las variables "desaparecen" cuando sale de la función, pero las variables de estado son conservadas por React.
+ 
+ ```JSX
+ import React, { useState } from "react";
+ 
+ function Example() {
+  // Declaracion de una variable de estado que llamaremos "count"
+  const [count, setCount] = useState(0);
+ }
+ ```
+ 
+El único argumento para el Hook useState() es el estado inicial. Devuelve una pareja de valores: el estado actual y una función que lo actualiza.  
+
+```JSX
+ import React, { useState } from "react";
+ 
+ function Example() {
+  // Declaracion de una variable de estado que llamaremos "count"
+  const [count, setCount] = useState(0);
+ }
+ 
+ return (
+  <div>
+   <p>You clicked { count } times </p>
+   <button onCLick={() => setCount(count+1)}>
+    Click me
+   </button> 
+  </div>
+ )
+```
+
  
  -> **useState** es **asíncrono** cuando hacemos setVariable, por eso usamos los hooks que reaccionan al cambio de estado, como el **useEffect** que nota el cambio de estado y dispara el callback. Otro medo es dentro del **useState** tenemos una función que lo modifica, pero hay limitantes de que hacer.
  
  -> Se van a tener muchos useStates dentro de los componentes, y es un problema al leer el codigo, por eso se empiezan a usar otras cosas, como las librerias, y usar loading, setLoading (que se usa por ejemplo para el ruteo con el react-router-dom)
 
- ### El hook useEffect
+
+ ### <img src="https://img.icons8.com/emoji/40/000000/hook.png"/> El hook useEffect
  
  Este hook nos sirve para indicarle a React que el componente debe realizar alguna acción luego de renderizarse. Se le pasa como argumento una función **callback** que se ejecuta luego de actualizar el DOM.
  
