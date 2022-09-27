@@ -257,7 +257,7 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
 
 ## ESTADO DE LOS COMPONENTES, PROTECCIÓN DE UNA RUTA, OBTENCIÓN DE DATOS DE UNA API
 
-### ¿ Cómo ersonalizar los Pop Ups de Sweet Alet 2 ?
+### ¿ Cómo personalizar los Pop Ups de Sweet Alet 2 ?
 
 1. Se usa el ```<Template>```
 
@@ -309,7 +309,17 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  
  ## ¿Qué colocar en el estado ?
  
- Como regla general deberíamos colocar en el estado del componente
+ Como regla general deberíamos colocar en el estado del componente a todas aquellas características que van a ser modificadas en su parte visual, es decir, cosas que afectan la representación visual de la página.
+ 
+ Ejemplos de alguna scosas que tiene sentido colocar en el estado:
+ 
+ - entrada ingresada por el usuario (campos de formularios)
+ 
+ - elemento actual o seleccionado (la pestaña actaul, la fila seleccionada)
+ 
+ - datos del servidor (una lista de productos, el número de me gusta / favoritos)
+ 
+ - estado abierto / cerrado ( modal abierto / cerado o barra lateral expandida/oculta)
  
  -> Con los hooks nos podemos comunicar entre el componente padre e hijo sin tener efectos secundarios.
  
@@ -317,11 +327,71 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  
  ## 3 - Hooks
  
+ ### ¿ Qué son los hooks  ?
+ 
+ Es una **función especial** que permite **modificar o añadir/enganchar características de React a un componente**.
+ 
+
+ 
+ Por ejemplo, **useState** le permite agregar el estado a los componentes.
+ 
+ Los hooks **no funcionan dentro de clases**, sólo en funciones (no se pueden usar en componentes de clase).
+ 
+ ### ¿ Cuándo usar un hook ?
+ 
+ Si tienens un componente (de función) y te das cuenta que necesitas agregarle algún estado o manejar efectos o eventos. Anteriormente, si querías hacer esto, tenías que convertir en función en una clase.
+ 
+ ### Reglas especiales para los hooks
+ 
+ La documentación oficial de React nos proporciona esta información.
+ 
+ Nos dice que los hooks deben seguir dos reglas principales al usarlos:
+ 
+ 1. **Llamar a los Hooks en el niverl superiior de la función**: no se debn llamar a los hooks dentro de bucles, condicionales o funciones anidadas. En su lugar, siempre debemos usar hooks en el nivel superior de la función React para evitar cualquier retorno anticipado . Al seguir esta regla, te aseguras de que los hooks se llamen en el mismo orden cada vez que se represente un componente.
+ 
+ 2. **Solamente llamar a los hooks en componentes de función** es decir, puedes llamarlos desde los componentes y desde hooks creados por vos (custom). Haciendo esto garantizas que sea legible y visible la lógica de los estados del componente.
+ 
+ ### El hook useState
+ 
+ La llamada de este Hook declara una **variable de estado**. Esta es una forma de "preservar" algunos valores entre las
+ 
+ ### El hook useEffect
+ 
+ Este hook nos sirve para indicarle a React que el componente debe realizar alguna acción luego de renderizarse. Se le pasa como argumento una función **callback** que se ejecuta luego de actualizar el DOM.
+ 
+ Como característica importante de este hook es que, por defecto, **se ejecuta después del primer renderizado y después de cada actualización**.
+ 
+ Para evitar que se ejecute en cada actualización, se le puede pasar como argumento una lista de valores. Estos valores le permiten al useEffect que se ejecute sólo cuando cambien de estado esa lista de valores.
+ 
+ Ejemplo de una llamada a una API utilizando fetch:
+ 
+ -> es una llamada que retorna una promesa
+ 
+ ```JSX
+ useEffect(() => {
+  fetch("https://pokeapi.co/api/v2/pokemon/${name}")
+  .then(res => res.json())
+  .then(pikachu => {
+     setPokemonInfo(pikachu)
+ }, [name])
+ ```
+ 
  ---
  
  ## 4 - Flujo de datos en React
  
- ---
+ Hay un **componente padre** que tiene uno o varios **componente hijos** y se va a comunicar con ellos medinte **props**.
+ 
+ Cada uno de los **compoenntes hijos** tiene su propio **state**(estado).
+ 
+ Para mandar información de padre a hijo, se pasa por props, y son datos de solo lecturas.
+ 
+Para mandar información de hijos a padres, se usan los eventos, se pasan como propos, los hijos los invocan y los pasan a los padres.
+ 
+ 
+
+ 
+---
  
  ## 5 - Ejemplo: flujo de Datos entre Hermanos (Lifting)
  
