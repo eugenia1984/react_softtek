@@ -599,3 +599,5 @@ export default CuntomRoute;
 ---
 
 
+[**TEORIA DEL MODULO 2 Y VIDEOS**](https://github.com/eugenia1984/react_softtek/blob/main/modulo02/modulo2_teoria.md)
+
