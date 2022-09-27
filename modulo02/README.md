@@ -353,8 +353,14 @@ El estado son los datos que necesitamos para representar el comportamiento de un
  
  ### El hook useState
  
- La llamada de este Hook declara una **variable de estado**. Esta es una forma de "preservar" algunos valores entre las
+ La llamada de este Hook declara una **variable de estado**. Esta es una forma de "preservar" algunos valores entre lasllamadas de la función.
  
+ Normalmente, las variables "desaparecen" cuando sale de la función.
+ 
+ -> **useState** es **asíncrono** cuando hacemos setVariable, por eso usamos los hooks que reaccionan al cambio de estado, como el **useEffect** que nota el cambio de estado y dispara el callback. Otro medo es dentro del **useState** tenemos una función que lo modifica, pero hay limitantes de que hacer.
+ 
+ -> Se van a tener muchos useStates dentro de los componentes, y es un problema al leer el codigo, por eso se empiezan a usar otras cosas, como las librerias, y usar loading, setLoading (que se usa por ejemplo para el ruteo con el react-router-dom)
+
  ### El hook useEffect
  
  Este hook nos sirve para indicarle a React que el componente debe realizar alguna acción luego de renderizarse. Se le pasa como argumento una función **callback** que se ejecuta luego de actualizar el DOM.
@@ -375,6 +381,8 @@ El estado son los datos que necesitamos para representar el comportamiento de un
      setPokemonInfo(pikachu)
  }, [name])
  ```
+ 
+
  
  ---
  
