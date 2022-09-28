@@ -618,7 +618,7 @@ export default CuntomRoute;
 
 ---
 
-## :star:  1 Repaso de hsta donde va el video
+## :star:  1 Repaso de hasta donde va el video
 
 - Vemos como van los videos en esta instancia, ya haciendo la petición a la API de peliculas, usando el API key. Se usa **axios** que revuelve una **respuesta** encapsulada en una **response** que se guarda en un objeto llamado **data**. Se actualiza el estado, pasa de un **array vacio** a un**array con peliculas**. Tenemos el **catch** para ca`tar el error si hay errores, es para la visualizacion del usuario, avisarle que pasa, y además para que el programa no se corte.
 
@@ -637,9 +637,21 @@ export default CuntomRoute;
 
 ### ¿ Qué es ?
 
-Son las fases por las cuales un componente
+Son las fases por las cuales un componente transita durante su "vida" util en la aplicación.
+ 
+ Un componente en React posee 3 secciones:
+ 
+ -el MONTAJE (**mounting**)
+ 
+ -la ACTUALIZACION (**updating**)
+ 
+ -el DESMONTAJE (**unmounting**)
+ 
+ Cada sección tiene métodos específicos responsables de una etapa particular en el ciclo de vida de un componente. Estos métodos son propios de los **componentes basados en clases** y no están destinados a los componentes funcionales.
+ 
+ Sin embargo, dado que el concepto de Hooks se lanzó en React, ahora se pueden usar versiones abstractas de estos métodos de cicilo de vida de un componente funcional.
 
-###Secciones del ciclo de vida de un componente
+### Secciones del ciclo de vida de un componente
 
 Un componente de React tiene 3 secciones en su ciclo de vida:
 
@@ -655,11 +667,11 @@ Un componente de React tiene 3 secciones en su ciclo de vida:
 
 Un componente de React pasa por 3 fases de ejecución en su ciclo de vida.
 
-- **Fase del render (Render Phase)**
+- **Fase del render (Render Phase)**: es donde obtenemos un componente puro y no tiene efectos secundarios.
 
-- **Fase previa a la confirmación (Pre-commit Phase)**
+- **Fase previa a la confirmación (Pre-commit Phase)**: en esta fase podemos leer el DOM.
 
-- **Fase de confirmación (Commit Phase)**
+- **Fase de confirmación (Commit Phase)**: en esta fase podemos trabajar con el DOM, hacer recorridas y limpiezas de efectos secundarios
 
 ---
 
