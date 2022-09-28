@@ -700,7 +700,53 @@ Es una ruta que va a recibir como parámetro un bloque de información crucial q
 
 Por ejemplo, en la siguiente ruta: **http://localhost:3000/productos/45gb32F** La última parte (**45gb32F**) sería la parte dinámica, la
 misma vendría a representar el ID de un producto.
+ 
+ ```JSX
+ import "./App.css";
+ import {BrowserRouter, Route, Routes } from "react-router-dom";
+ import Home from "./pages/Home";
+ import Products from "./pages/Products";
+ import Products1 from "./pages/Products1";
+ import Products2 from "./pages/Products2";
+ import Products3 from "./pages/Products3";
+ import DynamicPage from "./pages/DynamicPage";
+ 
+ function App() {
+  return (
+   <div className="App">
+     <BrowserRouter>
+       <Routes>
+           <Route path="/" element={<Home />} />
+           <Route path="/products/products1" element={<Product1 />} />
+           <Route path="/products/products2" element={<Product2 />} />
+           <Route path="/products/products3" element={<Product3 />} />
+           <Route path="/products/:id" element={< DynamicPage />} />
+       </Routes>
+     </BrowserRouter>
+   </div>
+  )
+ }
+ 
+ export default App;
+ ```
+ 
+ 
+ ```JSX
+ import REact from "react";
+ import { useParam } from "react-router-dom";
+ 
+ function DynamicPage() {
+  const { id } = useParams;
+ return (
+  <div>
+   <h1>This is a dynamic page for {id}</h1>
+  </div>
+ )
+ }
+ ```
 
+ 
+ 
 ---
 
 ## :star: 5 - Verificación de Usuario y Token
