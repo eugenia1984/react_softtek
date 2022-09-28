@@ -662,7 +662,7 @@ Un componente de React tiene 3 secciones en su ciclo de vida:
 
 - **Actualización (Updating)**: es cuando el componente se actualiza o vuelve a renderizar. Esto se desencadena cuando se actualizan las props o el state. Esto puede ocurrir varias veces.
 
-- **Desmontaje (Unmounting)**: es la última parte dle ciclo de vida de un componente. Es cuando el componente se elimina del DOM. Es cuando tenemos un conditional return.
+- **Desmontaje (Unmounting)**: es la última parte del ciclo de vida de un componente. Es cuando el componente se elimina del DOM. Es cuando tenemos un conditional return.
 
 ---
 
@@ -680,9 +680,26 @@ Un componente de React pasa por 3 fases de ejecución en su ciclo de vida.
 
 ## :star: 3 - Ejemplo de Ciclo de Vida de un Componente
 
+- Ejemplo de un componente basado en clase: [https://www.topcoder.com/thrive/articles/lifecycle-methods-in-react-js](https://www.topcoder.com/thrive/articles/lifecycle-methods-in-react-js)
+
+- Otro ejemplo de un componente basado en clase [https://github.dev/gatsbyjs/gatsby/blob/v1.0.0-
+beta.1/packages/gatsby-link/src/index.js](https://github.dev/gatsbyjs/gatsby/blob/v1.0.0-beta.1/packages/gatsby-link/src/index.js)
+
+- Otro ejemplo de componente funcional con hooks: [https://wavez.github.io/react-hooks-lifecycle/](https://wavez.github.io/react-hooks-lifecycle/)
+
+- Diagrama Simplificado del Ciclo de Vida para un componente función (Flujo de Hooks): [https://github.com/donavon/hook-flow](https://github.com/donavon/hook-flow)
+
+
 ---
 
 ## :star: 4 - Vista Detalle de un Componente
+
+###  ¿Qué son las rutas dinámicas?
+
+Es una ruta que va a recibir como parámetro un bloque de información crucial que permitirá que el componente que se renderice sea dinámico.
+
+Por ejemplo, en la siguiente ruta: **http://localhost:3000/productos/45gb32F** La última parte (**45gb32F**) sería la parte dinámica, la
+misma vendría a representar el ID de un producto.
 
 ---
 
