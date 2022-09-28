@@ -601,8 +601,77 @@ export default CuntomRoute;
 ---
 
 
-# :star2: Clase 28 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * UNIDAD 4  ( Armado de la vista de Listado) :star2: 
+# :star2: Clase 28 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * Unidad 5. Vista de detalle :star2: 
 
+## CICLO DE VIDA DE UN COMPONENTE, VISTA DETALLE Y VERIFICACION USUARIO/TOKEN
+
+---
+
+### Temas:
+```
+- 1  -Repaso de hasta donde va el video
+- 2 - Ciclo de vida de un componente
+- 3 - Ejemplo de Ciclo de Vida de un Componente
+- 4 - Vista Detalle de un Componente
+- 5 - Verificación de Usuario y Token
+```
+
+---
+
+## :star:  1 Repaso de hsta donde va el video
+
+- Vemos como van los videos en esta instancia, ya haciendo la petición a la API de peliculas, usando el API key. Se usa **axios** que revuelve una **respuesta** encapsulada en una **response** que se guarda en un objeto llamado **data**. Se actualiza el estado, pasa de un **array vacio** a un**array con peliculas**. Tenemos el **catch** para ca`tar el error si hay errores, es para la visualizacion del usuario, avisarle que pasa, y además para que el programa no se corte.
+
+- Una vez seteado el **state** con la lista de las peliculas, para mostrarlas usamos un **map**, qu es como un for mejorado, porque va a retornar cada card con los datos de las peliculas. Usamos el **index** para que cada card tenga su **key** unica, y para que mantenga la posicion, que no de muevan. Y si se agrega alguna que se agregue al final. Pero... no es recomendable tener un key que sea el index, por ejemplo:
+
+```key={`movie key: ${index}`}
+
+- Y hay un boton para ver el detalle de la pelicula : es lo que vamos  ver a continuacion como manejar la ruta.
+
+- Punto a mejorar: la llamada al endpoint es mejor dejarla como constante o en un archivo aparte donde encapsulas la llama a la API.
+
+---
+
+## :star: 2 - Ciclo de vida de un componente
+
+
+### ¿ Qué es ?
+
+Son las fases por las cuales un componente
+
+###Secciones del ciclo de vida de un componente
+
+Un componente de React tiene 3 secciones en su ciclo de vida:
+
+- **Montaje (Mounting)**: es cuando se crea un nuevo componente y se inserta en el DOM. Esto solo puede suceder una vez, y a menudo, se denomina **Renderización inicial** (**first render**)
+
+- **Actualización (Updating)**: es cuando el componente se actualiza o vuelve a renderizar. Esto se desencadena cuando se actualizan las props o el state. Esto puede ocurrir varias veces.
+
+- **Desmontaje (Unmounting)**: es la última parte dle ciclo de vida de un componente. Es cuando el componente se elimina del DOM. Es cuando tenemos un conditional return.
+
+---
+
+## Fases de ejecución del ciclo de vida de un componente
+
+Un componente de React pasa por 3 fases de ejecución en su ciclo de vida.
+
+- **Fase del render (Render Phase)**
+
+- **Fase previa a la confirmación (Pre-commit Phase)**
+
+- **Fase de confirmación (Commit Phase)**
+
+---
+
+## :star: 3 - Ejemplo de Ciclo de Vida de un Componente
+
+---
+
+## :star: 4 - Vista Detalle de un Componente
+
+---
+
+## :star: 5 - Verificación de Usuario y Token
 
 ---
 ---
