@@ -155,7 +155,7 @@ props ----> COMPONENT  ----> DOM
 
 ---
 
-### ¿ Los componentes hijos se pueden pasar como props?
+###  <img src="https://img.icons8.com/material-outlined/40/000000/add-property-1.png"/> ¿ Los componentes hijos se pueden pasar como props?
 
 Dado a que los componentes hijos pueden ser elementos JSX, objetos o valores de JavaSCript, son válidos pasarlos como props. Hay escenarios donde te gustaría implementar **compoenntes genéricos**.
 
@@ -254,7 +254,7 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
 ---
 ---
 
-# :star2: Clase 27 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * UNIDAD 4  ( Armado de la vista de Listado) :star2: 
+# :star2: Clase 27 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * UNIDAD 4  (Armado de la vista de Listado) :star2: 
 
 
 ## ESTADO DE LOS COMPONENTES, PROTECCIÓN DE UNA RUTA, OBTENCIÓN DE DATOS DE UNA API
@@ -291,7 +291,7 @@ Algunas de las librerías más populares (incluyendo librerías de componentes) 
  
 ->  Ejercicio de Repaso de mejoras de estilos: [https://codesandbox.io/s/ejercicio-repaso-mejora-estilos-9fdndc](https://codesandbox.io/s/ejercicio-repaso-mejora-estilos-9fdndc)
 
--> [Opciones de SweetAlert para componentes en React: https://codesandbox.io/s/sweetalert-options-for-react-components-3yxyxo](https://codesandbox.io/s/sweetalert-options-for-react-components-3yxyxo)
+-> Opciones de SweetAlert para componentes en React: [https://codesandbox.io/s/sweetalert-options-for-react-components-3yxyxo](https://codesandbox.io/s/sweetalert-options-for-react-components-3yxyxo)
  
 ---
  
@@ -491,6 +491,7 @@ EL concepto de lifting es muy importante para desacoplar logic Y PARA RELACIONAR
  
  
  -> Ejemplo de Lifting: [https://codesandbox.io/s/lifting-example-parent-children-communication-gq1h5y](https://codesandbox.io/s/lifting-example-parent-children-communication-gq1h5y)
+ 
  ---
  
  ## Armado de Vista Listado
@@ -517,7 +518,7 @@ EL concepto de lifting es muy importante para desacoplar logic Y PARA RELACIONAR
  ##  6 - Protección de una ruta
  
  
- ### Casos típicos de protección de rutas
+ ### <img src="https://img.icons8.com/ios/50/000000/trail--v2.png"/> Casos típicos de protección de rutas
 
 Existen varios casos en los que se decide proteger una ruta, comúnmente se debe a:
 
@@ -528,7 +529,7 @@ Existen varios casos en los que se decide proteger una ruta, comúnmente se debe
 ● Sólo accede un usuario particular
 
 
-### ¿Dónde proteger las rutas?
+### <img src="https://img.icons8.com/ios/50/000000/trail--v2.png"/> ¿Dónde proteger las rutas?
 
 Una de las prácticas habituales es crear un componente (con posibles componentes hijos) que sea el responsable de manejar toda la lógica del enrutamiento prácticamente a nivel raíz de la app.
 
@@ -570,7 +571,7 @@ export default CuntomRoute;
  ##  7 - Obtener datos de una API
  
  
- ### Axios vs Fetch
+ ### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-vs-esport-flaticons-lineal-color-flat-icons.png"/>  Axios vs Fetch
  
  JavaScript (Ecma) viene con métodos nativos para realizar peticiones HTTP, la forma de realizarlas es mediante el uso del método **fetch()**, pero habiendo un método nativo de JavaScript ¿Por qué usar una llamada como Axios?
  
@@ -578,7 +579,7 @@ export default CuntomRoute;
  
  Es decir que es simple de configurar para distintos escenarios ayudándonos a mantener un código legible y reduciendo la propensión a errores.
  
- ### Promesas en JavaScript
+ ### <img src="https://img.icons8.com/ios-glyphs/40/000000/promise.png"/> Promesas en JavaScript
  
  Repasamos algunos conceptos:
  
@@ -620,6 +621,8 @@ export default CuntomRoute;
 
 ## :star:  1 Repaso de hasta donde va el video
 
+### <img src="https://img.icons8.com/color/48/000000/video.png"/> ¿Qué vimos hasta ahora?
+
 - Vemos como van los videos en esta instancia, ya haciendo la petición a la API de peliculas, usando el API key. Se usa **axios** que revuelve una **respuesta** encapsulada en una **response** que se guarda en un objeto llamado **data**. Se actualiza el estado, pasa de un **array vacio** a un**array con peliculas**. Tenemos el **catch** para ca`tar el error si hay errores, es para la visualizacion del usuario, avisarle que pasa, y además para que el programa no se corte.
 
 - Una vez seteado el **state** con la lista de las peliculas, para mostrarlas usamos un **map**, qu es como un for mejorado, porque va a retornar cada card con los datos de las peliculas. Usamos el **index** para que cada card tenga su **key** unica, y para que mantenga la posicion, que no de muevan. Y si se agrega alguna que se agregue al final. Pero... no es recomendable tener un key que sea el index, por ejemplo:
@@ -635,7 +638,7 @@ export default CuntomRoute;
 ## :star: 2 - Ciclo de vida de un componente
 
 
-### ¿ Qué es ?
+### <img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/40/000000/external-loop-arrows-vitaliy-gorbachev-flat-vitaly-gorbachev-1.png"/>  ¿Qué es?
 
 Son las fases por las cuales un componente transita durante su "vida" util en la aplicación.
  
@@ -651,7 +654,7 @@ Son las fases por las cuales un componente transita durante su "vida" util en la
  
  Sin embargo, dado que el concepto de Hooks se lanzó en React, ahora se pueden usar versiones abstractas de estos métodos de cicilo de vida de un componente funcional.
 
-### Secciones del ciclo de vida de un componente
+### <img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/40/000000/external-loop-arrows-vitaliy-gorbachev-flat-vitaly-gorbachev-1.png"/> Secciones del ciclo de vida de un componente
 
 Un componente de React tiene 3 secciones en su ciclo de vida:
 
@@ -663,7 +666,7 @@ Un componente de React tiene 3 secciones en su ciclo de vida:
 
 ---
 
-## Fases de ejecución del ciclo de vida de un componente
+## <img src="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/40/000000/external-loop-arrows-vitaliy-gorbachev-flat-vitaly-gorbachev-1.png"/> Fases de ejecución del ciclo de vida de un componente
 
 Un componente de React pasa por 3 fases de ejecución en su ciclo de vida.
 
