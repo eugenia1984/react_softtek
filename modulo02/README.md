@@ -816,9 +816,76 @@ Crear un componente padre "container" que consiga los estados o valores y los en
 
 - **useLayoutEffect**: similar a useEffect pero asíncrono.
 
-- **useDeferredValue**: REact 18 sirve para poder reaccionar a cambios de estados luego de renderizar el cambio de estado
+- **useDeferredValue**: REact 18 sirve para poder reaccionar a cambios de estados luego de renderizar el cambio de estado. Por ejemplo tengo un buscador de ciuades en el mundo, al ir tipeando las letras va a estar lentisimo, porque antes de actualizar el estado dle input que voy leyendo que letras ingresa para hacer la busqueda en el listado de ciudades, lo que me relentiza todo. Lo usamos para crear una constante que se usa como dependencia para actualizar.
 
+ - **useTRansition** React 18 como deferredValue pero con lógica (isPending, startTransition)
+ 
+ - **useId**: React 18, crear id únicos NO USAR COMO keys. Sirve para identificar componentes o clases. Son id **dinamicos**
+ 
+---
+ 
+ ### useEffect
+ 
+ - No usar como dependencia objetos (Salvoq ue uno sepa lo que esta haciendo). Los objetos siempre se comparan a un primer nivel, si cambian de estado a más profuncidad no se entera. Tiene que ver con ```[] == []``` es false.
+ 
+ - No olvidemos la cleanUp function (el return)
+ 
+ ### Cuando usamos un timeout()
+ 
+ ```JSX
+ useEffect(() => {
+  const messageTimer = setTimeout(() => {
+   console.log("This is a function")
+  })
+  return claerTimeout(messageTimer)
+ }, [])
+ ```
+ 
+ ### Con sokets
+ 
+  ```JSX
+ useEffect(() => {
+  const soket = new WebSocket("mySocketURI")
+  soket.onmessage = () => {} 
+  return WebSocket.close()
+ }, [])
+ ```
+ 
+ ### Cuando esperamos una respuesta asíncrona
+ 
+  ```JSX
+ useEffect(() => {
+  let isApiSuscribed = true;
+  axios.get(API).then((response) => {
+    if(isApiSubscribed) {
+      // handle Success
+    }
+  });
+  return () => {
+    isApiSubscribed = false;
+  }
+ }, [])
+ ```
 
+ - Un caso de cleanUp más complejo. Abortando una petición.
+ 
+ ```JSX
+ useEffect(() => {
+  let controller = new AbortController();
+ 
+  (async () => {
+   try {
+    const response = await fetch(API, {
+     signal: controller.signal,
+    });
+   } catch(e) {
+     console.log(e)
+   }
+  })();
+  return () => controller?abort();
+ }, []);
+ ```
+ 
 ---
 ---
 
