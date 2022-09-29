@@ -812,11 +812,11 @@ Crear un componente padre "container" que consiga los estados o valores y los en
 
 - **useMemo**: devuelve valores memorizados, lo usamos cuando envíamos funciones como props.
 
-- **useRef**: devuelve objeto JS; lo usamos para referenciar componentes y para usar valores mutables.
+- **useRef**: devuelve objeto JS; lo usamos para referenciar componentes y para usar valores mutables. Mantiene el estado a lo largo de los renderizados, no pierde el valor si se modifica algo en el renderizado del componente. Se usa para valores que son mutables.
 
 - **useLayoutEffect**: similar a useEffect pero asíncrono.
 
-- **useDEferredValue**: REact 18 sirve para poder reaccionar a cambios de estados luego de renderizar el cambio de estado
+- **useDeferredValue**: REact 18 sirve para poder reaccionar a cambios de estados luego de renderizar el cambio de estado
 
 
 ---
