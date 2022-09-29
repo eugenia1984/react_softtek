@@ -202,6 +202,49 @@ Generalmente sí, pues siempre que se quiera mostrar un gran conjunto de informa
 
 Justamente eso es lo que aprenderemos en esta clase. Pero, para hacerte un breve resumen, lo primero será hacer el llamado a la API y una vez tengas su respuesta, almacenar los datos en el estado local del componente, para posteriormente a través de una iteración ir renderizando uno a uno los elementos obtenidos de dicha respuesta.
 
+Tengo el componente **List**:
+
+```JSX
+return (
+    <>
+      <h2 className="listado-title">Listado</h2>
+      <div className="row">
+        <div className="col col-sm-6 col-md-4 col-lg-3">
+          <CardList />
+        </div>
+      </div>
+      <div className="btn-container">
+        <button onClick={handlerClick} className="btn-listado">Cerrar</button>
+      </div>
+    </>
+  );
+  ```
+  
+  Y dentro el componente **CardList**:
+  
+  ```JSX
+  import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
+
+function CardList () {
+  const url = "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-movie-movie-theater-flaticons-lineal-color-flat-icons-7.png";
+  return (
+    <Card >
+      <Card.Img variant="top" src={url} />
+      <Card.Body>
+        <Card.Title>Movie Title</Card.Title>
+        <Card.Text>
+          Movie review
+        </Card.Text>
+        <Button variant="primary"><Link to="/">View Detail</Link></Button>
+      </Card.Body>
+    </Card>
+  )
+}
+
+export default CardList;
+  ```
 
 ---
 
