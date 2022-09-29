@@ -1,4 +1,4 @@
-# :star2: Teoría Módulo 2 - Inidad 2 - Armado y diseño de nuestros componentes
+# :star2: Teoría Módulo 2 - Unidad 2 - Armado y diseño de nuestros componentes
 
 ---
 
