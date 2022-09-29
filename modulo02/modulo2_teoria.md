@@ -117,7 +117,7 @@ Justamente eso es lo que aprenderemos en esta clase. Pero, para hacerte un breve
 
 ---
 
-##:star: 4.2 PROTECCION RUTA
+## :star: 4.2 PROTECCION RUTA
 
 ### ¿Por qué es necesario proteger esta ruta?
 
@@ -137,7 +137,7 @@ Esto se debe a que es el servidor quien almacena las credenciales (usuario y con
 
 ---
 
-### :start: 4.3 OBTENCION DE LA API
+### :star: 4.3 OBTENCION DE LA API
 
 ### Listo, ya estamos logueados ¿y ahora?
 
