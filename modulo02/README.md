@@ -751,6 +751,74 @@ misma vendría a representar el ID de un producto.
 
 ## :star: 5 - Verificación de Usuario y Token
 
+
+---
+---
+
+# :star2: Clase 29 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 2 * UNIDAD 3 :star2: 
+
+---
+
+### Más sobre componentes puros
+
+Un componente funcional poro es básicamente **cualquier componente que para unas props determinadas devuelve siempre la misma respuesta**.
+
+Un componente puro ofrece **mejoras de rendimiento** y **mayor facilidad de reutilización**.
+
+-> Recibe props de afuera -> Maneja las props internamente -> DEvuelve algo
+
+- Un ejemplo es el de un boton
+
+
+### ¿ Cuándo deja de ser puro un componente ?
+
+Básicamente cuando solicitamos algún dato dinámico fuera del componente, lo más habitual es:
+
+- Consumir un estado "superior" (consumir un estado mediante Redux, Context)
+
+- Consumir un valor almacenado fuera del componente (localStorage, Cookies, Cache, ReactQuery)
+
+- Recibe datos de un servidor (porque esos datos pueden cambiar)
+
+### Técnica para mantener componentes puros
+
+Crear un componente padre "container" que consiga los estados o valores y los envíe por props al componente hijo puro.
+
+- Tenemos un compoennte padre **container** que va a recibir todas las props y se las va a pasar a los **componentes puros** que son los hijos (asi estos quedan mas limpios).
+
+- Como algo personal si el componente no es puro no esta dentro de **components** lo pasa a **views** o **containers**, asi sabes que lso componentes que estan en containers se pueden traer y llevar de aca para alla sin efectos no deseados.
+
+---
+
+### Resumen de Hooks
+
+1. Llamar a los Hooks en el nivel superior de la función
+
+2. Solamente llamar a los Hooks en componentes funcionales
+
+### Hooks básicos
+
+- **useState**: usar estados de forma simple.
+
+- **useEffect**: ejecutar acciones antes y/o despues del renderizado de un componente o del cambio de una dependencia.
+
+- **useContext** : usar estados creados en un contexto.
+
+### Hooks adicionales
+
+- **useRecuder**: similar a useState, lo suamos cuando el seteo de valores tiene muchas alternativas. Caundo el set tiene muchas alternativas, por ejemplo un setMusic y tenemos distintos seteos de musica dependeindo de muchas cosas.
+
+- **useCallback**: devuelve función memorizada, lo usamos cuando envíamos funciones como props.
+
+- **useMemo**: devuelve valores memorizados, lo usamos cuando envíamos funciones como props.
+
+- **useRef**: devuelve objeto JS; lo usamos para referenciar componentes y para usar valores mutables.
+
+- **useLayoutEffect**: similar a useEffect pero asíncrono.
+
+- **useDEferredValue**: REact 18 sirve para poder reaccionar a cambios de estados luego de renderizar el cambio de estado
+
+
 ---
 ---
 
