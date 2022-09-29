@@ -174,7 +174,9 @@ import "./css/bootrap.main.css";
 
 -> [https://react-bootstrap.github.io/](https://react-bootstrap.github.io/)
 
-Instalación: ```npm install react-bootstrap bootstrap````
+Instalación: ```npm install react-bootstrap bootstrap```
+
+En el index.js o en App.js debo importarlo: ```import 'bootstrap/dist/css/bootstrap.min.css';```
 
 ---
 ---
