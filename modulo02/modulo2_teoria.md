@@ -1,4 +1,4 @@
-# :star2: Teoría Módulo 2 - Unidad 2 - Armado y diseño de nuestros componentes
+# :star2: Teoría Módulo 2 - Unidad 2 - Armado y diseño de nuestros componentes :star2:
 
 ---
 
@@ -24,7 +24,7 @@
 
 ---
 
-## :star2: MODULO 2 - UNIDAD 1 -  DISEÑO DE LA ESTRUCTURA BÁSICA
+## :star2: MODULO 2 - UNIDAD 1 -  DISEÑO DE LA ESTRUCTURA BÁSICA :star2:
 
 ### :star: 3.1 ARMADO ENCABEZADO / NAVEGACION
 
@@ -97,23 +97,7 @@ Claro que sí. Y no necesitas ser un experto para hacerlo. Es más, a lo largo d
 ---
 
 
-## :star2: MODULO 2 - UNIDAD 2 -  aRMADO DE LA VISTA DE LISTADO
-
----
-
-## Objetivos del módulo
-
-```
-- Profundizar en la utilización de componentes como estructura básica de nuestro sitio web e implementar la librería de Bootstrap para incorporar CSS a nuestro sitio.
-- Poder armar la componente “cabecera” en donde dispondrás todo lo referente a la barra de navegación de la aplicación.
-- Elaborar un componente “pie de página” en donde deberás disponer los créditos y los elementos claves que deben estar presentes en el footer de una aplicación.
-- Integrar los componentes anteriores con los demás componentes y permitir que formen parte del flujo de toda la aplicación.
-- Implementar una librería de CSS para comenzar a gestionar los estilos visuales de la aplicación.
-- Armar el componente "listado", para que puedas mostrar allí todos los resultados obtenidos desde la API.
-- Crear un componente "detalle" que permita visualizar allí, la información de solamente un ítem en particular.
-- Entender cómo se renderiza un bloque de información (array) dentro del componente.
-Identificar cómo realizar un renderizado condicional, para que mientras la información llega desde la API la persona que usa la aplicación, pueda esperar cómodamente (mensaje: “Cargando…”).
-```
+## :star2: MODULO 2 - UNIDAD 2 -  ARMADO DE LA VISTA DE LISTADO :star2:
 
 ---
 
@@ -153,7 +137,7 @@ Esto se debe a que es el servidor quien almacena las credenciales (usuario y con
 
 ---
 
-### :start: OBTENCION DE LA API
+### :start: 4.3 OBTENCION DE LA API
 
 ### Listo, ya estamos logueados ¿y ahora?
 
@@ -180,7 +164,7 @@ Es lo más común de todo, pues la información que presentamos dentro de nuestr
 
 ---
 
-### :star: RENDERIZACION DATOS EN COMPONENTE
+### :star: 4.4 RENDERIZACION DATOS EN COMPONENTE
 
 
 ### Cuando ya tenemos los datos ¿cómo mostramos los mismos en el componente?
@@ -197,7 +181,7 @@ Demasiado. Prácticamente cuando desarrollas dentro del entorno de React, te aco
 
 ---
 
-### :star: MANEJO DE ERRORES (SWEET ALERT)
+### :star: 4.5 MANEJO DE ERRORES (SWEET ALERT)
 
 ### Realmente, ¿es indispensable el manejo de errores en mi aplicación?
 
@@ -213,7 +197,7 @@ No. El manejo de errores es algo crucial que debes implementar sí o sí, pero l
 
 ---
 
-## :star: INGRESO AL DETALLE DE CADA ITEM
+## :star: 4.6 INGRESO AL DETALLE DE CADA ITEM
 
 ### ¿De qué trata el detalle de cada ítem?
 
@@ -240,27 +224,11 @@ Vamos a poder renderizar el detalle del producto que coincida con ese ID en part
 ---
 ---
 
-## :star2: MODULO 2 - UNIDAD 3 -  VISTA DE DETALLE
+## :star2: MODULO 2 - UNIDAD 3 -  VISTA DE DETALLE :star2:
 
 ---
 
-### Objetivos del modulo
-```
-- Profundizar en la utilización de componentes como estructura básica de nuestro sitio web e implementar la librería de Bootstrap para incorporar CSS a nuestro sitio.
-- Poder armar la componente “cabecera” en donde dispondrás todo lo referente a la barra de navegación de la aplicación.
-- Elaborar un componente “pie de página” en donde deberás disponer los créditos y los elementos claves que deben estar presentes en el footer de una aplicación.
-- Integrar los componentes anteriores con los demás componentes y permitir que formen parte del flujo de toda la aplicación.
-- Implementar una librería de CSS para comenzar a gestionar los estilos visuales de la aplicación.
-- Armar el componente "listado", para que puedas mostrar allí todos los resultados obtenidos desde la API.
-- Crear un componente "detalle" que permita visualizar allí, la información de solamente un ítem en particular.
-- Entender cómo se renderiza un bloque de información (array) dentro del componente.
-- Identificar cómo realizar un renderizado condicional, para que mientras la información llega desde la API la persona que usa la aplicación, pueda esperar cómodamente (mensaje: “Cargando…”).
-```
-
-
----
-
-### :star: VERIFICACION DE USUARIO Y TOKEN
+### :star: 5.2 VERIFICACION DE USUARIO Y TOKEN
 
 
 ### ¿Por qué es necesario seguir teniendo en cuenta el token?
@@ -277,7 +245,7 @@ Realmente no, pues la más sencilla y habitual es manejar al token como un eleme
 
 ---
 
-### :star: ARMADO DE VISTA DETALLE
+### :star: 5.2 ARMADO DE VISTA DETALLE
 
 ### ¿Pará qué usamos este componente?
 
@@ -293,7 +261,7 @@ Si bien no están estrictamente vinculados para que uno funcione dependiendo del
 
 ---
 
-### :star: OBTENER LOS DATOS DE LA API
+### :star: 5.3 OBTENER LOS DATOS DE LA API
 
 ### ¿De dónde sacaremos el identificador que nos permitirá hacer el llamado a la API?
 
@@ -309,7 +277,7 @@ Particularmente JS tiene un objeto que nos permite acceder a esta información p
 
 ---
 
-### :star: MOSTRAR LOS DATOS, RENDER DE LA INFORMACION
+### :star: 5.4 MOSTRAR LOS DATOS, RENDER DE LA INFORMACION
 
 ### Y ahora que tenemos la información necesaria, ¿qué haremos con ella?
 
