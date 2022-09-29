@@ -186,37 +186,43 @@ En el index.js o en App.js debo importarlo: ```import 'bootstrap/dist/css/bootst
 
 ---
 
-## :star: 4.1 ARMADO DE A VISTA DE LISTADO
+## :star: 4.1 ARMADO DE LA VISTA DE LISTADO
 
-### ¿Para qué nos servirá este componente?
+### <img src="https://img.icons8.com/bubbles/40/000000/list.png"/> ¿Para qué nos servirá este componente?
 
 Este componente tiene como finalidad mostrar todos los datos recibidos desde la API. Aquí se deberán listar cada uno de los ítems recibidos, mostrando brevemente alguna parte de su información.
 
-### ¿Cualquier aplicación hecha con React cuenta con este tipo de componente?
+
+### <img src="https://img.icons8.com/bubbles/40/000000/list.png"/> ¿Cualquier aplicación hecha con React cuenta con este tipo de componente?
 
 Generalmente sí, pues siempre que se quiera mostrar un gran conjunto de información (listado de productos, servicios, platos de comida, cartelera de cine, etc.) se necesita este tipo de lógica en el ámbito de frontend que permita, no solo tomar los datos de la API, sino también presentar esta información lo mejor posible de cara al visitante de la aplicación.
 
-### ¿Cómo se presenta la información dentro de este componente?
+
+### <img src="https://img.icons8.com/bubbles/40/000000/list.png"/> ¿Cómo se presenta la información dentro de este componente?
 
 Justamente eso es lo que aprenderemos en esta clase. Pero, para hacerte un breve resumen, lo primero será hacer el llamado a la API y una vez tengas su respuesta, almacenar los datos en el estado local del componente, para posteriormente a través de una iteración ir renderizando uno a uno los elementos obtenidos de dicha respuesta.
+
 
 ---
 
 ## :star: 4.2 PROTECCION RUTA
 
-### ¿Por qué es necesario proteger esta ruta?
+### <img src="https://img.icons8.com/ios/50/000000/route.png"/> ¿Por qué es necesario proteger esta ruta?
 
 Puntualmente en este challenge, es un requerimiento para que puedas demostrar tus habilidades. Pero es bueno que sepas que este proceso de "protección" de rutas es algo muy común, ya que el mismo te permite evitar que personas que no estén autenticadas en la aplicación, puedan ver información sensible de la misma.
 
-### ¿Cuál es el flujo exacto que se genera dentro de la aplicación al proteger esta ruta?
+
+###  <img src="https://img.icons8.com/ios/50/000000/route.png"/> ¿Cuál es el flujo exacto que se genera dentro de la aplicación al proteger esta ruta?
 
 Como punto de partida, a esta ruta no se podrá ingresar si no se cuenta con la correspondiente autenticación de parte de la aplicación. Por eso, en dicho escenario, cualquier persona que carezca de credenciales válidas, será redireccionada al formulario de log in y su ingreso a esta ruta no será posible a menos que su usuario y contraseña sean los correctos.
 
-### ¿Qué se necesita para poder proteger una ruta?
+
+### <img src="https://img.icons8.com/ios/50/000000/route.png"/> ¿Qué se necesita para poder proteger una ruta?
 
 Una de las principales cosas que son necesarias para poder llevar a cabo esto, es una respuesta de parte del servidor que nos certifique en la parte del front que la persona que está usando la aplicación se ha autenticado correctamente. Generalmente a esto se le llama token. Y es gracias a la existencia del mismo que vamos a poder implementar toda la lógica que nos permita dar acceso o no a esta ruta.
 
-### ¿Por qué el token tiene que ser generado del lado del servidor?
+
+### <img src="https://img.icons8.com/ios/50/000000/route.png"/> ¿Por qué el token tiene que ser generado del lado del servidor?
 
 Esto se debe a que es el servidor quien almacena las credenciales (usuario y contraseña) de los usuarios de la aplicación. Pues, tener esta información del lado del frontend no solamente es casi imposible, sino que a su vez es altamente peligroso, pues cualquier persona con un poco de conocimiento, gracias a las herramientas de desarrollo del navegador, podría corromper esta información.
 
@@ -224,25 +230,29 @@ Esto se debe a que es el servidor quien almacena las credenciales (usuario y con
 
 ### :star: 4.3 OBTENCION DE LA API
 
-### Listo, ya estamos logueados ¿y ahora?
+### <img src="https://img.icons8.com/dotty/40/000000/api-settings.png"/> Listo, ya estamos logueados ¿y ahora?
 
 Una vez logueados de manera satisfactoria en la aplicación. Lo que vamos a hacer ahora es disparar un pedido a la API para que la misma nos responda con la información esperada (listado de películas) y así poder renderizar dicha información correctamente en nuestra interfaz.
 
-### ¿El uso de esta API demanda algún tipo de información especial?
+
+### <img src="https://img.icons8.com/dotty/40/000000/api-settings.png"/> ¿El uso de esta API demanda algún tipo de información especial?
 
 No, pero sí. Generalmente para consultar una API, la misma demanda algo que tradicionalmente se conoce como una API key. La API key es algo que debemos obtener previamente de la API para, a través de esta, poder identificar que somos nosotros quienes haremos consultas al servidor.
 
 Básicamente la API key es la que nos permite que nuestro llamado sea atendido. Y si bien no todas las APIS usan esta característica, la gran mayoría sí lo hace.
 
-### Pero, ¿entonces la API key es lo mismo que el token?
+
+### <img src="https://img.icons8.com/dotty/40/000000/api-settings.png"/> Pero, ¿entonces la API key es lo mismo que el token?
 
 No. El token es la confirmación de que la persona que se ha logueado en la aplicación lo hizo con las credenciales correctas, mientras que la API key es la llave que nos identifica frente a la API, para que la misma pueda atender nuestros llamados.
 
-### Listo. La API nos respondió con la información ¿y ahora?
+
+### <img src="https://img.icons8.com/dotty/40/000000/api-settings.png"/> Listo. La API nos respondió con la información ¿y ahora?
 
 Ahora viene la parte divertida, pues después de recibir la información, tendrás que poner en práctica tus habilidades de HTML, CSS y JS para mapear esta información y poder presentarla de una manera linda y agradable.
 
-### En un proyecto real, ¿qué tan común es trabajar con APIs?
+
+### <img src="https://img.icons8.com/dotty/40/000000/api-settings.png"/> En un proyecto real, ¿qué tan común es trabajar con APIs?
 
 Es lo más común de todo, pues la información que presentamos dentro de nuestro frontend, generalmente viene desde una API. Por ello es tan importante procesar estos conocimientos e implementarlos como algo habitual.
 
@@ -252,51 +262,62 @@ Es lo más común de todo, pues la información que presentamos dentro de nuestr
 ### :star: 4.4 RENDERIZACION DATOS EN COMPONENTE
 
 
-### Cuando ya tenemos los datos ¿cómo mostramos los mismos en el componente?
+### <img src="https://img.icons8.com/material-two-tone/40/000000/important-file.png"/> Cuando ya tenemos los datos ¿cómo mostramos los mismos en el componente?
 
 Para esta labor vamos a necesitar trabajar con mucho JSX y con algunas herramientas como el método Map o Filter de JavaScript, pues son estos métodos los que comúnmente se utilizan para llevar a cabo dicho proceso.
 
-### Pero, ¿se hace necesario usar si o si un Map o un Filter?
+
+### <img src="https://img.icons8.com/material-two-tone/40/000000/important-file.png"/> Pero, ¿se hace necesario usar si o si un Map o un Filter?
 
 Sí, pues dentro del esquema JSX que trabaja React, no es posible usar un iterador como un for o un forEach para renderizar la información, por tal motivo se hace necesario entender cómo funciona el Map o el Filter y reconocer cuál es su estructura. 
 
-### ¿Qué tan habitualmente se usa esto en un proyecto real?
+
+### <img src="https://img.icons8.com/material-two-tone/40/000000/important-file.png"/> ¿Qué tan habitualmente se usa esto en un proyecto real?
 
 Demasiado. Prácticamente cuando desarrollas dentro del entorno de React, te acostumbras a usar tanto el map o el filter, que se terminan volviendo tus mejores aliados de batalla en el proceso de desarrollo.
+
 
 ---
 
 ### :star: 4.5 MANEJO DE ERRORES (SWEET ALERT)
 
-### Realmente, ¿es indispensable el manejo de errores en mi aplicación?
+
+### <img src="https://img.icons8.com/color/48/000000/error--v1.png"/> Realmente, ¿es indispensable el manejo de errores en mi aplicación?
 
 Como ya lo hablamos en momentos anteriores, el manejo de errores es la técnica a través de la cual como desarrolladores podemos manejar las distintas respuestas obtenidas después de procesar la información obtenida desde la API. Por tal motivo debemos servir de mecanismos funcionales a la persona que visita nuestra aplicación, para que sepa en qué momentos alguna petición generó un error como respuesta y sepa cómo actuar en consecuencia.
 
-### Entendido, pero ¿necesito instalar otra librería para esto?
+
+### <img src="https://img.icons8.com/color/48/000000/error--v1.png"/> Entendido, pero ¿necesito instalar otra librería para esto?
 
 No, pues si anteriormente ya instalaste Sweet Alert, con ella es más que suficiente, aquí tu objetivo será entonces, identificar en qué momento tu aplicación pudiera generar un mensaje de error e implementar justo ahí un elemento visual informativo con dicha librería.
 
-### En un proyecto real, ¿es obligatorio usar Sweet Alert para el manejo de errores?
+
+### <img src="https://img.icons8.com/color/48/000000/error--v1.png"/> En un proyecto real, ¿es obligatorio usar Sweet Alert para el manejo de errores?
 
 No. El manejo de errores es algo crucial que debes implementar sí o sí, pero la manera como lo lleves a cabo y la implementación que decidas, corre 100% por tu cuenta en función de lo que te sea más cómodo y más útil de implementar.
+
 
 ---
 
 ## :star: 4.6 INGRESO AL DETALLE DE CADA ITEM
 
-### ¿De qué trata el detalle de cada ítem?
+
+### <img src="https://img.icons8.com/color/48/000000/details-pane.png"/> ¿De qué trata el detalle de cada ítem?
 
 Aquí vas a poder mostrar la información detallada de cada uno de los elementos recibidos como respuesta de la API. Como es común que en el listado completo de ítems solamente se muestre una pequeña porción de información, vamos a necesitar de un lugar determinado en donde mostrar el completo de la información. Y ese lugar, será el componente Detalle.
 
-### Pero si tengo muchos ítems, ¿tengo que hacer muchos componentes "Detalle"?
+
+### <img src="https://img.icons8.com/color/48/000000/details-pane.png"/> Pero si tengo muchos ítems, ¿tengo que hacer muchos componentes "Detalle"?
 
 No, ya que la idea fundamental es que este mismo componente te pueda servir para mostrar el detalle de cualquier ítem que el usuario haya seleccionado.
 
-### Y eso, ¿cómo se hace?
+
+### <img src="https://img.icons8.com/color/48/000000/details-pane.png"/> Y eso, ¿cómo se hace?
 
 Bueno, para lograr esto vamos a tener que hacer uso de las "rutas dinámicas" que nos provee React Router. 
 
-### Y, ¿qué es una ruta dinámica?
+
+### <img src="https://img.icons8.com/color/48/000000/details-pane.png"/> Y, ¿qué es una ruta dinámica?
 
 Básicamente es una ruta como cualquier otra, pero que va a recibir como parámetro un bloque de información crucial que permitirá que el componente que se renderiza sea dinámico. Por ejemplo, en la siguiente ruta: http://localhost:3000/productos/45gb32F, la última parte (45gb32F) sería la parte dinámica, la misma vendría a representar el ID de un producto y dependiendo del ID:
 
