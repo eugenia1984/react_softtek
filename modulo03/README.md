@@ -81,7 +81,7 @@ Está compuesto por:
 
 ---
 
-## <img src="https://img.icons8.com/color/100/000000/search--v1.png"/> Armado y validacion del componente BUSCADOR
+## <img src="https://img.icons8.com/color/40/000000/search--v1.png"/> Armado y validacion del componente BUSCADOR
 
 
 
