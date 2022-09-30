@@ -27,6 +27,38 @@
 
 ---
 
-ARMADO COMPONENTE BUSCADOR, VALIDACIONES, REDIRECCION A LOS RESULTADOS Y LOGICA DE FAVORITOS
+## ARMADO COMPONENTE BUSCADOR, VALIDACIONES, REDIRECCION A LOS RESULTADOS Y LOGICA DE FAVORITOS
+
+---
+
+### Temas:
+
+```
+- Presentación del Modulo 3
+- Ejercicio de repaso
+- Barra de busqueda
+- Armado y validacion del componente Buscador
+- Armado de la seccion de Favoritos
+```
+
+---
+
+### MODULO 3 : BUSCADOR Y SECCION DE FAVORITOS
+
+En este modulo vamos a seguir construyendo componentes y añadiendo nuevas funcionalidades a la aplicacion de la lista de peliculas.
+
+#### 01 - Implementación de un buscador
+
+Vamos a construir un componente para realizar busquedas de peliculas por palabra clave con sus validaciones y mostrando sus resultados.
+
+
+#### 02 - Sección de Favoritos
+
+Vamos a crear una seccion de favoritos y todo lo relacionado a su logica
+
+
+#### 03 - Hola Redux
+
+Vamos a conocer la libreria, hablar sobre el patron de diseño que implementa, sus ventajas y desventajas y cuando conviene usarlo.
 
 ---
