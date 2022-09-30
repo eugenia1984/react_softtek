@@ -62,3 +62,28 @@ Vamos a crear una seccion de favoritos y todo lo relacionado a su logica
 Vamos a conocer la libreria, hablar sobre el patron de diseño que implementa, sus ventajas y desventajas y cuando conviene usarlo.
 
 ---
+
+## 01 - Implementación de un buscador
+
+### <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/40/000000/external-lup-mutualiz-ui-essential-others-zufarizal-robiyanto.png"/> Barra de busqueda
+
+**Estructura basica**
+
+Uan barra de busqueda es un elemento en la intefaz de usuario que te permite encontrar informacion en la web o dentro de una aplicacion web.
+
+Generalmente lo encontramos en el Header cuando queremos que esté presente y accesible siempre para el usuario de nuestra aplicación.
+
+Está compuesto por:
+
+- Un **formulario** que posee un **input** para tomar un texto.
+
+- Un **boton** que se encarga de procesar la busqueda.
+
+---
+
+## <img src="https://img.icons8.com/color/100/000000/search--v1.png"/> Armado y validacion del componente BUSCADOR
+
+
+
+---
+---
