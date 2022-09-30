@@ -759,13 +759,42 @@ misma vendría a representar el ID de un producto.
 
 ---
 
+## Temas
+
+```
+- 1 - Finalización del módulo 2
+- 2 - Armado de la vista detalle y obtención de datos para el detalle desde la API.
+- 3 -Ejercicios de Repaso
+- 4 -Resumen para Práctica
+```
+
+---
+## Finalización del módulo 2
+
+### ¿ Qué vimos hasta ahora ?
+
+1. Hemos estructurado nuestra interfaz gráfica en varios componentes y los hemos empezado a crear (```<Header />```,``` <Footer />```, ```<Listado />```, etc) añadiendoles estilos con CSS (ya sea plano o con alguna librería) y manejando los errores que pueden llegar a pasar.
+
+2. Empezamos a consumir, es decir, hacer peticiones a un API de películas para obtener información necesaria y mostrarla en nuestra aplicación. 
+
+3. Garantizamos que las rutas de la aplicación sean ingresadas por un usuario que ha iniciado sesión (que tenga la información del token guardada en el sessionStorage).
+
+4. Vimos información relevante acerca del flujo de datos entre componentes, la importancia del estado y las propiedades al momento de la comunicación de componentes y que es el ciclo de vida de un componente.
+
+
+---
+
+## 2 - Armado de vista detalle y obtención de datos para el detalle de la API
+
+
+
 ### Más sobre componentes puros
 
 Un componente funcional poro es básicamente **cualquier componente que para unas props determinadas devuelve siempre la misma respuesta**.
 
 Un componente puro ofrece **mejoras de rendimiento** y **mayor facilidad de reutilización**.
 
--> Recibe props de afuera -> Maneja las props internamente -> DEvuelve algo
+-> Recibe props de afuera -> Maneja las props internamente -> Devuelve algo
 
 - Un ejemplo es el de un boton
 
