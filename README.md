@@ -231,9 +231,9 @@ contraseña:
 
 ## :star: FECHAS DE LOS EXAMENES
 
-- Cuestionario 1: 30 de Sep
+- Cuestionario 1: 30 de Sep -> **100 %**
 
-- Cuestionario 2: 6 de Oct
+- Cuestionario 2: 6 de Oct -> **100 %**
 
 - Cuestionario 3: 12 de Oct
 
