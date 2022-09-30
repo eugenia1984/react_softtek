@@ -23,7 +23,7 @@
 
 ---
 
-# :star2: Clase 30 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 3 * UNIDAD 1 :star2: 
+# :star2:Clase 30 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 3 * UNIDAD 6:star2: 
 
 ---
 
