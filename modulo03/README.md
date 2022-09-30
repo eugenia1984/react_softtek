@@ -22,3 +22,11 @@
 ```
 
 ---
+
+# :star2: Clase 30 Septiembre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 3 * UNIDAD 1 :star2: 
+
+---
+
+ARMADO COMPONENTE BUSCADOR, VALIDACIONES, REDIRECCION A LOS RESULTADOS Y LOGICA DE FAVORITOS
+
+---
