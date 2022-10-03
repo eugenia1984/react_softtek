@@ -248,3 +248,15 @@ contraseña:
 - [Repositorio en SandBox con la app de peliculas](https://codesandbox.io/s/first-react-form-2rys7b)
  
  ---
+ 
+###  Ejercicios:
+
+Encuentra los errores de la app y explica por qué pasa y cómo solucionarlos: [https://codesandbox.io/s/ily14d](https://codesandbox.io/s/ily14d)
+
+Lista de supermercado (añadir y remover items de la lista): [https://codesandbox.io/s/add-remove-exercise-supermarket-list-v2zs2x](https://codesandbox.io/s/add-remove-exercise-supermarket-list-v2zs2x)
+
+El editar y eliminar todos no funciona. Vuelve a escribir handleAddTodo, handleChangeTodo y handleDeleteTodo: [https://codesandbox.io/s/8wkui6](https://codesandbox.io/s/8wkui6)
+
+Actualización de la aplicación de películas con el buscador + la sección de favoritos: [https://codesandbox.io/s/movie-app-from-videos-2rys7b](https://codesandbox.io/s/movie-app-from-videos-2rys7b)
+
+---
