@@ -442,6 +442,166 @@ export default App;
 - Lo podes ver en [https://codesandbox.io/s/add-remove-exercise-supermarket-list-forked-uehhti](https://codesandbox.io/s/add-remove-exercise-supermarket-list-forked-uehhti)
 
 ---
+
+## Unidad 7. Introducción a Redux
+
+```
+- 7.1 Entendiendo la problemática en el desarrollo de aplicaciones
+- 7.2 Introducción y conceptos clave para manipular Redux
+```
+
+### Cómo hace un componente para...
+
+
+... informar un cambio de estado a un hermano o ancestro?
+
+... acceder el dato de un ancestro?
+
+- Si sólo usamos props, podemos comunicarnos desde el componente que está más afuera hacia el que está más adentro, es decir dle padre hacia el hijo. -> La **comunicación** es **top-down**
+
+- Ponemos todo lo del estado en el componente de más arriba y lo hacemos pasar hasta llegar al componente de abajo.
+
+```         {firstName:"M E", lastName: "C"}
+      -----
+      |   |
+      -----
+      |
+      v
+    ----
+    |   |
+    ----
+     |
+     v
+   -----
+   |   |
+   -----
+   firstName
+```
+
+El componente de más abajo necesitaría recibir un **handler** para poder informarle al padre de ese cambio de estado y el Padre puede volver a hacer el cascadeo.
+
+**Props Drilling** (esto es malo)
+
+- Informar un cambio de estado a un hermano o un ancestro ? Necesita recibir un **callback** por **props**
+
+- Acceder al dato de un ancestro? Necesita recibir el **dato** por **props**
+
+Drop drilling -> se hace lifting, se esta taladrando hacia abajo desde el root. A veces es suficiente, pero... no es bueno. El problema es que si luego nececito algo mas en el componente hijo o nieto, tengo que ir modificando todos los componentes intermedios para que llegue esta nueva prop.
+
+-> La problemática es ...
+
+
+... complejidad de comunicar componentes a traves del arbol
+
+...muchos componentes, varios niveles de anidación
+
+... prop drilling no escala en desarrollo
+
+
+-> como solución a esta problemática surge **Redux**
+
+---
+
+
+## Redux
+
+
+### Conceptos de Redux
+
+
+#### Una sola fuente de verdad
+
+Todo el estado de la aplicación está centralizado en un único lugar.
+
+#### Cambios de estado mediante funciones puras
+
+Los componentes no pueden aplicar las acciones, sino que se configuran funciones puras encargadas de interpretar la acción y avanzar el estado.
+
+#### Estado de solo lectura
+
+Los componentes pueden leer el estado de forma directa, pero para modificarlo deben disparar una acción indicando la modificación a realizar.
+
+
+-> Redux nacio de otro lenguaje de programacion para front end, End. Lo que propone es tener todo el estado cetnralizado en un punto (inmutabilidad).
+
+-> Los componentes van a disparar fucniones
+
+-> Se va a actualizar el estado
+
+### Estado central
+
+- Evita el prop drilling
+
+- solo se subscribe componentes que los necesitasn
+
+- solo participan en modificaciones componentes que lo necesitan
+
+
+### ¿ Cómo se nombra en Redux?
+
+- **selectors** para leer datos del estado cada vez que cambia
+
+- **dispatch** para provocar cambios de estado
+
+- **reducers** define como la accion actualiza el estado: logica independiente de vista, testeo sencillo.
+
+```
+----         reducer
+|  | <------ function <-----------
+----                             |
+ |                               | 
+ |             -----             |
+ |             |   |             |
+ |             -----             |
+ |             |    |            |
+ |             v    v            |
+ |           ---    ---          |
+ |           |  |   |   |        |
+ |           ---    ----         |
+ | useSelect()      dispatch()   |
+   leer estado     modificar estado
+```
+
+-> **useSelec** es un hook que nos permite pasarle una funcion para seleccionar fragmentos que nos interese del estado
+
+-> para hacer una modificacion sobre el estado usamos **useDispatch** y **dispatch** que nos permite pasarle una  definicion de la accion a realizar sobre el estado central. Esa accion se la va a pasar al reducer junto con el valor anterior del etado y se va a generar un nuevo estado que se va a renderizar en todos los componentes que estan leyendo de ese estado.
+
+
+La combinación del **Estado centralizado** y las **funciones de reduccion** se la conoce como**STORE**
+
+
+---
+
+### Ciclo de cambio de estado
+
+1. Los componentes despachan acciones que modifican el estado central.
+
+```JavaScript
+const dispatch = useDispatch()
+dispatch(action)
+```
+
+2. Los reducers actualizan el estado central a partir de las acciones:
+
+```JavaScript
+nuevoEstado = previoEstado + accion
+```
+
+3. Los componentes utilizan selectores para leer la informacion que les interesa del estado central:
+```JavaScript
+const dato = useSelect(selector)
+```
+
+El modelo que propone Redux es:
+
+
+```    actions
+      /      \
+    /         \
+  view <----- state
+```
+
+---
 ---
 
 - [**TEORIA Y VIDEOS**](https://github.com/eugenia1984/react_softtek/blob/main/modulo03/modulo3_teoria.md)
