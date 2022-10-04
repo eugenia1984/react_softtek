@@ -147,15 +147,15 @@ function throttle(cb, delay = 250) {
 
 ## Temas:
 ```
-- Retoques finales a la seccion de Favoritos
-- Verificación que el flujo de la applicacion funciona correctamente
-- Ejercicio de repaso
-- Introducciona  REdux
+- 1 - Retoques finales a la seccion de Favoritos
+- 2 - Verificación que el flujo de la applicacion funciona correctamente
+- 3 - Ejercicio de repaso
+- 4 - Introducciona  Redux
 ```
 
 ---
 
-## Finalización de la seccion de Favoritos
+## 1 - Finalización de la seccion de Favoritos
 
  Favoritos.js:
  
@@ -435,7 +435,7 @@ export default App;
 
 ---
 
-### Ejercicio de repaso
+### 3 - Ejercicio de repaso
 
 - Implementar el handleAdd y el handleRemove para esta lista de supermercado
 
@@ -443,7 +443,7 @@ export default App;
 
 ---
 
-## Unidad 7. Introducción a Redux
+## 4 -  Introducción a Redux ( Unidad 7)
 
 ```
 - 7.1 Entendiendo la problemática en el desarrollo de aplicaciones
@@ -600,6 +600,165 @@ El modelo que propone Redux es:
     /         \
   view <----- state
 ```
+
+#### Otro modo de verlo
+
+
+```
+                               (previousState, action)
+ACTION ----dispatch----> STORE -----------------------> REDUCERS
+  |          (action)      |    <----------------------
+  |                        |          (newState)
+  |                        |
+  |                 (state)|
+  |                        v
+  ---------------------- VIEW
+```
+
+Del STORE lleo el ESTADO en una VISTA, mediante ACCIONES DE UN USUARIO (generalmente los cambios se diparan cuando el usuario hace click, ingresa algo en un input, marca un checkbox, hace algo). Entonces desde el HANDLER se lanza una ACCION, esta accion llega al STORE y el store utilizando el REDUCER aplica la accion y general UN NUEVO ESTADO que se pasa a las vistas y se actualiza.
+
+---
+
+### Ejemplo sencillo de codigo
+
+[se puede ver aca]([https://codesandbox.io/p/github/paulocesarcuneo/redux-simple-example/csb-dvpob8/draft/autumn-violet?file=%2Fsrc%2Fcomponents%2FFooter.js&workspace=%257B%2522activeFileId%2522%253A%2522cl8s5g4ms000flshp49rw1wko%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522sidekickItems%2522%253A%255B%257B%2522type%2522%253A%2522PREVIEW%2522%252C%2522taskId%2522%253A%2522start%2522%252C%2522port%2522%253A3000%252C%2522key%2522%253A%2522cl8s5gtt8000k2v6gd17luwg5%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D](https://codesandbox.io/p/github/paulocesarcuneo/redux-simple-example/csb-dvpob8/draft/autumn-violet?file=%2Fsrc%2Fcomponents%2FFooter.js))
+
+App.js
+```JSX
+import React from "react";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { TodoList } from "./components/TodoList";
+import "./bootstrap.css";
+
+function App() {
+  return (
+    <div
+      className="container d-flex gap-2 flex-column justify-content-center"
+      style={{width: 600}}
+    >
+      <Header />
+      <TodoList />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+```
+
+Footer.js
+```JSX
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTask } from "../app/actions";
+
+export const Footer = () => {
+  const [text, setText] = useState("");
+  const dispatch = useDispatch();
+
+  const handleAddTask = () => {
+    dispatch(addTask(text));
+    setText("");
+  };
+
+  const handleChangeText = (e) => {
+    setText(e.target.value);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.code === "Enter") {
+      handleAddTask();
+    }
+  };
+
+  return (
+    <div className="input-group w-100 my-4">
+      <label className="input-group-text">Agregar</label>
+      <input
+        className="form-control"
+        type="text"
+        value={text}
+        placeholder="Nueva Tarea"
+        onKeyDown={handleKeyDown}
+        onChange={handleChangeText}
+      />
+      <button className="btn btn-primary" onClick={handleAddTask}>
+        +
+      </button>
+    </div>
+  );
+};
+
+```
+
+Header.js
+```JSX
+import { useSelector } from "react-redux";
+import { todosSelector } from "../app/selectors";
+
+export const Header = () => {
+  const todos = useSelector(todosSelector);
+  const selectedCount = todos.filter((todo) => todo.selected).length;
+
+  return (
+    <div className="d-flex flex-row align-items-center border px-3 mt-4">
+      <input type="checkbox" className="form-check-input flex-shrink-0"></input>
+      <span className="p-4 fs-5 fw-bold">
+        {selectedCount ? `${selectedCount} Seleccionados` : "Tareas"}
+      </span>
+      {selectedCount ? (
+        <button
+          className="btn btn-danger m-4"
+          onClick={() => console.log(`borrar seleccionados`)}
+        >
+          BORRAR
+        </button>
+      ) : null}
+    </div>
+  );
+};
+```
+
+TodoList.js
+```JSX
+import { useSelector, useDispatch } from "react-redux";
+import { toggleSelection } from "../app/actions";
+import { todosSelector } from "../app/selectors";
+
+export const TodoList = () => {
+  const todos = useSelector(todosSelector);
+  const dispatch = useDispatch();
+
+  const handleToggleSelection = (index) => () => {
+    dispatch(toggleSelection(index));
+  };
+
+  return (
+    <div className="list-group mx-0 w-auto">
+      {todos.map(({ text, selected }, i) => (
+        <label
+          className="list-group-item d-flex gap-2 align-items-center justify-content-between"
+          key={`row-${i}`}
+        >
+          <input
+            type="checkbox"
+            className="form-check-input flex-shrink-0"
+            value={selected}
+            onChange={handleToggleSelection(i)}
+          />
+          <span className="d-block">{text}</span>
+          <button
+            className="btn btn-close"
+            onClick={() => console.log(`remove el item ${i}`)}
+          ></button>
+        </label>
+      ))}
+    </div>
+  );
+};
+```
+
 
 ---
 ---
