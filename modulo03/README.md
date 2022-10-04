@@ -141,6 +141,91 @@ function throttle(cb, delay = 250) {
 ---
 ---
 
+# :star2:Clase 03 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 3 * UNIDAD 6:star2: 
+
+---
+
+## Temas:
+```
+- Retoques finales a la seccion de Favoritos
+- Verificación que el flujo de la applicacion funciona correctamente
+- Ejercicio de repaso
+- Introducciona  REdux
+```
+
+---
+
+## Finalización de la seccion de Favoritos
+
+ Favoriots.js:
+ 
+ ```JSX
+ mport React from "react";
+import { Link, Navigate } from "react-router-dom";
+
+const Favoritos = ({ favorites, addOrRemoveFromFavs }) => {
+  let token = sessionStorage.getItem("token");
+
+  return (
+    <>
+      {!token && <Navigate replace to="/" />}
+      <h2 className="text-white">Favoritos</h2>
+      <div className="row my-2 mx-2">
+        {favorites.length === 0 && (
+          <div className="col-12 text-danger text-center">
+            No Hay Nada en Favoritos
+          </div>
+        )}
+        {favorites.map((oneMovie, index) => {
+          return (
+            <div className="col-3" key={index}>
+              <div className="card my-2">
+                <img
+                  src={oneMovie.imgURL}
+                  style={{ height: "300px" }}
+                  className="card-img-top"
+                  alt="..."
+                />
+                <button
+                  className="favorito"
+                  onClick={addOrRemoveFromFavs}
+                  data-movie-id={oneMovie.id}
+                >
+                  🖤
+                </button>
+                <div
+                  className="card-body text-center"
+                  style={{ height: "220px" }}
+                >
+                  <h5 className="card-title">
+                    {oneMovie.title.substring(0, 30)}
+                  </h5>
+                  <p className="card-text">
+                    {oneMovie.overview.substring(0, 100)}...
+                  </p>
+                  <Link
+                    to={`/pelicula/${oneMovie.id}`}
+                    className="btn btn-dark "
+                  >
+                    View details
+                  </Link>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+
+export default Favoritos;
+```
+
+
+---
+---
+
 - [**TEORIA Y VIDEOS**](https://github.com/eugenia1984/react_softtek/blob/main/modulo03/modulo3_teoria.md)
 
 ---
