@@ -228,9 +228,105 @@ export default Favoritos;
 
 -> Es una estructura similar a las cards, pero ademas tiene el **boton** con el **corazon** con el **handle** para el **onClick**.
 
--> Este boton con el corazon lo vamos a mostrar en la seccion de **favoritos** y tambien en la parte de **listado**. Para compartir información entre componenetes **el estado lo maneja el Padre más cercano**, es decir en **App**:
+-> Este boton con el corazon lo vamos a mostrar en la seccion de **favoritos** y tambien en la parte de **listado**. Para compartir información entre componenetes **el estado lo maneja el Padre más cercano**, es decir en **App**.
 
-App.js:
+-> Como entre **Favorito** y **listado** vamos a compartir pasamos como props la informacion con **addOrRemoveFromFavs** asi utilizan el **boton** para enviar el evento y remover el item de favorito, hacemos el **lifting** y lo movemos a App:
+
+```JSX
+<Route
+    path="/listado"
+    element={<Listado addOrRemoveFromFavs={addOrRemoveFromFavs} />}
+  />
+  <Route path="/pelicula/:id" element={<Detalle />} />
+  <Route
+    path="/resultados"
+    element={<Resultados addOrRemoveFromFavs={addOrRemoveFromFavs} />}
+  />
+  <Route
+    path="/favoritos"
+    element={
+      <Favoritos
+        favorites={favoritos}
+        addOrRemoveFromFavs={addOrRemoveFromFavs}
+      />
+    }
+  />
+</Routes>
+```
+
+-> TEnemos que manejar una **lista de favoriots** además de la lista de las movies que se obtiene de la API, esta lista de favoritos la manejamos como un estado y utilizamos el **localStorage**, usamos un useState para la primer renderizacion y vemos si en localStorage tengo algo guardado que sea **fav**, los vaforitos, si hay se guarda en la variable de estado.
+
+A veces con una misma funcion se maneja tanto el **add** como el **Remove**, loq eu no es recomendable, si luego se complejiza, es mejor tener separadas las funcionalidades, pero en el video esta todo junto. Al hacer click al boton obtenemos lo que tenemos del listado en el localStorage, si no tenemos nada inicializamos una variable secundaria (temporal) para el manejo de quitar elementos y agregar elementos en la lista. A nosotros nos interesa que las listas sean inmutables, pero JS tiene arrays mutables (su valor en memoria y sus indices cambian) por eso es importante trabajar con variables temporales/de soporte.
+
+Inicializamos la lista vacioa si no hay nada en el localStorage, sino le hacemos un **JSON.parse**:
+
+```JSX
+const [favoritos, setFavoritos] = useState([]);
+
+  useEffect(() => {
+    const favInLocal = localStorage.getItem("favs");
+
+    if (!!favInLocal) {
+      const favsArrays = JSON.parse(favInLocal);
+      setFavoritos(favsArrays);
+    }
+  }, []);
+```
+
+Tengo una lista de diciconario.
+
+Ahora para obtener la informacion del evento a añadir o remover utilizo:
+
+```JSX
+//Obtengo información del elemento
+const btn = e.currentTarget;
+const parent = btn.parentElement;
+const imgURL = parent.querySelector("img").getAttribute("src");
+const title = parent.querySelector("h5").innerText;
+const overview = parent.querySelector("p").innerText;
+const movieData = {
+  imgURL,
+  title,
+  overview,
+  id: parseInt(btn.dataset.movieId)
+};
+```
+
+Co la funcion **find** veo si en mi lista de favoritos tego esta pelicula a agregar o eliminar, si no esta lo paso de objeto JSOn a un objeto String para guardar en la varaible de favs que tengo en el localStorage.
+
+```JSX
+let movieIsInArray = tempMoviesInFavs.find((oneMovie) => {
+  return oneMovie.id === movieData.id;
+});
+```
+
+Tambien lo seteamos y loc ambiamos en la variable de estado, y le lanzamos el aviso de que esta todo ok y se agrego la peli a favoritos.
+
+Si quieor eliminar, busco que este en el array y con un filter me guardo el resto de las pelis, menos la que quiero eliminar, y aviso que ya quedo eliminada.
+
+```JSX
+ if (!movieIsInArray) {
+    localStorage.setItem(
+      "favs",
+      JSON.stringify([...tempMoviesInFavs, movieData])
+    );
+    setFavoritos([...tempMoviesInFavs, movieData]);
+    swal.fire("Bien", "Se agrego la pelicula a favoritos", "success");
+  } else {
+    let moviesLeft = tempMoviesInFavs.filter((oneMovie) => {
+      return oneMovie.id !== movieData.id;
+    });
+    localStorage.setItem("favs", JSON.stringify(moviesLeft));
+    setFavoritos(moviesLeft);
+    swal.fire("Bien", "Se elimino la pelicula de favoritos", "success");
+  }
+};
+```
+
+Estos **favoritos** lo voy a compartir en el Listado y en Favoritos, tambien lo puedo incluir en el Layout, se lo podria pasar en el **Header**.
+
+
+Entonces, me queda **App.js**:
 ```JSX
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
