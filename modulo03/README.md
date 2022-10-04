@@ -433,6 +433,13 @@ function App() {
 export default App;
 ```
 
+---
+
+### Ejercicio de repaso
+
+- Implementar el handleAdd y el handleRemove para esta lista de supermercado
+
+- Lo podes ver en [https://codesandbox.io/s/add-remove-exercise-supermarket-list-forked-uehhti](https://codesandbox.io/s/add-remove-exercise-supermarket-list-forked-uehhti)
 
 ---
 ---
