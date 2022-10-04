@@ -157,7 +157,7 @@ function throttle(cb, delay = 250) {
 
 ## Finalización de la seccion de Favoritos
 
- Favoriots.js:
+ Favoritos.js:
  
  ```JSX
  mport React from "react";
@@ -220,6 +220,121 @@ const Favoritos = ({ favorites, addOrRemoveFromFavs }) => {
 };
 
 export default Favoritos;
+```
+
+-> Armamos un boton de favoritos, que es un boton con el corazon, que al hacerle el click nos lo va a guardar en al sección de favoritos.
+
+-> Recibe de **props**: **favorites** y **addOrRemoveFromFavs**
+
+-> Es una estructura similar a las cards, pero ademas tiene el **boton** con el **corazon** con el **handle** para el **onClick**.
+
+-> Este boton con el corazon lo vamos a mostrar en la seccion de **favoritos** y tambien en la parte de **listado**. Para compartir información entre componenetes **el estado lo maneja el Padre más cercano**, es decir en **App**:
+
+App.js:
+```JSX
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import swal from "sweetalert2";
+
+import Login from "../Login/Login";
+import Listado from "../Listado/Listado";
+import Detalle from "../Listado/Detalle";
+import Resultados from "../Resultados/Resultados";
+import Favoritos from "../Favoritos/Favoritos";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
+import "./App.css";
+
+function App() {
+  const [favoritos, setFavoritos] = useState([]);
+
+  useEffect(() => {
+    const favInLocal = localStorage.getItem("favs");
+
+    if (!!favInLocal) {
+      const favsArrays = JSON.parse(favInLocal);
+      setFavoritos(favsArrays);
+    }
+  }, []);
+
+  const addOrRemoveFromFavs = (e) => {
+    const favMovie = localStorage.getItem("favs");
+
+    let tempMoviesInFavs = [];
+
+    if (favMovie.length) {
+      tempMoviesInFavs = JSON.parse(favMovie);
+    }
+
+    //Obtengo información del elemento
+    const btn = e.currentTarget;
+    const parent = btn.parentElement;
+    const imgURL = parent.querySelector("img").getAttribute("src");
+    const title = parent.querySelector("h5").innerText;
+    const overview = parent.querySelector("p").innerText;
+    const movieData = {
+      imgURL,
+      title,
+      overview,
+      id: parseInt(btn.dataset.movieId)
+    };
+
+    let movieIsInArray = tempMoviesInFavs.find((oneMovie) => {
+      return oneMovie.id === movieData.id;
+    });
+
+    if (!movieIsInArray) {
+      localStorage.setItem(
+        "favs",
+        JSON.stringify([...tempMoviesInFavs, movieData])
+      );
+      setFavoritos([...tempMoviesInFavs, movieData]);
+      swal.fire("Bien", "Se agrego la pelicula a favoritos", "success");
+    } else {
+      let moviesLeft = tempMoviesInFavs.filter((oneMovie) => {
+        return oneMovie.id !== movieData.id;
+      });
+      localStorage.setItem("favs", JSON.stringify(moviesLeft));
+      setFavoritos(moviesLeft);
+      swal.fire("Bien", "Se elimino la pelicula de favoritos", "success");
+    }
+  };
+
+  return (
+    <BrowserRouter>
+      <div className="app">
+        <div className="principal">
+          <Header favorites={favoritos} />
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route
+              path="/listado"
+              element={<Listado addOrRemoveFromFavs={addOrRemoveFromFavs} />}
+            />
+            <Route path="/pelicula/:id" element={<Detalle />} />
+            <Route
+              path="/resultados"
+              element={<Resultados addOrRemoveFromFavs={addOrRemoveFromFavs} />}
+            />
+            <Route
+              path="/favoritos"
+              element={
+                <Favoritos
+                  favorites={favoritos}
+                  addOrRemoveFromFavs={addOrRemoveFromFavs}
+                />
+              }
+            />
+          </Routes>
+          <Footer />
+        </div>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
 ```
 
 
