@@ -83,6 +83,59 @@ Está compuesto por:
 
 ## <img src="https://img.icons8.com/color/40/000000/search--v1.png"/> Armado y validacion del componente BUSCADOR
 
+---
+
+## ARMADO Y VALIDACION DEL COMPONENTE BUSCADOR 
+
+---
+
+## ARMADO DE LA SECCION DE FAVORITOS 
+
+---
+
+## RENDIMIENTO API REQUEST INNECESARIAS
+
+### Rendimiento en API
+
+Deboucing:
+```JavaScript
+let timer;
+
+const debounce = (e) => {
+  if(timer) clearTimeout(timer);
+  timer = setTimeout(() => {
+    handleChange.target.value)
+  }, 500);
+;
+
+const handleChange= (e) => {
+  const url = "https//www.thecoktaildb.com/api/json/v1/search.php?s=${e}";
+  fetch(url)
+    .then((res)=> res.json())
+    .then((json) => {
+      return setDrinkList(json.drinks)});
+   };
+```
+
+### Rendimiento en AP
+
+Notar que ya estamos teniendo que incorporar lógica algo compleja para prevenir las request innecesarias.
+
+```JavaScript
+function throttle(cb, delay = 250) {
+  let shouldWait = false;
+  
+  return ( ...args) => {
+    if(shouldWait) retutn
+    
+    cb(...args)
+    shouldWait = true
+    setTimeout(()=> {
+      shouldWait = false
+    }, delay)
+  }
+}
+```
 
 
 ---
