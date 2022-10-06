@@ -356,6 +356,35 @@ se obtenga alguna respuesta.
 
 ## :star:  2 - Opciones de librerías para manejar formularios
 
+### <img src="https://img.icons8.com/dusk/40/000000/microsoft-forms.png"/> ¿Cuáles opciones tenemos?
+
+Gracias a las librerías, estos conceptos y funcionalidades han sido abstraídos y puestos a disposición para usarse. A
+continuación vamos a ver algunas de las más populares que existen actualmente:
+
+- Formik
+
+- react-hook-form
+
+
+### <img src="https://img.icons8.com/dusk/40/000000/microsoft-forms.png"/> React Hook Form
+
+Es una librería construida sobre React Hooks que está enfocada en el rendimiento, la integración con otras bibliotecas de UI como react-datepicker, downshift, chakra, entre otros.
+
+Su hook principal es useForm. A continuación, vamos a ver una implementación básica de un formulario de registro usando esta librería.
+
+
+
+### <img src="https://img.icons8.com/dusk/40/000000/microsoft-forms.png"/> Formik
+
+Es una librería exclusiva para el manejo de formularios en React y React Native. Se encarga de las abstracciones más comunes, es intuitiva, y finalmente es bastante usada por su simplicidad.
+
+Ofrece dos modos de uso:
+
+1. Usando el componente <Formik /> y tiene algunas ventajas como poder usar los componentes que Formik ha abstraído como
+```<Field />```, ```<ErrorMessage />```, entre otros.
+
+2. Usando el hook de useFormik
+
 ---
 
 ## :star: 3 - Agregar Formik a nuestro formulario de Login
@@ -365,7 +394,26 @@ se obtenga alguna respuesta.
 ## :star: 4 - Crear un formulario de registro con Formik
 
 ---
----
+
+```                
+                    clear error
+                    -------------------------------------
+  X                |                                    |
+  |                |  submit request         --------- error      
+  | enter          | -------------------     |
+  |       ready    | |                  |    |
+loading ---------- idle/ -----------> remote
+         |-----|  waiting <------    processing
+         valid       | invalid  |             |
+         input       | input    |             ------- sucess
+                     v          |
+                 input error ---|valid input
+                  |       |
+                  ---------
+                invalid input
+```
+
+
 
 ---
 ---
