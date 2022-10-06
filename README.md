@@ -241,7 +241,7 @@ contraseña:
 
 - Cuestionario 5: 1 de Nov
 
-- Examen sin nombre: 20Dec (trabajo finla grupal)
+- Examen sin nombre: 20Dec (trabajo final grupal)
 
 ---
  
