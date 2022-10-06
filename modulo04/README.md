@@ -262,3 +262,110 @@ CSS es muy poderoso y complejo. Permite relativizar el tamaño de las fuentes en
 
 ---
 ---
+
+# :star2:Clase 5 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 9:star2: 
+
+---
+
+## LIBRERIAS PARA FORMULARIOS EN REACT
+
+---
+
+## :star: Temas:
+
+```
+- 1 - ¿Por qué usar una librería para manejar formularios?.
+- 2 - Opciones de librerías para manejar formularios.
+- 3 - Agregar Formik a nuestro formulario de Login.
+- 4 - Crear un formulario de registro con Formik.
+```
+
+---
+
+## :star: 1 - ¿Por qué usar una librería para manejar formularios?
+
+A medida que la aplicación crece, se debe optar por la optimización de sus componentes y los formularios son un ejemplo de ello.
+
+Para crear un formulario, debemos tener en cuenta los siguientes aspectos:
+
+- **Accesibilidad**: Millones de usuarios en el mundo sufren algún tipo de discapacidad y navegan los sitios web a través de herramientas diferentes al mouse y el teclado, por lo tanto, debemos tener en cuenta la semántica de los elementos HTML que usemos para crear el formulario.
+
+- **Validaciones**: Cada campo que existe en el formulario puede tener unas reglas particulares. Unos campos pueden ser opcionales, otros obligatorios, también permiten ingresar correos electrónicos, pueden requerir valores mínimos o máximos, entre otros.
+
+- **Serialización**: La información del formulario se encuentra en algún espacio de memoria de la aplicación. Obtener esa información, manipularla y enviarla adecuadamente puede ser un reto en algunas ocasiones.
+
+Se ha convertido en un reto saber cómo efectivamente implementar formularios. Para lograrlo en React, tenemos que tener en cuenta qué estilo de componente vamos a crear para los formularios (**controlado o no controlado**) y sus validaciones pertinentes (síncronas y asíncronas).
+
+###  Componente No Controlado
+
+Es aquel que no usa el estado o las props para representarse en el DOM, es decir, el valor de los elementos del componente no pueden ser manejados en un determinado momento. Una de las maneras en la que React obtiene los valores es usando el hook de **useRef**.
+
+```JSX
+import React from "react";
+
+function Form() {
+  const formRef = React.useForm():
+  
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    /*
+      1. Usamos FormData para obtener la informacion
+      2.FormData requiere la referencia del DOM, 
+        gracias al REF API podemos pasar esa referencia
+      3. Finalmente obtenemos los datos serializados  
+    */
+    const formData = new FormData(formRef.current);
+    const values = Object.formEntries(formData);
+    // Aqui puedes usar valores para enviar la informacion
+  }
+  
+  return (
+    <form onSubmit={handleSubmit} ref={formRef}>
+      <label htmlFor="email">Email</label>
+      <input id="email" name="email" type="email"/>
+      <label htmlFor="password">Password</label>
+      <input id="password" name="password" type="passwprd"/>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
+### Componente Controlado
+
+Es aquel que usa los cambios de estado o cambios de props para representarse en el DOM. Es un componente que mantiene una
+sincronización entre el estado y el valor del campo, si el estado cambia, el valor cambia.
+
+```
+   Component
+  /        \
+State <--- SetState 
+```
+
+### Validaciones Síncronas
+
+Son aquellas que ocurren sin bloquear la ejecución esperando alguna respuesta. La mayoría de las validaciones son de este tipo, y los casos de uso más normales son validaciones de correos electrónicos, nivel de seguridad de contraseña, etc.
+
+
+### Validaciones Asíncronas
+
+Son aquellas que determinan el estado del campo usando algún servicio externo, lo que genera un bloqueo de la ejecución hasta que
+se obtenga alguna respuesta.
+
+---
+
+## :star:  2 - Opciones de librerías para manejar formularios
+
+---
+
+## :star: 3 - Agregar Formik a nuestro formulario de Login
+
+---
+
+## :star: 4 - Crear un formulario de registro con Formik
+
+---
+---
+
+---
+---
