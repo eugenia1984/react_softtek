@@ -259,6 +259,13 @@ container {
 
 CSS es muy poderoso y complejo. Permite relativizar el tamaño de las fuentes en base a un fuente root o a la fuente del tag padre utilizando unidades em y rem.
 
+---
+
+## :star: Practica
+
+Ejercicio de Mobile First: [https://codesandbox.io/s/mobile-first-principle-exercise-wfcjy8](https://codesandbox.io/s/mobile-first-principle-exercise-wfcjy8)
+
+-> Aca se puede ver el ejercicio que practique yo [forkeando](https://codesandbox.io/s/mobile-first-principle-exercise-forked-2msegn)
 
 ---
 ---
