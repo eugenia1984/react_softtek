@@ -2,7 +2,8 @@
 
 ---
 
-## Unidad 6. Creando secciones
+## :star: Unidad 6. Creando secciones
+
 ```
 - 6.1. Armado componente buscador
 - 6.2. Validación formulario buscador
@@ -15,7 +16,8 @@
 
 ---
 
-## Unidad 7. Introducción a Redux
+## :star: Unidad 7. Introducción a Redux
+
 ```
 - 7.1 Entendiendo la problemática en el desarrollo de aplicaciones
 - 7.2 Introducción y conceptos clave para manipular Redux
@@ -155,9 +157,9 @@ function throttle(cb, delay = 250) {
 
 ---
 
-## 1 - Finalización de la seccion de Favoritos
+## :sart: 1 - Finalización de la seccion de Favoritos
 
- Favoritos.js:
+ <img src="https://img.icons8.com/ios/50/000000/likes-folder.png"/> Favoritos.js:
  
  ```JSX
  mport React from "react";
@@ -254,7 +256,7 @@ export default Favoritos;
 </Routes>
 ```
 
--> TEnemos que manejar una **lista de favoriots** además de la lista de las movies que se obtiene de la API, esta lista de favoritos la manejamos como un estado y utilizamos el **localStorage**, usamos un useState para la primer renderizacion y vemos si en localStorage tengo algo guardado que sea **fav**, los vaforitos, si hay se guarda en la variable de estado.
+-> Tenemos que manejar una **lista de favoriots** además de la lista de las movies que se obtiene de la API, esta lista de favoritos la manejamos como un estado y utilizamos el **localStorage**, usamos un useState para la primer renderizacion y vemos si en localStorage tengo algo guardado que sea **fav**, los vaforitos, si hay se guarda en la variable de estado.
 
 A veces con una misma funcion se maneja tanto el **add** como el **Remove**, loq eu no es recomendable, si luego se complejiza, es mejor tener separadas las funcionalidades, pero en el video esta todo junto. Al hacer click al boton obtenemos lo que tenemos del listado en el localStorage, si no tenemos nada inicializamos una variable secundaria (temporal) para el manejo de quitar elementos y agregar elementos en la lista. A nosotros nos interesa que las listas sean inmutables, pero JS tiene arrays mutables (su valor en memoria y sus indices cambian) por eso es importante trabajar con variables temporales/de soporte.
 
@@ -302,7 +304,7 @@ let movieIsInArray = tempMoviesInFavs.find((oneMovie) => {
 
 Tambien lo seteamos y loc ambiamos en la variable de estado, y le lanzamos el aviso de que esta todo ok y se agrego la peli a favoritos.
 
-Si quieor eliminar, busco que este en el array y con un filter me guardo el resto de las pelis, menos la que quiero eliminar, y aviso que ya quedo eliminada.
+Si quiero eliminar, busco que este en el array y con un filter me guardo el resto de las pelis, menos la que quiero eliminar, y aviso que ya quedo eliminada.
 
 ```JSX
  if (!movieIsInArray) {
@@ -435,22 +437,22 @@ export default App;
 
 ---
 
-### 3 - Ejercicio de repaso
+### :star: 3 - Ejercicio de repaso
 
-- Implementar el handleAdd y el handleRemove para esta lista de supermercado
+#### <img src="https://img.icons8.com/office/40/000000/pushups.png"/> Implementar el handleAdd y el handleRemove para esta lista de supermercado
 
 - Lo podes ver en [https://codesandbox.io/s/add-remove-exercise-supermarket-list-forked-uehhti](https://codesandbox.io/s/add-remove-exercise-supermarket-list-forked-uehhti)
 
 ---
 
-## 4 -  Introducción a Redux ( Unidad 7)
+## :star: 4 -  Introducción a Redux ( Unidad 7)
 
 ```
 - 7.1 Entendiendo la problemática en el desarrollo de aplicaciones
 - 7.2 Introducción y conceptos clave para manipular Redux
 ```
 
-### Cómo hace un componente para...
+### <img src="https://img.icons8.com/ios/40/000000/redux.png"/> Cómo hace un componente para...
 
 
 ... informar un cambio de estado a un hermano o ancestro?
@@ -480,7 +482,7 @@ export default App;
 
 El componente de más abajo necesitaría recibir un **handler** para poder informarle al padre de ese cambio de estado y el Padre puede volver a hacer el cascadeo.
 
-**Props Drilling** (esto es malo)
+<img src="https://img.icons8.com/ios/40/000000/redux.png"/> **Props Drilling** (esto es malo)
 
 - Informar un cambio de estado a un hermano o un ancestro ? Necesita recibir un **callback** por **props**
 
@@ -488,7 +490,7 @@ El componente de más abajo necesitaría recibir un **handler** para poder infor
 
 Drop drilling -> se hace lifting, se esta taladrando hacia abajo desde el root. A veces es suficiente, pero... no es bueno. El problema es que si luego nececito algo mas en el componente hijo o nieto, tengo que ir modificando todos los componentes intermedios para que llegue esta nueva prop.
 
--> La problemática es ...
+-> <img src="https://img.icons8.com/ios/40/000000/redux.png"/> La problemática es ...
 
 
 ... complejidad de comunicar componentes a traves del arbol
@@ -503,47 +505,54 @@ Drop drilling -> se hace lifting, se esta taladrando hacia abajo desde el root. 
 ---
 
 
-## Redux
+## :star: Redux
 
 
-### Conceptos de Redux
+## <img src="https://img.icons8.com/ios/40/000000/redux.png"/> Conceptos de Redux
 
 
-#### Una sola fuente de verdad
+#####  Una sola fuente de verdad
 
 Todo el estado de la aplicación está centralizado en un único lugar.
 
-#### Cambios de estado mediante funciones puras
+
+##### Cambios de estado mediante funciones puras
 
 Los componentes no pueden aplicar las acciones, sino que se configuran funciones puras encargadas de interpretar la acción y avanzar el estado.
 
-#### Estado de solo lectura
+
+#####  Estado de solo lectura
 
 Los componentes pueden leer el estado de forma directa, pero para modificarlo deben disparar una acción indicando la modificación a realizar.
 
 
 -> Redux nacio de otro lenguaje de programacion para front end, End. Lo que propone es tener todo el estado cetnralizado en un punto (inmutabilidad).
 
--> Los componentes van a disparar fucniones
+-> Los componentes van a disparar funciones
 
 -> Se va a actualizar el estado
 
-### Estado central
+###  <img src="https://img.icons8.com/ios/40/000000/redux.png"/>Estado central
 
-- Evita el prop drilling
+- Evita el prop drilling (es como si lo tuviera por fuera de la aplicación, no tengo que pasarlo por componentes intermedios)
 
-- solo se subscribe componentes que los necesitasn
+- solo se subscribe componentes que los necesitan (no intervienen los componentes intermedios)
 
-- solo participan en modificaciones componentes que lo necesitan
+- solo participan en modificaciones componentes que lo necesitan (no recibe el callback por prop, sino que tiene un mecanismo para comunicarse con el estado central)
 
 
-### ¿ Cómo se nombra en Redux?
+### <img src="https://img.icons8.com/ios/40/000000/redux.png"/> ¿ Cómo se nombra en Redux?
 
 - **selectors** para leer datos del estado cada vez que cambia
 
 - **dispatch** para provocar cambios de estado
 
 - **reducers** define como la accion actualiza el estado: logica independiente de vista, testeo sencillo.
+
+
+-> Se usa **useSelect** que es un hook que nos permite pasarle una función para seleccionar  fragmentos que nos interesen del Estado. Para realizar una modificación sobre el estado vamos a usar **useDispatch** y **deipatch** que nos permite pasarle una definición de la acción a realizar sobre el estado cental. Esa acción se la va a pasar al reducer junto con el valor anterior del estado y se va a generar un nuevo estado que se va a actualizar en todos los componentes que están leyendo de ese estado.
+
+A esta combinación del estado centralizado y la funciones de reduccion se las conoce como **STORE**
 
 ```
 ----         reducer
@@ -572,7 +581,7 @@ La combinación del **Estado centralizado** y las **funciones de reduccion** se 
 
 ---
 
-### Ciclo de cambio de estado
+###  <img src="https://img.icons8.com/ios/40/000000/redux.png"/> Ciclo de cambio de estado
 
 1. Los componentes despachan acciones que modifican el estado central.
 
@@ -623,7 +632,23 @@ Del STORE lleo el ESTADO en una VISTA, mediante ACCIONES DE UN USUARIO (generalm
 
 [se puede ver aca]([https://codesandbox.io/p/github/paulocesarcuneo/redux-simple-example/csb-dvpob8/draft/autumn-violet?file=%2Fsrc%2Fcomponents%2FFooter.js&workspace=%257B%2522activeFileId%2522%253A%2522cl8s5g4ms000flshp49rw1wko%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522sidekickItems%2522%253A%255B%257B%2522type%2522%253A%2522PREVIEW%2522%252C%2522taskId%2522%253A%2522start%2522%252C%2522port%2522%253A3000%252C%2522key%2522%253A%2522cl8s5gtt8000k2v6gd17luwg5%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D](https://codesandbox.io/p/github/paulocesarcuneo/redux-simple-example/csb-dvpob8/draft/autumn-violet?file=%2Fsrc%2Fcomponents%2FFooter.js))
 
-App.js
+```
+>public
+>src
+  app
+      actions.js
+      reducers.js
+      store.js
+  components
+      Footer.js
+      Header.js
+      TodoList.js
+  App.js
+  bootstrap.css
+  index.js
+```
+
+**App.js**:
 ```JSX
 import React from "react";
 import { Footer } from "./components/Footer";
@@ -647,7 +672,7 @@ function App() {
 export default App;
 ```
 
-Footer.js
+**Footer.js**:
 ```JSX
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -692,7 +717,7 @@ export const Footer = () => {
 
 ```
 
-Header.js
+**Header.js**:
 ```JSX
 import { useSelector } from "react-redux";
 import { todosSelector } from "../app/selectors";
@@ -720,7 +745,7 @@ export const Header = () => {
 };
 ```
 
-TodoList.js
+**TodoList.js**:
 ```JSX
 import { useSelector, useDispatch } from "react-redux";
 import { toggleSelection } from "../app/actions";
@@ -759,7 +784,95 @@ export const TodoList = () => {
 };
 ```
 
--> https://recordings.rna1.blindsidenetworks.com/ilumnotech/9245ae6957e39f5d8f43aa41bec37fa03f820e1b-1664805529357/capture/ 18mins
+-> En **app**:
+
+**actons.js**:
+```JSX
+export const ADD_TODO = "todo/add";
+export const TOGGLE_SELECTION = "todo/toggle-selection";
+export const TOGGLE_SELECT_ALL = "todo/toggle-select-all";
+export const DELETE_ALL_SELECTED = "todo/delete-all-selected";
+export const DELETE = "todo/delete";
+
+export const addTask = (text) => {
+  return { type: ADD_TODO, text };
+};
+
+export const toggleSelection = (index) => {
+  return { type: TOGGLE_SELECTION, index };
+};
+```
+
+**reducers.js**:
+```JSX
+import {
+  ADD_TODO,
+  DELETE,
+  DELETE_ALL_SELECTED,
+  TOGGLE_SELECTION,
+  TOGGLE_SELECT_ALL,
+} from "./actions";
+
+const removeNth = (arr, n) => {
+  return [...arr.slice(0, n), ...arr.slice(n + 1)];
+};
+
+export const todosReducer = (state, action) => {
+  switch (action.type) {
+    case ADD_TODO: {
+      const { todos } = state;
+      const { text } = action;
+      return { ...state, todos: [...todos, { text }] };
+    }
+    case TOGGLE_SELECTION: {
+      const { index } = action;
+      const { todos } = state;
+      const updatedTodos = todos.map((item, i) => {
+        if (i === index) {
+          return { ...item, selected: !Boolean(item.selected) };
+        }
+        return item;
+      });
+      return { ...state, todos: updatedTodos };
+    }
+    case TOGGLE_SELECT_ALL: {
+      throw new Error("Not implemented");
+    }
+    case DELETE_ALL_SELECTED: {
+      throw new Error("Not implemented");
+    }
+    case DELETE: {
+      throw new Error("Not implemented");
+    }
+    default:
+      return state;
+  }
+};
+
+export const initialState = {
+  todos: [{ text: "Aprender Redux", selected: false }],
+};
+
+```
+
+**selectors.js**:
+```JSX
+export const todosSelector = (state) => state.todos;
+```
+
+**store.js**:
+```JSX
+import { configureStore } from "@reduxjs/toolkit";
+
+import { todosReducer, initialState } from "./reducers";
+
+export const store = configureStore({
+  reducer: todosReducer,
+  preloadedState: initialState,
+});
+```
+
+-> https://recordings.rna1.blindsidenetworks.com/ilumnotech/9245ae6957e39f5d8f43aa41bec37fa03f820e1b-1664805529357/capture/ 24mins
 
 ---
 ---
