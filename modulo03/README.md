@@ -145,6 +145,8 @@ function throttle(cb, delay = 250) {
 
 # :star2:Clase 03 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 3 * UNIDAD 6:star2: 
 
+### FINALIZACION DE LA SECCION FAVORITOS E INTRODUCCION A REDUX
+
 ---
 
 ## Temas:
@@ -152,12 +154,24 @@ function throttle(cb, delay = 250) {
 - 1 - Retoques finales a la seccion de Favoritos
 - 2 - Verificación que el flujo de la applicacion funciona correctamente
 - 3 - Ejercicio de repaso
-- 4 - Introducciona  Redux
+- 4 - Introduccion a Redux
 ```
 
 ---
 
-## :sart: 1 - Finalización de la seccion de Favoritos
+## :star: 1 - Finalización de la seccion de Favoritos
+
+
+ <img src="https://img.icons8.com/ios/50/000000/likes-folder.png"/> Nota:
+ 
+● Para que varios componentes puedan acceder al mismo estado, este tiene que ser creado en el root.
+
+● Luego el estado se pasa por props a los componentes hijos.
+
+● También la lógica para administrar el estado tiene que estar en el root.
+
+● Por tanto hay que pasar el handler a los hijos también por props.
+
 
  <img src="https://img.icons8.com/ios/50/000000/likes-folder.png"/> Favoritos.js:
  
@@ -872,7 +886,12 @@ export const store = configureStore({
 });
 ```
 
--> https://recordings.rna1.blindsidenetworks.com/ilumnotech/9245ae6957e39f5d8f43aa41bec37fa03f820e1b-1664805529357/capture/ 24mins
+-> la **action** es un objeto que tiene un type y puede tener un campo, un indice, etc.
+
+
+-> El repo de ejemplo de juguete redux -> [https://github.com/paulocesarcuneo/redux-simple-example](https://github.com/paulocesarcuneo/redux-simple-example)
+
+
 
 ---
 ---
