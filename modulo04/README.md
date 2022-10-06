@@ -123,7 +123,7 @@ A día de hoy los usuarios acceden a los contenidos de las páginas webs desde d
 
 ## <img src="https://img.icons8.com/ios/40/000000/two-smartphones.png"/> ¿Cómo lograr un diseño web responsive?
 
-Hoy en día existen diferentes patrones que podemos usar para hacer nuestras páginas web responsives. Algunas opciones son*:
+Hoy en día existen diferentes patrones que podemos usar para hacer nuestras páginas web responsives. Algunas opciones son:
 
 
 - **Mostly Fluid** Es un diseño multi-columna que introduce márgenes más grandes a medida que va aumentando el tamaño de la pantalla. Como cuando tenemos desde el mobil que vamos viendo todos bloques de sections unas debajos de las otras, que nos ocupan el 100 % del ancho.
