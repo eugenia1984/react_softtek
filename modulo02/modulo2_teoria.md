@@ -28,6 +28,9 @@
 
 ### :star: 3.1 ARMADO ENCABEZADO / NAVEGACION
 
+![image](https://user-images.githubusercontent.com/72580574/194800330-cb44e3d2-fb5b-4ecb-9808-c0a3963a3949.png)
+
+
 
 #### <img src="https://img.icons8.com/ios-glyphs/40/000000/head-profile.png"/> ¿Para qué nos servirá este componente?
 
