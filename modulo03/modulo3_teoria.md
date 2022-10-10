@@ -90,6 +90,8 @@ Totalmente, en la medida de lo posible, ese es el objetivo ideal. Pero si te res
 
 #### :star: 6.4 LLAMADO A LA API CON PALABRA CLAVE
 
+![image](https://user-images.githubusercontent.com/72580574/194800429-934dfa8e-cbdb-48da-8880-fadbc65d2998.png)
+
 
 ####  <img src="https://img.icons8.com/external-filled-outline-wichaiwi/40/000000/external-Result-business-filled-outline-wichaiwi.png"/> Puntualmente, ¿de dónde sacamos la información para la sección de resultados?
 
@@ -126,9 +128,16 @@ En teoría es sencillo, pues deberemos implementar antes que nada algún element
 
 Puntualmente en esta aplicación estaremos almacenando toda la información del ítem elegido de parte del visitante. De esta manera, nos va a ser mucho más sencillo rescatar dicha información más adelante, cuando queramos mostrarla en su totalidad.
 
+
+![image](https://user-images.githubusercontent.com/72580574/194800449-dceb8432-8035-460d-bf1a-df6412ff8bde.png)
+
 ---
 
-#### :star: ARMADO COMPONENTE "FAVORITOS"
+#### :star: 6.6 ARMADO COMPONENTE "FAVORITOS"
+
+![image](https://user-images.githubusercontent.com/72580574/194800484-4e084d38-ff9a-48f1-a659-5fa10baf9c8f.png)
+
+
 
 ### ¿Cómo debemos "pensar" a este componente?
 
@@ -147,7 +156,10 @@ Para ello tendremos que implementar una lógica que nos permita preguntar a cada
 ---
 
 
-##### :star: FINALIZACION DEL COMPONENTE "FAVORITOS"
+##### :star: 6.7  FINALIZACION DEL COMPONENTE "FAVORITOS"
+
+![image](https://user-images.githubusercontent.com/72580574/194800516-2cd2fea5-9c51-46d5-a1a3-5571a3d11cf5.png)
+
 
 #### <img src="https://img.icons8.com/external-flat-juicy-fish/40/000000/external-favourite-messages-and-communication-flat-flat-juicy-fish.png"/> Para finalizar
 
