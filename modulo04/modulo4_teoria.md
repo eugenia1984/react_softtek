@@ -258,7 +258,7 @@ Con una herramienta que administre rutas, podemos utilizar todo el potencial de 
 
 Para ello, podemos utilizar React Router Dom y de forma relativamente sencilla establecer rutas, crear páginas públicas y privadas, realizar redirecciones a otras páginas según ciertas condiciones y crear rutas para páginas 404. 
 
-##  <img src="https://img.icons8.com/office/16/000000/route.png"/> ¿Qué es React Router Dom?
+##  <img src="https://img.icons8.com/office/40/000000/route.png"/> ¿Qué es React Router Dom?
 
 Es una biblioteca de enrutamiento del lado del cliente y del servidor con todas las funciones para ser aplicado en React.
 
@@ -269,11 +269,11 @@ Para instalarlo ejecutamos el siguiente comando en la raíz de nuestro proyecto.
 ![image](https://user-images.githubusercontent.com/72580574/194801711-e54840f2-2b11-4f97-82fc-bcb6fbea5f9b.png)
 
 
-###  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-forbiden-summer-olympics-flaticons-lineal-color-flat-icons-4.png"/>¿Por qué es necesario que existan tipos de usuarios y permisos?
+###  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-forbiden-summer-olympics-flaticons-lineal-color-flat-icons-4.png"/>¿Por qué es necesario que existan tipos de usuarios y permisos?
 
 Si necesitamos crear una aplicación que posea autenticación de usuarios, probablemente debamos tener rutas que alguien que no tiene una sesión activa no pueda ver. Para la administración de estas rutas, podemos crear tipos de usuarios y permisos asociados a estos como, por ejemplo, que un usuario logueado tiene permiso de acceder a determinadas rutas. 
 
-### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-forbiden-summer-olympics-flaticons-lineal-color-flat-icons-4.png"/> ¿Qué son las páginas públicas y las privadas?
+### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-forbiden-summer-olympics-flaticons-lineal-color-flat-icons-4.png"/> ¿Qué son las páginas públicas y las privadas?
 
 Las rutas que pueden ser accedidas sin la necesidad de tener sesión activa en nuestro sitio son las públicas y las que necesitan una autenticación previa son las privadas.
 
@@ -281,13 +281,13 @@ Las rutas que pueden ser accedidas sin la necesidad de tener sesión activa en n
 
 ## 10.2 Creacion de rutas con React Router Dom 6
 
-###  <img src="https://img.icons8.com/office/16/000000/route.png"/>  Envolver nuestra App
+###  <img src="https://img.icons8.com/office/40/000000/route.png"/>  Envolver nuestra App
 
 Una vez que React Router esté instalado como una dependencia, abrimos src/index.js e importamos BrowserRouter desde react-router-dom y luego envolvemos la App en un ```<BrowserRouter>```
 
 ![image](https://user-images.githubusercontent.com/72580574/194801838-3f84c976-a39a-4afa-8705-1e3f597a2a75.png)
 
-###  img src="https://img.icons8.com/office/16/000000/route.png"/> Desarrollar las rutas
+###  <img src="https://img.icons8.com/office/40/000000/route.png"/> Desarrollar las rutas
 
 Ahora ya podemos trabajar con React Router en nuestra aplicación. Para ello, importamos Routes y Route desde react-router-dom y luego podemos reemplazar el marcado predeterminado con algunas rutas en nuestra App.js
 
@@ -341,19 +341,19 @@ Ahora, si hacemos esto podremos encontrarnos con la limitante de crear ese eleme
 
 ---
 
-## 10.4 TRansicion entre rutas
+## 10.4 Transicion entre rutas
 
-### ¿Por qué es necesario pensar en la transición entre rutas?
+###  <img src="https://img.icons8.com/pastel-glyph/40/000000/planned-path.png"/> ¿Por qué es necesario pensar en la transición entre rutas?
 
 Desde el punto de vista de la funcionalidad, no son una necesidad las transiciones animadas entre rutas, pero crear este tipo de efectos permite mejorar la experiencia del usuario en nuestras aplicaciones.
 
 
-### ¿Qué es Framer Motion?
+### <img src="https://img.icons8.com/pastel-glyph/40/000000/planned-path.png"/>  ¿Qué es Framer Motion?
 
 Es una biblioteca de movimiento lista para producción en React y que, entre una variedad de aspectos/cuestiones que podría explorar en su documentación oficial, sirve para que realicemos transiciones animadas entre una ruta y otra. 
 
 
-### Animación en las transiciones entre rutas
+### <img src="https://img.icons8.com/pastel-glyph/40/000000/planned-path.png"/> Animación en las transiciones entre rutas
 
 Para darle animación a nuestra aplicación cada vez que se cambia de ruta debemos seguir los siguientes pasos: 
 
@@ -369,7 +369,7 @@ b) **Instalar la biblioteca con yarn**
 ![image](https://user-images.githubusercontent.com/72580574/194802256-c215bec4-380a-404d-a9a0-7327a68491e3.png)
 
 
-### Un objeto que controlará las transiciones
+### <img src="https://img.icons8.com/pastel-glyph/40/000000/planned-path.png"/> Un objeto que controlará las transiciones
 
 Ahora debemos crear un objeto que controle los tres momentos de una animación de transición: el inicio o initial, la animación entre un estado y otro, aquí llamada animate y, luego, la animación de la salida, que solemos llamar exit.
 
@@ -377,7 +377,7 @@ Estos parámetros de la pageTransition serán también los parámetros que coloc
 
   ![image](https://user-images.githubusercontent.com/72580574/194802289-d4c496ff-986f-4c79-beb3-89507876526a.png)
 
- ###   Anidar nuestras rutas
+ ### <img src="https://img.icons8.com/pastel-glyph/40/000000/planned-path.png"/>  Anidar nuestras rutas
  
 Debemos anidar nuestras rutas primero con AnimatePresence, el cual detectará los componentes que son desmontados para aplicar las transiciones necesarias y luego, anidamos cada ruta dentro de motion.div donde indicaremos cuál animación se ocupará en cada uno de los momentos initial > animate > exit.
 
@@ -385,7 +385,7 @@ Debemos anidar nuestras rutas primero con AnimatePresence, el cual detectará lo
 ![image](https://user-images.githubusercontent.com/72580574/194802331-609dfbea-a285-484e-b2a5-e9eaed4e9662.png)
 
 
-###  Redirigir del login al inicio
+### <img src="https://img.icons8.com/external-soft-fill-juicy-fish/40/000000/external-redirect-crisis-management-soft-fill-soft-fill-juicy-fish.png"/> Redirigir del login al inicio
 
 Si bien esto no está relacionado estrictamente con la animación entre rutas, al loguearnos es muy probable que necesitemos redirigir al inicio de nuestro sitio y queramos hacerlo con una animación.
 
@@ -400,7 +400,7 @@ En nuestro ejemplo, al ser exitoso el login, es cuando realizamos la redirecció
 
 ## 10.5  Lazy Import y suspense
 
-## ¿Por qué usar lazy loading?
+## <img src="https://img.icons8.com/office/16/000000/spinner-frame-5.png"/> ¿Por qué usar lazy loading?
 
 Una aplicación React tendrá sus archivos empaquetados en un bundle, lo que significa tener los archivos importados y fusionados en un único archivo. 
 
@@ -417,8 +417,197 @@ Y luego, en el lugar donde lo utilicemos, lo envolvemos con suspense que cargar�
 ![image](https://user-images.githubusercontent.com/72580574/194802403-979bc16b-c856-4a44-b3e7-569bc9364dc2.png)
 
 
-###  ¿Cuándo conviene utilizar lazy?
+### <img src="https://img.icons8.com/office/16/000000/spinner-frame-5.png"/>  ¿Cuándo conviene utilizar lazy?
 
 La utilización o no de esta herramienta dependerá de la estrategia que queramos implementar, aunque una buena opción es utilizarlo en aquellos componentes que son muy grandes o también los que no solemos utilizar mucho, indistintamente de su tamaño.
 
 ---
+
+## :star: UNIDAD 11 * ADAPTANDO A MOBILE FIRST
+
+---
+
+## <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-head-anatomy-flaticons-lineal-color-flat-icons-6.png"/> 11.1 Header
+
+
+La etiqueta <header> contiene al encabezado del sitio, donde se colocan habitualmente los vínculos de navegación, los formularios de búsqueda, los logos, etc. En muchos casos, los contenidos del encabezado son iguales a lo largo de la navegación del sitio.
+
+Si bien se recomienda utilizar la etiqueta header para el contenido que será el header en nuestro sitio, podríamos utilizar una etiqueta <div> dándole la misma utilidad. 
+
+Este podría ser un ejemplo de esta etiqueta: 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194802708-549183c1-bcd5-4e4e-a898-c518097e6743.png)
+
+ En este archivo de header, el usuario solo visualizará dos elementos, un logo y una x para cerrar la sesión. 
+
+La x al ser apretada ejecutará handleLogout que, por un lado, borrará el ítem logged y luego, redirigirá al usuario al componente login. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194802730-fe1fba87-47d3-4bb8-b733-142f94672b24.png)
+
+ 
+ Si bien ya ocupamos en ejemplos anteriores el elemento Navigate, no lo ocupamos en este componente, por lo que debemos importar el hook para ocuparlo: 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194802819-2e4a15a8-42da-4160-97dd-bcf7ea447222.png)
+
+ Aquí podremos ver con más claridad el esquema de funcionamiento básico de nuestro header: 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194802844-0c21f2eb-585d-4d03-ace6-ee9d9354cd8a.png)
+
+ ## <img src="https://img.icons8.com/external-bearicons-flat-bearicons/40/000000/external-colors-graphic-design-bearicons-flat-bearicons.png"/> El CSS
+ 
+ Y, por último, para dar a nuestro header el estilo mostrado arriba, deberíamos aplicar los siguientes estilos a la hoja CSS enlazada a nuestro componente. 
+
+Para importar el CSS a nuestro componente header debemos ejecutar: 
+
+```JSX
+import "./Header.style.css";
+```
+ 
+y aquí la hoja de estilos que dará forma al HTML.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194802935-f8eda365-ca2c-4e55-903f-9f4a2a9a38c6.png)
+
+ En nuestro CSS para dar el efecto de separación entre el logo y la x utilizamos Flexbox, una herramienta de diseño en CSS que podrás ampliar yendo a los enlaces recomendados. 
+ 
+ ---
+ 
+ ## 11.2 CSS Global y estilos en login
+ 
+ ### <img src="https://img.icons8.com/external-bearicons-flat-bearicons/40/000000/external-colors-graphic-design-bearicons-flat-bearicons.png"/> Variables globales en CSS
+ 
+Tenemos varias formas de darle estilos a nuestra aplicación por medio de las hojas de estilo: podemos hacer que cada componente tenga su propia hoja de estilo, que exista una única hoja de estilos para toda la aplicación o ambas, distinguiendo qué colocamos en cada una. 
+
+La forma más utilizada, que además utilizaremos en los ejemplos, es que exista una hoja global, donde colocaremos las variables globales para que puedan ser llamadas desde las hojas de estilos particulares de cada componente. 
+ 
+### Las variables globales
+
+ De esta forma declaramos las variables globales, en la hoja de estilo que es importada por el componente padre de todos los componentes.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803023-c388e34f-2eec-48ac-9994-b7f44051961a.png)
+
+ ### Llamada a las variables globales 
+ 
+Las llamadas a las variables globales desde los archivos CSS de componente se realiza de la siguiente forma: 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803048-7ce758a7-a78e-4ce0-8888-fde69c1838e1.png)
+
+ 
+ ###  <img src="https://img.icons8.com/external-bearicons-flat-bearicons/40/000000/external-colors-graphic-design-bearicons-flat-bearicons.png"/> ¿Por qué usar !important en una propiedad CSS?
+ 
+Muchas veces podemos tener situaciones en donde una propiedad sobrescribe otra y para indicar cuál está por encima de otra indicamos important. En el ejemplo que tenemos a continuación, la propiedad padding inicial está por encima de la segunda vez que lo declaramos.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803079-2b3b4010-6fff-4ebe-b4a2-64a381d46e40.png)
+
+ Para priorizar una propiedad podemos hacerlo escribiendo !important al final de la declaración y antes del punto y coma. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803093-794f58d3-32a0-41a8-a5c4-4f7ca77909df.png)
+
+ 
+ ###  Importar google fonts
+ 
+Para importar una fuente desde fonts.google.com, debemos buscar la fuente que necesitamos y agregarla. 
+ 
+![image](https://user-images.githubusercontent.com/72580574/194803106-8221e71d-c48e-4ddf-b09c-0d4f13db911a.png)
+
+ En nuestro ejemplo utilizamos la función import para vincular la fuente con nuestro proyecto: 
+ 
+![image](https://user-images.githubusercontent.com/72580574/194803117-c2771f10-5f37-44a3-8534-9837978ad996.png)
+
+ El @import debemos ubicarlo en nuestro archivo CSS y después indicar dónde aplicaremos la fuente, que en este caso se encuentra de forma global con el *.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803140-5269cebe-6c92-48d2-9999-51818d190068.png)
+
+ También podemos enlazar la fuente a nuestro proyecto con la etiqueta link y colocar el código que nos proporciona Google fonts, en el <head> de nuestro HTML principal y en el CSS aplicaríamos la propiedad CSS font-family, tal y como nos la proporciona Google fonts.
+ 
+ ---
+ 
+ ## <img src="https://img.icons8.com/color/40/000000/todo-list.png"/> 11.3 Lista de tareas Mobile First
+ 
+ El listado que realizamos en nuestro desarrollo de ejemplo cuenta con un componente de tareas donde las mismas deben listarse. 
+
+En nuestro caso, cada una de las tareas es un div de clase “list” que se repetirá según la cantidad de tareas que mostremos.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803213-5b07d792-39bf-4a35-90f0-836cca3feb46.png)
+
+ El código de cada uno de los bloques pertenecientes a las tareas es
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803223-84ffb35f-d518-4fdb-8828-d5cae9aea1a6.png)
+
+ Lo que permitirá una vista similar a esta
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803239-2ec7ffd8-064a-4bad-806a-71ae442875f6.png)
+
+ Hasta acá es donde nos es posible llegar con nuestra explicación sobre los estilos volcados en los archivos CSS. Para continuar profundizando con el tema, pueden estudiar el repositorio del proyecto.
+ 
+ ---
+ 
+ ## 11.4 Listados en escritorio y utilidades
+ 
+ ## <img src="https://img.icons8.com/color/40/000000/todo-list.png"/> Renderizado condicional según el ancho de la pantalla
+ 
+Para lograr esto lo que debemos hacer es que el componente sepa cuál es el tamaño de la pantalla y, según esto, renderice los componentes que solicitamos para cada tamaño de pantalla. 
+ 
+ 
+  ## <img src="https://img.icons8.com/color/40/000000/todo-list.png"/>  ¿Cómo saber si estamos en un teléfono o una laptop?
+ 
+Utilizando useState podremos crear una constante que exista si el ancho de la pantalla es inferior a un tamaño que consideremos como el ancho de un teléfono o, caso contrario, consideraremos que el ancho es el de una computadora. 
+
+Cuando el componente se renderiza, se chequea cuál es el ancho de la pantalla y si es inferior a 900 px. isPhone es true. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803301-30c09cf0-321f-4329-a7c7-d57e20fd4af8.png)
+
+ Con esta constante que modifica su valor de verdad dependiendo del tamaño de la pantalla ya podemos colocar un renderizado condicional en nuestro componente, es decir, que aparezca una parte u otra dependiendo de si una constante es verdadera o falsa. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803313-f451e918-246a-4c15-ad29-5fb3680368d2.png)
+
+ En este punto logramos que nuestra aplicación se renderice cada vez que se carga según el tamaño de la pantalla. Sin embargo, necesitamos que se haga de forma automatizada, por lo que para lograrlo utilizaremos useEffect que en este caso ejecutará handleResize() cada vez que se modifique el tamaño de la pantalla. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803328-4275defe-fb79-422d-a01e-e191f531039a.png)
+
+ En el objeto windows llamamos a addEventListener, un escuchador de eventos que en este caso lo pondremos para que detecte el resize del objeto windows, es decir que “escuche” cada vez que se modifica el tamaño de la pantalla y pueda ejecutar handleResize() y luego de hacerlo, lo removemos. 
+ 
+Aquí está handleResize, que simplemente modifica el valor de verdad de isPhone. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803340-d4b10d31-3ed1-454a-808c-a64f85087356.png)
+
+ 
+ ##  Limitar las cadenas de caracteres
+ 
+Cuando tenemos algún elemento donde la cantidad de caracteres que puede tener superará lo que esperamos, rompiendo el diseño o impidiendo una experiencia del usuario aceptable, podemos limitar la cantidad de caracteres de ese elemento. 
+
+Para ello utilizaremos una función llamada slice(0, tamaño_que_queremos) que al ejecutar sobre un string podemos hacer que esa función devuelva la cantidad de caracteres que necesitemos. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803358-05041121-67fb-40e2-827a-570b9074f819.png)
+
+ En la siguiente función, recibimos un string y analizamos por medio de un if si es mayor a 370 caracteres. De ser así lo recorta en 367 más los “...” y además agrega un elemento botón (addButton).
+ 
+ ---
+ 
+ ## 11.5 Refactorizaciones
+ 
+ ### Implementar un custom hook
+ 
+Un custom hook es una función común y corriente de JavaScript cuyo nombre comienza con ”use” y que puede llamar a otros hooks.
+
+Para implementar nuestros propios hooks, debemos implementar un componente al que nombraremos con el prefijo use.
+
+Su estructura interna dependerá de la solución que debemos implementar. En nuestro ejemplo desarrollaremos un hook que resuelva el problema de analizar el tamaño del dispositivo. 
+
+En nuestro hook distinguiremos tres partes fundamentales: la importación, el desarrollo que resolverá el problema y el retorno de los elementos. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803406-bbf007d4-999c-42d9-81d2-b901a083c5c9.png)
+
+ ### Refactorizar el componente listado
+ 
+Ahora veremos cómo al incluir un componente dentro de otro componente, podemos pasarle datos y utilizarlo de forma repetitiva con un map. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803427-0e89ed6f-3a89-4764-9027-711a85a1951c.png)
+
+ Lo que hace map aquí es construir una iteración de componentes Card, a los cuales les pasa los datos proporcionados por cardsData para cada uno de sus elementos. 
+
+Distinguiremos dos elementos fundamentales en esta estructura: El key y el data que tendrá todos los datos sacados del archivo que ocuparemos para colocar la información. 
+
+ ![image](https://user-images.githubusercontent.com/72580574/194803441-c657af42-7aba-426c-a434-0f3099056287.png)
+
+ 
+ ---
