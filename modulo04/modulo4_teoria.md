@@ -543,12 +543,12 @@ En nuestro caso, cada una de las tareas es un div de clase “list” que se rep
  
  ## 11.4 Listados en escritorio y utilidades
  
- ## <img src="https://img.icons8.com/color/40/000000/todo-list.png"/> Renderizado condicional según el ancho de la pantalla
+ ## <img src="https://img.icons8.com/dotty/40/000000/mac-book-pro-m1.png"/> Renderizado condicional según el ancho de la pantalla
  
 Para lograr esto lo que debemos hacer es que el componente sepa cuál es el tamaño de la pantalla y, según esto, renderice los componentes que solicitamos para cada tamaño de pantalla. 
  
  
-  ## <img src="https://img.icons8.com/color/40/000000/todo-list.png"/>  ¿Cómo saber si estamos en un teléfono o una laptop?
+  ##<img src="https://img.icons8.com/dotty/40/000000/mac-book-pro-m1.png"/>  ¿Cómo saber si estamos en un teléfono o una laptop?
  
 Utilizando useState podremos crear una constante que exista si el ancho de la pantalla es inferior a un tamaño que consideremos como el ancho de un teléfono o, caso contrario, consideraremos que el ancho es el de una computadora. 
 
@@ -611,3 +611,156 @@ Distinguiremos dos elementos fundamentales en esta estructura: El key y el data 
 
  
  ---
+
+ ## :star: UNIDAD 12 * TRABAJANDO CON FORMIK
+ 
+ ---
+ 
+ ### 12.1. Creación con Formik
+ 
+ Este componente es un formulario que permitirá el ingreso de datos para la creación de cada una de las tareas. 
+
+Lo crearemos y lo importamos al inicio del componente Tasks
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803630-1c80f77d-468a-4d91-953f-856d76b1218a.png)
+
+ Este formulario debe tener todos los campos que sean necesarios ingresar por el usuario, y no los datos como, por ejemplo, el del nombre del usuario, que se podrá automáticamente o las id. 
+
+ ---
+ 
+ ## 12.2. Validación con Yup
+ 
+ ### ¿Qué es Yup?
+ 
+Es un generador de esquemas para la validación de valores, es decir, que nos permitirá validar los datos de nuestros formularios. 
+ 
+### Instalar Yup
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803679-4f09d17d-4930-495e-8b77-43b3a76c9f71.png)
+
+ 
+ ###  Importar Yup
+ 
+Yup tiene una forma particular de ser importado a diferencia de otros elementos importados que estuvimos viendo. Pero seguiremos por este camino, ya que Yup es considerada por los desarrolladores de Formik como un gran complemento para trabajar en conjunto. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803696-682e4100-74e7-443c-a24b-8a0d11d101db.png)
+
+ 
+ ###  El objeto Yup para validar
+ 
+Aquí desarrollamos el objeto que validará al formulario. Este objeto tendrá como elemento a cada uno de los campos de nuestro formulario que queramos validar.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803706-c984c672-d0e4-4561-bb05-5602eb4e08c7.png)
+ 
+ 
+- **.min(6, "mensaje")** podemos ponerlo para que de error si el input tiene menos caracteres del que ingresamos.
+ 
+- **.required(required)** podemos ponerlo para que nos indique que el campo es obligatorio
+
+Este nuevo objeto validationSchema, se suma a lo que habíamos aprendido de formik como un parámetro.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803765-922a3d4f-93e6-4b97-8da7-0e91c28f742a.png)
+
+ 
+ ### Objeto validation Schema
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803785-c39b9db2-2cec-40da-9570-47f3b1b22a4a.png)
+
+ 
+ Y así será como colocaremos en el HTML, donde errors.title nos mostrará los errores que devolverá yup.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803804-41286627-1a46-4b6b-8ae8-aea16b19a471.png)
+
+ Es importante tener en cuenta que si no colocamos un mensaje personalizado en .min aparecerá el mensaje por defecto en inglés. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803823-ea543156-e63e-4788-8365-e0e3f786a7c3.png)
+ 
+ Si nuestro mensaje para campo requerido será igual en todos los campos, podríamos utilizar una constante a la que llamemos en cada uno de los elementos del objeto validationSchema.
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803832-ce12851b-554d-47db-8736-fd419cad3c11.png)
+
+ 
+ ---
+ 
+ ## 12.3 OnBlur en Formik y UXp
+ 
+### La propiedad touched
+
+ Esta propiedad de formik, que se suma a las aprendidas, nos permitirá saber si un campo fue visitado. 
+
+ ![image](https://user-images.githubusercontent.com/72580574/194803883-f36f42c0-1ba4-4a55-be1f-dd626df1bcfd.png)
+ *Propiedad touched*
+ 
+
+ Al sumarlo al HTML nos avisará que tendremos, aparte de los errores que ya indicamos, una validación más que es: si lo visitamos y no lo valoramos correctamente. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803906-c21b0149-f0ae-4e60-a832-e02b28bff6f0.png)
+ *Validación de valoración*
+ 
+ Además, sumaremos al input un elemento onBlur que disparará el handleBlur cada vez que se deja ese input. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803920-9b053f18-0f97-4996-9ba8-41a089fe72e8.png)
+
+Y sumaremos a las validaciones de Formik.
+
+ ![image](https://user-images.githubusercontent.com/72580574/194803932-a51bfb90-209f-428a-9c1b-d0888c5183b0.png)
+
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803939-de95341a-a07c-4f2b-afff-980ca32ca0f1.png)
+
+Para este punto logramos dos tipos de validaciones, por un lado, la validación cada vez que apretamos el botón, validando el formulario en general y, por el otro, cada vez que abandonamos el campo.
+ 
+### Mejorando el aviso de error
+
+ Para mejorar el aviso de error podríamos colocar una clase a nuestro input que se active al presentarse la validación incorrecta. 
+
+La línea que contiene la className agrega la clase error en caso de presentarse el error de validación. 
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803976-fa582e8b-2075-49a5-8a53-41546d491074.png)
+
+ Este recurso también podríamos ocuparlos en otras partes del formulario, como, por ejemplo, en el mensaje de error:
+ 
+ ![image](https://user-images.githubusercontent.com/72580574/194803995-eeda79b8-4629-495d-8209-94dffa34d397.png)
+
+ 
+ ---
+ 
+ ## Para profundizar
+ 
+ Si quieres profundizar tu conocimiento respecto a lo dado en esta unidad, te recomendamos que visites los siguientes enlaces: 
+ 
+- [Herramientas de desarrollo de Chrome para revisar etiquetas](https://support.google.com/campaignmanager/answer/2828688?hl=es)
+ 
+- [Herramientas para desarrolladores en Mozilla Firefox](https://developer.mozilla.org/es/docs/Learn/Common_questions/What_are_browser_developer_tools)
+ 
+- [CSS media queries](https://developer.mozilla.org/es/docs/Web/CSS/Media_Queries/Using_media_queries)
+ 
+- [Fragments](https://es.reactjs.org/docs/fragments.html)
+ 
+- [Todo sobre JSX](https://es.reactjs.org/docs/introducing-jsx.html)
+ 
+- [Variables de Estado](https://es.reactjs.org/docs/hooks-state.html#declaring-a-state-variable)
+ 
+- [Preguntas frecuentes sobre Hooks](https://es.reactjs.org/docs/hooks-faq.html)
+ 
+- [Documentación de Formik](https://formik.org/)
+ 
+- [Renderizado Condicional](https://es.reactjs.org/docs/conditional-rendering.html)
+ 
+- [Documentación de React Router DOM](https://reactrouter.com/en/main)
+ 
+- [Framer Motion](https://www.framer.com/)
+ 
+- [División de Código con React](https://es.reactjs.org/docs/code-splitting.html)
+ 
+- [Conceptos básicos de Flexbox](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+ 
+- [Google Web Fonts](https://fonts.google.com/)
+ 
+- [Todo lo que hay que saber de String](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+ - [Construyendo tus propios Hooks](https://es.reactjs.org/docs/hooks-custom.html)
+ 
+- [Yup en NPM](https://www.npmjs.com/package/yup)
+ 
+ 
