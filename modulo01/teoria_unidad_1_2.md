@@ -27,20 +27,18 @@ token de autenticación.
 
 ---
 
-##  SET UP DE TOOLS  
+## <img src="https://img.icons8.com/office/16/000000/maintenance.png"/>  1.1 SET UP DE TOOLS  
 
-- [VSC](https://code.visualstudio.com/)
+- [VSC](https://code.visualstudio.com/) extension en VSC: JS JSX Snippet 
+
+
+- [Node.js](https://nodejs.org/es/) en su ultima versión estable, con **node** se instala un **entorno de desarrollo**, para ver que esta bien instalado desde la terminal ponemos ```node -v``` o ```node -version``` y si ves la version de Node.js es que ya está instalado correctamente.
+
+![image](https://user-images.githubusercontent.com/72580574/194800100-ae444485-764f-4739-9806-0e5b9e6ae6a7.png)
 
 - [Create Reaact App](https://es.reactjs.org/docs/create-a-new-react-app.html)
 
-- [Node.js](https://nodejs.org/es/)
 
-
-### <img src="https://img.icons8.com/office/16/000000/maintenance.png"/> 1.1 SET UP DE HERRAMIENTAS
-
-- extension en VSC: JS JSX Snippet 
-
-- Node.js en su ultima versión estable, con **node** se instala un **entorno de desarrollo**, para ver que esta bien instalado desde la terminal ponemos ```node -v``` o ```node -version``` y si ves la version de Node.js es que ya está instalado correctamente.
 
 - **Create React App (CRA)** configura un ambiente de desarrollo de forma que puedas usar JavaScript, brindando una buena experiencia de desarrollo y optimizando tu aplicación. Necesitarás tener **Node >= 14.0.0** y **npm >= 5.6** instalados en tu máquina. Para crear un proyecto ejecuta:
 
@@ -52,7 +50,9 @@ nmp start
 
 - Create React App no se encarga de la lógica de backend o de bases de datos, tan solo crea un flujo de construcción para frontend, de manera que lo puedas usar con cualquier backend. Para ello internamente usa Babel y Webpack, pero no necesitas saber nada de estas herramientas para usar Create React App.
 
-- React Developer Tools. Si bien esta herramienta es opcional, constituye un gran aliado para poder ver cómo fluyen los datos entre componentes de React
+- **React Developer Tools**. Si bien esta herramienta es opcional, constituye un gran aliado para poder ver cómo fluyen los datos entre componentes de React
+
+![image](https://user-images.githubusercontent.com/72580574/194800188-e5f639fc-1801-4429-bfe2-6440a6fc2198.png)
 
 
 ---
@@ -115,6 +115,9 @@ Todo el mérito es para la representación del lado del servidor (SSR). Hemos es
 
 Luego de finalizar la instalación de React, nuestro sistema de archivos se parecerá a lo siguiente:
 
+![image](https://user-images.githubusercontent.com/72580574/194800227-cc2a2af4-533d-4597-8865-9ecb9671f5b4.png)
+
+
 ```
 -1. Nombre de mi proyecto: el nombre que le dimos al instalar vite.
 -2. node_modules: es un directorio que se crea en la carpeta raíz de nuestro proyecto cuando instalamos paquetes o dependencias mediante npm.
@@ -156,6 +159,10 @@ myfirstreactapp
 ├── package-lock.json
 └── README.md
 ```
+
+![image](https://user-images.githubusercontent.com/72580574/194800243-4b3532f0-db07-4844-9f21-5870c485024f.png)
+
+
 
 ####  <img src="https://img.icons8.com/bubbles/40/000000/react.png"/> Iniciar el servidor de desarrollo de aplicaciones React
 
