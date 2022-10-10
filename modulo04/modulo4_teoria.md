@@ -242,6 +242,183 @@ Y si para este punto, logramos desarrollar todo el complemento deberíamos ver a
 ![image](https://user-images.githubusercontent.com/72580574/194801483-cd92ede4-f052-4333-992f-eec7c02b480d.png)
 
 
+---
 
+## :star: UNIDAD 10 * TRABAJANDO CON LAS RUTAS
+
+---
+
+## 10.1 React Router Dom 6, rutas y roles
+
+## <img src="https://img.icons8.com/office/16/000000/route.png"/>  ¿Para qué es necesario administrar las rutas?
+
+React nos permite desarrollar aplicaciones SPA (single-page application), una aplicación web de una sola página. Esto permite una experiencia similar al de una aplicación corriente, y si bien esto es bueno para mejorar la experiencia del usuario, muchas veces nos priva de otros elementos como la creación de rutas fijas donde colocar partes específicas de nuestro sitio (por ejemplo, misitio.com/contacto) o para crear rutas dinámicas (por ejemplo, un producto cuya url es misitio.com/producto/id).
+
+Con una herramienta que administre rutas, podemos utilizar todo el potencial de React y a la par poseer URL amigables. 
+
+Para ello, podemos utilizar React Router Dom y de forma relativamente sencilla establecer rutas, crear páginas públicas y privadas, realizar redirecciones a otras páginas según ciertas condiciones y crear rutas para páginas 404. 
+
+##  <img src="https://img.icons8.com/office/16/000000/route.png"/> ¿Qué es React Router Dom?
+
+Es una biblioteca de enrutamiento del lado del cliente y del servidor con todas las funciones para ser aplicado en React.
+
+### Instalación
+
+Para instalarlo ejecutamos el siguiente comando en la raíz de nuestro proyecto. 
+
+![image](https://user-images.githubusercontent.com/72580574/194801711-e54840f2-2b11-4f97-82fc-bcb6fbea5f9b.png)
+
+
+###  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-forbiden-summer-olympics-flaticons-lineal-color-flat-icons-4.png"/>¿Por qué es necesario que existan tipos de usuarios y permisos?
+
+Si necesitamos crear una aplicación que posea autenticación de usuarios, probablemente debamos tener rutas que alguien que no tiene una sesión activa no pueda ver. Para la administración de estas rutas, podemos crear tipos de usuarios y permisos asociados a estos como, por ejemplo, que un usuario logueado tiene permiso de acceder a determinadas rutas. 
+
+### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-forbiden-summer-olympics-flaticons-lineal-color-flat-icons-4.png"/> ¿Qué son las páginas públicas y las privadas?
+
+Las rutas que pueden ser accedidas sin la necesidad de tener sesión activa en nuestro sitio son las públicas y las que necesitan una autenticación previa son las privadas.
+
+---
+
+## 10.2 Creacion de rutas con React Router Dom 6
+
+###  <img src="https://img.icons8.com/office/16/000000/route.png"/>  Envolver nuestra App
+
+Una vez que React Router esté instalado como una dependencia, abrimos src/index.js e importamos BrowserRouter desde react-router-dom y luego envolvemos la App en un ```<BrowserRouter>```
+
+![image](https://user-images.githubusercontent.com/72580574/194801838-3f84c976-a39a-4afa-8705-1e3f597a2a75.png)
+
+###  img src="https://img.icons8.com/office/16/000000/route.png"/> Desarrollar las rutas
+
+Ahora ya podemos trabajar con React Router en nuestra aplicación. Para ello, importamos Routes y Route desde react-router-dom y luego podemos reemplazar el marcado predeterminado con algunas rutas en nuestra App.js
+
+```<Routes>``` debe envolver a todas nuestras rutas que serán declaradas de la siguiente forma: 
+
+![image](https://user-images.githubusercontent.com/72580574/194801897-55afcd41-0a2e-4fb8-8e8a-f7f33f4e614c.png)
+
+El código en App.js podría ser algo así:
+
+![image](https://user-images.githubusercontent.com/72580574/194801908-c5c95b68-ff8c-4d1d-b9e2-2b195d6c6570.png)
+
+
+En el ejemplo podemos ver cómo la ruta “/login” nos mostrará el componente Login.
+
+![image](https://user-images.githubusercontent.com/72580574/194801928-9ac7b002-289e-45d1-9a84-d31c58f88973.png)
+
+
+---
+
+## 10.3 Implementación con React Router Dom 6, rutas y roles
+
+Si vamos al componente donde declaramos nuestro enrutamiento, podremos limitar el acceso a las páginas que consideremos privadas.
+
+Para realizar esta tarea usaremos un componente de react-router-dom llamado Navigate, por lo que debemos importarlo. 
+
+![image](https://user-images.githubusercontent.com/72580574/194801978-9c4b9cc4-62b9-4816-b60e-00fb6d3564f1.png)
+
+Luego de esta importación, debemos definir cuáles serán las condiciones a cumplir para que sea posible acceder a las rutas privadas. Esto lo definiremos en un componente RequirAuth que, a modo de ejemplo, preguntamos si no existe un elemento del localStorage llamado logged. 
+
+Cuando no exista este elemento, que significó para la lógica de nuestra aplicación que el usuario no se ha logueado, retornaremos el elemento Navigate y en el parámetro to indicaremos cuál es la ruta a la que debe ir. 
+
+![image](https://user-images.githubusercontent.com/72580574/194802012-706ec7c6-2384-4d5f-a559-e90713ed15f4.png)
+
+Como habremos visto, el parámetro del componente al que llamamos children, es el componente al que podemos ir si estamos logueados, es decir, que existe el ítem logged en el localStorage.
+
+![image](https://user-images.githubusercontent.com/72580574/194802023-a969a16f-146b-43e6-aafb-2c0e4a4103b9.png)
+
+Habrás notado que el parámetro de este elemento es children. Esto es porque es el hijo del elemento RequirAuth, que en nuestro ejemplo es el componente Task. 
+
+Lo que se hace aquí es pasar por el componente RequirAuth como un parámetro.
+
+![image](https://user-images.githubusercontent.com/72580574/194802039-00ea2f7d-21df-4161-bfb7-296224673793.png)
+
+Ahora, si hacemos esto podremos encontrarnos con la limitante de crear ese elemento en el localStorage o eliminarlo si ya lo creamos. Por eso, te dejamos aquí los comandos que debes ejecutar en la consola de tu navegador para ver esto: 
+
+![image](https://user-images.githubusercontent.com/72580574/194802050-ce911430-19d1-447b-8fbd-1d0ec71d5204.png)
+*Crear el item y darle un valor*
+
+![image](https://user-images.githubusercontent.com/72580574/194802073-d631a6e7-4340-4c55-89de-8558de2e5941.png)
+*Remover el item*
+
+---
+
+## 10.4 TRansicion entre rutas
+
+### ¿Por qué es necesario pensar en la transición entre rutas?
+
+Desde el punto de vista de la funcionalidad, no son una necesidad las transiciones animadas entre rutas, pero crear este tipo de efectos permite mejorar la experiencia del usuario en nuestras aplicaciones.
+
+
+### ¿Qué es Framer Motion?
+
+Es una biblioteca de movimiento lista para producción en React y que, entre una variedad de aspectos/cuestiones que podría explorar en su documentación oficial, sirve para que realicemos transiciones animadas entre una ruta y otra. 
+
+
+### Animación en las transiciones entre rutas
+
+Para darle animación a nuestra aplicación cada vez que se cambia de ruta debemos seguir los siguientes pasos: 
+
+1. 
+ 
+a) **Instalar la biblioteca con npm**
+![image](https://user-images.githubusercontent.com/72580574/194802174-d48f2bf0-3cb5-4744-8c4c-0bdd5569e932.png)
+
+b) **Instalar la biblioteca con yarn**
+![image](https://user-images.githubusercontent.com/72580574/194802224-a21e4c19-ca7c-4bb9-a727-97720e0cc9e6.png)
+
+2. ** Importamos en nuestro componente**
+![image](https://user-images.githubusercontent.com/72580574/194802256-c215bec4-380a-404d-a9a0-7327a68491e3.png)
+
+
+### Un objeto que controlará las transiciones
+
+Ahora debemos crear un objeto que controle los tres momentos de una animación de transición: el inicio o initial, la animación entre un estado y otro, aquí llamada animate y, luego, la animación de la salida, que solemos llamar exit.
+
+Estos parámetros de la pageTransition serán también los parámetros que colocaremos en cada una de las rutas que queremos que tengan la transición deseada. 
+
+  ![image](https://user-images.githubusercontent.com/72580574/194802289-d4c496ff-986f-4c79-beb3-89507876526a.png)
+
+ ###   Anidar nuestras rutas
+ 
+Debemos anidar nuestras rutas primero con AnimatePresence, el cual detectará los componentes que son desmontados para aplicar las transiciones necesarias y luego, anidamos cada ruta dentro de motion.div donde indicaremos cuál animación se ocupará en cada uno de los momentos initial > animate > exit.
+
+
+![image](https://user-images.githubusercontent.com/72580574/194802331-609dfbea-a285-484e-b2a5-e9eaed4e9662.png)
+
+
+###  Redirigir del login al inicio
+
+Si bien esto no está relacionado estrictamente con la animación entre rutas, al loguearnos es muy probable que necesitemos redirigir al inicio de nuestro sitio y queramos hacerlo con una animación.
+
+Para la redirección debemos importar useNavigate y crear una constante a la cual asignarle ese hooks, en este caso es navigate. 
+
+En nuestro ejemplo, al ser exitoso el login, es cuando realizamos la redirección con navigate, pasándole el parámetro de la url hacia dónde iremos. 
+
+![image](https://user-images.githubusercontent.com/72580574/194802361-8357426c-4279-46bd-ab6f-fd8589b44c09.png)
+
+
+---
+
+## 10.5  Lazy Import y suspense
+
+## ¿Por qué usar lazy loading?
+
+Una aplicación React tendrá sus archivos empaquetados en un bundle, lo que significa tener los archivos importados y fusionados en un único archivo. 
+
+A medida que la aplicación crezca, el bundle también crecerá y para evitar terminar con un bundle grande, es bueno dividirlo para que se cargue de forma dinámica durante la ejecución de la aplicación. 
+
+Dividir el código puede ayudarte a cargar solo lo necesario en cada momento y así mejorar el rendimiento, al reducir la cantidad de código durante la carga inicial.
+
+Los componentes que queremos que se carguen solo cuando lo vamos a utilizar, los reemplazamos de esta forma en vez de la línea de importación.
+
+![image](https://user-images.githubusercontent.com/72580574/194802390-11a10a64-236e-4697-a895-f6f5e3b9499b.png)
+
+Y luego, en el lugar donde lo utilicemos, lo envolvemos con suspense que cargará algo mientras se carga nuestro componente. 
+
+![image](https://user-images.githubusercontent.com/72580574/194802403-979bc16b-c856-4a44-b3e7-569bc9364dc2.png)
+
+
+###  ¿Cuándo conviene utilizar lazy?
+
+La utilización o no de esta herramienta dependerá de la estrategia que queramos implementar, aunque una buena opción es utilizarlo en aquellos componentes que son muy grandes o también los que no solemos utilizar mucho, indistintamente de su tamaño.
 
 ---
