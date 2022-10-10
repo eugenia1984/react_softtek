@@ -21,7 +21,7 @@ que avanzamos en nuestro proyecto, llevar adelante el testeo de nuestro código.
 
 ### 8.1 ¿Qué es mobile First ?
 
-## <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-smartphone-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png"/>  Diseño responsive
+## <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-smartphone-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png"/>  Diseño responsive
 
 Este concepto refiere a una técnica que permite que el diseño de nuestra aplicación se adapte al tamaño de la pantalla de los diferentes dispositivos, teniendo en cuenta el diseño y tamaño de los recursos que se cargarán. 
 
@@ -29,7 +29,7 @@ Esta técnica piensa en el diseño de la aplicación en función de una rejilla 
 
 Su funcionamiento se basa en unas reglas de estilo llamadas media query, que plasmamos en nuestros archivos CSS.
 
-### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-smartphone-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png"/>  ¿Pero, qué es Mobile First?
+### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/40/000000/external-smartphone-digital-nomading-relocation-flaticons-lineal-color-flat-icons.png"/>  ¿Pero, qué es Mobile First?
 
 Es un concepto de diseño web que comienza optimizando el diseño para móviles y solo después, es optimizado para pantallas más grandes como la de ordenadores y portátiles.
 
