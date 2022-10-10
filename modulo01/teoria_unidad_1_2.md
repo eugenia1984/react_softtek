@@ -1,8 +1,8 @@
-# :star2: TEORIA DE MODULO 1 - UNIDAD 1 Y 2
+# :star2:TEORIA DE MODULO 1 - UNIDAD 1 Y 2:star2:
 
 ---
 
-## OBJETIVOS DEL MODULO
+## :star: OBJETIVOS DEL MODULO
 
 ```
 -Iniciar nuestros primeros pasos en la librería de React reconociendo su sintaxis, 
@@ -27,7 +27,7 @@ token de autenticación.
 
 ---
 
-## SET UP DE TOOLS  
+##  SET UP DE TOOLS  
 
 - [VSC](https://code.visualstudio.com/)
 
@@ -36,7 +36,7 @@ token de autenticación.
 - [Node.js](https://nodejs.org/es/)
 
 
-### 1.1 SET UP DE HERRAMIENTAS
+### <img src="https://img.icons8.com/office/16/000000/maintenance.png"/> 1.1 SET UP DE HERRAMIENTAS
 
 - extension en VSC: JS JSX Snippet 
 
@@ -59,13 +59,13 @@ nmp start
 
 ## 1.2 INTRODUCCION A REACT (parte 2)
 
-### ¿Qué es React? 
+### <img src="https://img.icons8.com/bubbles/40/000000/react.png"/> ¿Qué es React? 
 
 Es una biblioteca desarrollada inicialmente por **Facebook** (ahora llamado **Meta**) y su principal ventaja es ser de software libre. Sus primeros usos fueron en aplicaciones como Facebook e Instagram. Otras empresas web de primer nivel también lo incorporaron, como Wallmart, Netflix, Airbnb, Dropbox, Spotify, etc.
 
 Se creó para hacer el **desarrollo de los componentes de las interfaces del usuario más fácil** y su requisito principal es **ofrecer un rendimiento mayor al de las otras alternativas existentes en el mercado**.
 
-### ¿Cómo funciona?
+### <img src="https://img.icons8.com/bubbles/40/000000/react.png"/> ¿Cómo funciona?
 
 #### Componentes
 
@@ -85,7 +85,7 @@ Para utilizar esta librería necesitamos tener un par de requisitos básicos en 
 
 - Práctica en el uso de ECMA6 como: arrow functions, template, métodos, etc.
 
-#### DOM Virtual
+#### <img src="https://img.icons8.com/bubbles/40/000000/react.png"/> DOM Virtual
 
 React enfatiza la **necesidad de actualizar las vistas** cuando el desarrollador lo requiera y lo consigue mediante el **DOM Virtual**.
 
@@ -93,13 +93,13 @@ El DOM Virtual es una de las características principales de React. Este hace re
 
 Se utiliza para aumentar el rendimiento de las aplicaciones y componentes con las que interactúa el usuario directamente. Así, se puede ofrecer una **mejor experiencia de usuario y una mayor fluidez**.
 
-#### (SPA) Aplicación de página única
+#### <img src="https://img.icons8.com/bubbles/40/000000/react.png"/> (SPA) Aplicación de página única
 
 Una aplicación de página única (single-page application) es **una app que carga una única página HTML y todos los componentes necesarios (tales como JavaScript y CSS) para que se ejecute la aplicación**. Cualquier interacción con la página o páginas subsecuentes no requiere hacer solicitudes al servidor, lo que significa que **la página no es recargada**.
 
 Aunque se puede construir una aplicación de página única con React, esto no es un requerimiento. React también puede ser utilizado para mejorar pequeñas partes de sitios web existentes con interactividad adicional. 
 
-#### Las diferencias de crear un sitio común de cero
+#### <img src="https://img.icons8.com/bubbles/40/000000/react.png"/> Las diferencias de crear un sitio común de cero
 
 Demos un paseo por el espacio de la tecnología antes de 2015, cuando el desarrollo web se trataba de secuencias de comandos y renderizado. La época en que lenguajes como HTML, CSS dominaban el frontend y PHP dominaba el backend.
 
@@ -111,7 +111,7 @@ Todo el mérito es para la representación del lado del servidor (SSR). Hemos es
 
 ## 1.3 INTRODUCCION A REACT (parte 3)
 
-### Sistema de archivos de React
+### <img src="https://img.icons8.com/bubbles/40/000000/react.png"/>  Sistema de archivos de React
 
 Luego de finalizar la instalación de React, nuestro sistema de archivos se parecerá a lo siguiente:
 
@@ -157,7 +157,7 @@ myfirstreactapp
 └── README.md
 ```
 
-#### Iniciar el servidor de desarrollo de aplicaciones React
+####  <img src="https://img.icons8.com/bubbles/40/000000/react.png"/> Iniciar el servidor de desarrollo de aplicaciones React
 
 ¡Comencemos juntos con nuestro primer código usando React!
 
@@ -214,7 +214,7 @@ export default App;
 
 ---
 
-### 2.1 ARMANDO COMPONENTE LOGIN
+### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/>  2.1 ARMANDO COMPONENTE LOGIN
 
 - Voy a crear la carpeta **components** y dentro mi primer componente **Login.js**
 - 
@@ -311,19 +311,19 @@ export default Login;
 - ¿ Qué es un **componente funcional** ? Es una función.
 
 
-#### ¿Qué es el componente "Login"?
+####  <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿Qué es el componente "Login"?
 
 Este componente es el que va a permitir que las personas que usan la aplicación se logueen en la misma.
 
 El mismo estará compuesto por un breve formulario con dos campos: **correo electrónico** y **contraseña**, los cuales funcionarán como un mecanismo de entrada de información para el proceso de autenticación de usuarios.
 
 
-#### ¿Para qué sirve el componente "Login"?
+#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/>  ¿Para qué sirve el componente "Login"?
 
 Este componente tiene como objetivo principal servir como un **filtro de usuarios**, para que, **solamente aquellas personas que se loguean con las credenciales válidas puedan usar el completo de la aplicación**.
 
 
-#### ¿Cómo se implementa el proceso de Login en un proyecto real?
+#### <img src="https://img.icons8.com/external-fauzidea-flat-fauzidea/40/000000/external-login-online-learning-fauzidea-flat-fauzidea.png"/> ¿Cómo se implementa el proceso de Login en un proyecto real?
 
 Esto es algo bastante habitual, pues muchas aplicaciones para que puedan ser usadas, necesitan autenticar al usuario para así proveer de toda su funcionalidad. 
 
@@ -334,12 +334,12 @@ Por ello es importante conocer cuáles son los pasos a dar para poder llevar ade
 ### 2.2 VALIDACION DE FORMULARIO 
 
 
-#### ¿Qué es la validación de formularios?
+#### <img src="https://img.icons8.com/dotty/40/000000/password-check.png"/> ¿Qué es la validación de formularios?
 
 La validación es el proceso que **nos permite corroborar** (como developers) **que la información suministrada de parte del usuario y que requiere nuestro sistema para funcionar, sea la correcta**.
 
 
-#### ¿Para qué sirve la validación de formularios?
+#### <img src="https://img.icons8.com/dotty/40/000000/password-check.png"/> ¿Para qué sirve la validación de formularios?
 
 La validación de formularios nos permite **corroborar que la información que estamos recibiendo y que posteriormente enviaremos al servidor sea correcta y no presente errores**. 
 
@@ -347,7 +347,7 @@ En el desarrollo de aplicaciones siempre estaremos en la búsqueda constante de 
 
 
 
-#### ¿Qué ejemplos existen sobre la validación de formularios?
+#### <img src="https://img.icons8.com/dotty/40/000000/password-check.png"/> ¿Qué ejemplos existen sobre la validación de formularios?
 
 El más común lo encontramos en los **formularios de registro**. 
 
@@ -357,7 +357,7 @@ De no coincidir nuestra información ingresada con este formato, obtendremos alg
 
 
 
-#### ¿Cómo se implementa la validación de formularios en un proyecto real?
+#### <img src="https://img.icons8.com/dotty/40/000000/password-check.png"/> ¿Cómo se implementa la validación de formularios en un proyecto real?
 
 De la misma manera que lo haremos en esta 
 . 
@@ -459,19 +459,23 @@ const submitHandler = (e) => {
 
 ## 2.3 ENVIO DE FORMULARIO
 
-#### ¿Qué es el envío de formularios vía HTTP?
+
+#### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-http-internet-marketing-flaticons-lineal-color-flat-icons.png"/> ¿Qué es el envío de formularios vía HTTP?
 
 Los formularios en HTML no son nada más que presentacionales, y para poder usar la información suministrada por el usuario tendremos que enviar la misma a algún lugar, tradicionalmente a una API. Y para poder generar el envío de dicha información necesitaremos implementar algún método HTTP que nos permita hacer esto. 
 
-#### ¿Para qué sirve el envío de información vía HTTP?
+
+####  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-http-internet-marketing-flaticons-lineal-color-flat-icons.png"/> ¿Para qué sirve el envío de información vía HTTP?
 
 Tal como lo mencionamos anteriormente, un formulario HTML no es funcional si no enviamos su información a algún lugar. Y por este motivo es que los métodos HTTP tales como GET, POST o PUT nos van a ser de gran utilidad, pues con estos métodos tendremos la posibilidad de hacerle llegar al servidor aquellos datos que el usuario ha dejado en nuestra aplicación.
 
-#### ¿Dónde se pone en uso el envío de información vía HTTP?
+
+####  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-http-internet-marketing-flaticons-lineal-color-flat-icons.png"/>¿Dónde se pone en uso el envío de información vía HTTP?
 
 Generalmente, siempre que diligencies un formulario (como el de login, registro, contacto, etc) y des click en el botón "ENVIAR", allí mismo estás disparando un envío de la información vía HTTP, para que sea el servidor quien procese dicha información y pueda darte una respuesta dependiendo de la información suministrada.
 
-#### ¿Cómo se implementa el envío de información vía HTTP en un proyecto real?
+
+####  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-http-internet-marketing-flaticons-lineal-color-flat-icons.png"/>¿Cómo se implementa el envío de información vía HTTP en un proyecto real?
 
 En los formularios de contacto, de registro, de logueo o en cualquier otra petición que obtenga o envíe datos desde y hacia el servidor se implementan este tipo de solicitudes HTTP.
 
@@ -480,15 +484,17 @@ En los formularios de contacto, de registro, de logueo o en cualquier otra petic
 #### 2.4 MANEJO DE ERRORES
 
 
-#### ¿Qué es el manejo de errores?
+####  <img src="https://img.icons8.com/fluency/48/000000/error-cloud.png"/> ¿Qué es el manejo de errores?
 
 El manejo de errores es la técnica a través de la cual como desarrolladores podemos manejar las distintas respuestas obtenidas después de enviar información a una API o incluso cuando nos encontramos validando la información de un formulario.
 
-#### ¿Para qué sirve el manejo de errores?
+
+#### <img src="https://img.icons8.com/fluency/48/000000/error-cloud.png"/> ¿Para qué sirve el manejo de errores?
 
 Sirve para advertir a la persona que usa nuestra aplicación de los posibles errores que se encontraron en el procesamiento de la información, sea porque suministró información errada o quizás porque aun habiendo suministrado la información correcta, el servidor no pudo procesarla de manera satisfactoria.
 
-#### ¿Cómo se implementa el manejo de errores en un proyecto real?
+
+#### <img src="https://img.icons8.com/fluency/48/000000/error-cloud.png"/> ¿Cómo se implementa el manejo de errores en un proyecto real?
 
 
 Existen diversas maneras de hacerlo, pero una muy común es hacerlo usando librerías que nos permitan disparar cajas modales que alerten e informen al usuario del error resultante de la operación. Puntualmente en esta clase implementaremos la librería [**Sweet alert**](https://sweetalert.js.org/guides/) para poder mostrar estos mensajes de una manera mucho más amigable para el usuario.
@@ -541,21 +547,22 @@ axios
 
 ## 2.5 PERSISTENCIA DEL TOKEN
 
-#### ¿Qué es un token y qué significa la persistencia del mismo?
+
+####  <img src="https://img.icons8.com/color/40/000000/token-card-code.png"/>¿Qué es un token y qué significa la persistencia del mismo?
 
 Un token es **un identificador único obtenido tras un proceso de autenticación que le permite saber al servidor que la persona que usa la aplicación se ha logueado satisfactoriamente**. 
 
 Por otro lado, **persistir un token** significa **mantenerlo guardado en algún lugar para posteriormente usar su información**. Para que, de esta manera, evitemos solicitar al usuario en cada momento sus credenciales de acceso.
 
 
-#### ¿Para qué sirve la persistencia del token?
+####  <img src="https://img.icons8.com/color/40/000000/token-card-code.png"/>¿Para qué sirve la persistencia del token?
 
 Cómo ya lo dijimos con anterioridad, sirve **para evitar hacer múltiples solicitudes de autenticación al servidor**, cada vez que el usuario de la aplicación desea llevar a cabo una determinada actividad. Por este motivo, el token es tan importante ya que lo obtendremos en el primer llamado de autenticación y desde ese momento en adelante usaremos el mismo cada vez que sea necesario.
 
 -> El token es como la puerta de entrada a la siguiente petición, de modo que no voy a estar enviando constantemente la información de logueo, se manda una vez, se guarda y se usa esa información.
 
 
-#### ¿Cómo se implementa la persistencia del token en un proyecto real?
+#### <img src="https://img.icons8.com/color/40/000000/token-card-code.png"/> ¿Cómo se implementa la persistencia del token en un proyecto real?
 
 Existen algunos caminos para lograr este resultado, pero el más sencillo y cómodo para nosotros será **guardar el mismo en el almacenamiento local del navegador**, de esta manera aprovecharemos las múltiples ventajas de este tipo de almacenamiento.
 
@@ -609,21 +616,21 @@ localStorage.clear()
 ## 2.6 REDIRECCIONAMIENTO AL COMPONENTE "LISTADO"
 
 
-#### ¿Qué es un redireccionamiento?
+#### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-redirect-internet-marketing-flaticons-lineal-color-flat-icons.png"/> ¿Qué es un redireccionamiento?
 
 El redireccionamiento **es un proceso mediante el cual, después de ejecutar una acción determinada, llevamos a la persona que usa nuestra aplicación a una ubicación específica**. Es muy común de implementar en el proceso de logueo, en el cual después de validar las credenciales de una persona, le daremos acceso completo a la aplicación.
 
 Vale aclarar que una redirección también se puede generar cuando nos damos cuenta que sin tener los permisos correspondientes, una persona desea ingresar a una sección a la que no tiene permiso.
 
 
-#### ¿Para qué sirve la redirección?
+#### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-redirect-internet-marketing-flaticons-lineal-color-flat-icons.png"/> ¿Para qué sirve la redirección?
 
 Sirve para enviar a la persona que usa nuestro sistema a un determinado lugar después de ejecutar una acción.
 
 **Sirve puntualmente para proteger secciones de la aplicación que requieren que la persona usuaria tenga permisos específicos**.
 
 
-#### ¿Qué ejemplos existen sobre el redireccionamiento?
+#### <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-redirect-internet-marketing-flaticons-lineal-color-flat-icons.png"/> ¿Qué ejemplos existen sobre el redireccionamiento?
 
 El más sencillo y el que puedes probar por tu cuenta es el siguiente: 
 
@@ -753,7 +760,7 @@ const token = localStorage.getItem("token");
 
 ---
 
-### Otro modo es con el componente Navigate
+###  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-redirect-internet-marketing-flaticons-lineal-color-flat-icons.png"/> Otro modo es con el componente Navigate
 
 ```JSX
 const Listado = () => {
@@ -773,7 +780,7 @@ return(
 
 ---
 
-### Enlaces y documentación
+###  <img src="https://img.icons8.com/arcade/34/000000/experimental-link-arcade.png"/> Enlaces y documentación
 
 - [**Visual Studio Code**](https://code.visualstudio.com/): Desde este enlace podrás descargar el editor de texto más utilizado por todo el mundo desde hace ya un par de años. Excelente para escribir código en cualquier lenguaje de programación.
 
