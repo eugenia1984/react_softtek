@@ -2,7 +2,6 @@
 
 ---
 
-## Unidad 8. Modo responsive
 ```
 - 8.1. ¿Qué es Mobile First?
 - 8.2. Dev tools para Mobile First
@@ -424,3 +423,122 @@ loading ---------- idle/ -----------> remote
 
 ---
 ---
+
+
+# :star2:Clase 6 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 10:star2: 
+
+---
+
+## Temas:
+
+```
+- 1-  Rutas privadas
+- 2 - Transiciones entre rutas
+- 3 - lazy loading / suspense
+```
+
+---
+
+## :star: 1 - Rutas privadas
+
+### Mejora de Implementación
+
+- componente para validar la autenticacion
+
+```JSX
+const RequireAuth = ( {children}) => {
+  if(!localStorage.getItem("logged")) {
+    return <Navigate to="/login" replace={true} />
+  }
+  return shildren
+}
+```
+
+- usar el componente para aquellas rutas que quieran proteger
+
+```JSX
+export const App = () => {
+  <Routes>
+    <Route 
+      path="/"
+      element= {
+        <RequireAuth>
+          <Task />
+        </RequireAuth>
+      }
+    />
+    <Route path="/login" element={<Login / >} />
+    <Route path="*" element={<Error404 />} />
+  </Routes>
+}
+```
+
+---
+
+## :star: 2 - Transiciones entre rutas
+
+### Animaciones al cambiar de ruta
+
+Las transiciones entre rutas son animaciones que suceden al navegar la aplicación y mejoran la experiencia de usuario.
+
+### Framer Motion
+
+Es una librería de animación de componentes, creada por el equipo de framer, una plataforma de creación de sitios web.
+
+- **API intuitiv** : framer-motion envuelve todos los elementos de html agregando props que permiten animarlos.
+
+- **AnimatePresense**:  Además los componentes de frame-motion detectan el momento en que se monta y desmonta un componente. En el caso de las pantallas esto permite animar las transiciones.
+
+- **Doc con ejemplos**:  La documentación incluye todo tipo de ejemplos que se puede ejecutar en sandbox
+
+### Algunas props interesantes
+
+- **initial**: valor inicial de la animación
+
+- **animate**: valor final de la animación al cargar
+
+- **exit**: valor final cuando el componente se desmonta (Envuelto por AnimatePresence)
+
+- **variants**: objeto que define valores por nombre para utilzar en las otras props
+
+- **whileHover**: valor final de la animación al pasar el puntero 
+
+Ejemplo:
+
+```JSX
+import {motion, AnimatePresence } from "framer-motion"
+
+export const MyCOmponent = ({ isVisible }) => {
+  <AnimatePresence>
+    {isVisible && (
+      <motion.div
+        initial={{ opacity:0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0}}
+       />
+    )}
+  </AnimatePresence>
+}
+```
+
+```JSX
+const variants = {
+  active: {
+    background-color: "green"
+  },
+  inactive: {
+    background-color: "yellow",
+    transition: { duration: 2 }
+  }
+}
+
+<motion.div variants={variants} animate="active" />
+```
+
+---
+
+## :star: 3 - lazy loading / suspense
+---
+---
+
+
