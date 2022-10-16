@@ -425,11 +425,14 @@ loading ---------- idle/ -----------> remote
 ---
 
 
-# :star2:Clase 6 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 10 * Trabajando con las rutas:star2: 
+# :star2:Clase 6 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 10:star2: 
 
 ---
 
-## Temas:
+TRABAJANDO CON LAS RUTAS 
+---
+
+##  :book: Temas:
 
 ```
 - 1-  Rutas privadas
@@ -441,7 +444,7 @@ loading ---------- idle/ -----------> remote
 
 ## :star: 1 - Rutas privadas
 
-### Mejora de Implementación
+### <img src="https://img.icons8.com/office/16/000000/private.png"/> Mejora de Implementación
 
 - componente para validar la autenticacion
 
@@ -477,11 +480,11 @@ export const App = () => {
 
 ## :star: 2 - Transiciones entre rutas
 
-### Animaciones al cambiar de ruta
+###  <img src="https://img.icons8.com/external-sketchy-juicy-fish/40/000000/external-animation-game-development-sketchy-sketchy-juicy-fish.png"/> Animaciones al cambiar de ruta
 
 Las transiciones entre rutas son animaciones que suceden al navegar la aplicación y mejoran la experiencia de usuario.
 
-### Framer Motion
+### <img src="https://img.icons8.com/external-sketchy-juicy-fish/40/000000/external-animation-game-development-sketchy-sketchy-juicy-fish.png"/> Framer Motion
 
 Es una librería de animación de componentes, creada por el equipo de framer, una plataforma de creación de sitios web.
 
@@ -491,7 +494,7 @@ Es una librería de animación de componentes, creada por el equipo de framer, u
 
 - **Doc con ejemplos**:  La documentación incluye todo tipo de ejemplos que se puede ejecutar en sandbox
 
-### Algunas props interesantes
+### <img src="https://img.icons8.com/external-sketchy-juicy-fish/40/000000/external-animation-game-development-sketchy-sketchy-juicy-fish.png"/> Algunas props interesantes
 
 - **initial**: valor inicial de la animación
 
@@ -535,7 +538,7 @@ const variants = {
 <motion.div variants={variants} animate="active" />
 ```
 
-### Animando la transición
+### <img src="https://img.icons8.com/external-sketchy-juicy-fish/40/000000/external-animation-game-development-sketchy-sketchy-juicy-fish.png"/> Animando la transición
 
 ### Montado/Desmontado
 
@@ -547,44 +550,43 @@ AnimatePresence y la prop exit permiten definir que animar al desmontar
 
 ## :star: 3 - lazy loading / suspense
 
-###  Despliegue Productivo Y SPA
+### <img src="https://img.icons8.com/color/48/000000/favourite-file.png"/>  Despliegue Productivo Y SPA
 
-Las aplicaciones react son lo que se conoce como **Single Page
-Application**, aplicaciones de una página.
+Las aplicaciones react son lo que se conoce como **Single Page Application**, aplicaciones de una página.
 
 Todo el código se empaqueta en un único archivo, un **bundle**.
 
-#### npm run build
+#### <img src="https://img.icons8.com/color/48/000000/favourite-file.png"/> npm run build
 
 Este comando crea un directorio build dentro del proyecto donde podemos encontrar el bundle minificado de javascript y los demás assets del de la app. 
 
 La minificacion se lleva a cabo por webpack, rollup, browserify u otras herramientas.
 
-##### ```serve -s <build>```
+##### <img src="https://img.icons8.com/color/48/000000/favourite-file.png"/> ```serve -s <build>```
 
 Permite servir archivos estáticamente. En este caso indicando el directorio resultado del build.
 
 ---
 
-## Time to interact
+## <img src="https://img.icons8.com/color/48/000000/favourite-file.png"/> Time to interact
 
 Es un indicador o métrica de experiencia de usuario, que refiere al tiempo que
 tarda en ser interactiva la página.
 
 ---
 
-##  Code Splitting
+##   <img src="https://img.icons8.com/color/48/000000/favourite-file.png"/> Code Splitting
 
 Es una técnica que refiere a “dividir el bundle en bundles más chicos” y descargarlos por separado.
 
 
-### Descarga del Bundle
+### <img src="https://img.icons8.com/color/48/000000/favourite-file.png"/> Descarga del Bundle
 
 Una app react no se volverá interactiva hasta que se descargue el bundle, por lo tanto si el bundle es muy grande o la conexión es muy lenta, la experiencia de usuario es mala.
 
 ### ¿Pero, es necesario descargar toda la app al principio?
 
-#### Descarga bajo demanda
+#### <img src="https://img.icons8.com/color/48/000000/favourite-file.png"/> Descarga bajo demanda
 
 Code splitting permite dividir el bundle en fragmentos más chicos e ir descargándolos a medida que sean necesarios.
 
@@ -604,11 +606,11 @@ fuera una app, por lo tanto el bundle se descarga únicamente al instalar.
 
 ---
 
-### Carga Incremental Componentes
+### <img src="https://img.icons8.com/fluency/48/000000/loading.png"/> Carga Incremental Componentes
 
 En react podemos cargar los componentes a medida que se necesita utilizando **lazy** en combinación con **import**
 
-#### Pero ¿que pinta hasta que se termina de descargar el componente?
+#### <img src="https://img.icons8.com/fluency/48/000000/loading.png"/> Pero ¿que pinta hasta que se termina de descargar el componente?
 
 **Suspense** permite definir un componente a mostrar hasta que está disponible el principal, o sea un fallback.
 
@@ -626,7 +628,7 @@ const loadLanguages = async () => {
 
 Nota de color: tambien se puede hacer agregando dinamicamente un tag ```<script/>``` al dom. (ya no se usa de esta forma)
 
-### ¿Cuándo usarlo?
+### <img src="https://img.icons8.com/fluency/48/000000/loading.png"/>  ¿Cuándo usarlo?
 
 Generalmente se usa para componentes grandes o componentes menos usados.
 
@@ -636,6 +638,7 @@ const Error404 = lazy(() =>
 ```
 
 ¿Y si falla la descarga del componente?
+
 ---
 ---
 
