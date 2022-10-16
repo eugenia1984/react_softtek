@@ -425,7 +425,7 @@ loading ---------- idle/ -----------> remote
 ---
 
 
-# :star2:Clase 6 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 10:star2: 
+# :star2:Clase 6 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 10 * Trabajando con las rutas:star2: 
 
 ---
 
@@ -535,9 +535,107 @@ const variants = {
 <motion.div variants={variants} animate="active" />
 ```
 
+### Animando la transición
+
+### Montado/Desmontado
+
+Cuando se modifica una ruta, router-dom desmonta el componente principal anterior y monta uno nuevo.
+
+AnimatePresence y la prop exit permiten definir que animar al desmontar
+
 ---
 
 ## :star: 3 - lazy loading / suspense
+
+###  Despliegue Productivo Y SPA
+
+Las aplicaciones react son lo que se conoce como **Single Page
+Application**, aplicaciones de una página.
+
+Todo el código se empaqueta en un único archivo, un **bundle**.
+
+#### npm run build
+
+Este comando crea un directorio build dentro del proyecto donde podemos encontrar el bundle minificado de javascript y los demás assets del de la app. 
+
+La minificacion se lleva a cabo por webpack, rollup, browserify u otras herramientas.
+
+##### ```serve -s <build>```
+
+Permite servir archivos estáticamente. En este caso indicando el directorio resultado del build.
+
+---
+
+## Time to interact
+
+Es un indicador o métrica de experiencia de usuario, que refiere al tiempo que
+tarda en ser interactiva la página.
+
+---
+
+##  Code Splitting
+
+Es una técnica que refiere a “dividir el bundle en bundles más chicos” y descargarlos por separado.
+
+
+### Descarga del Bundle
+
+Una app react no se volverá interactiva hasta que se descargue el bundle, por lo tanto si el bundle es muy grande o la conexión es muy lenta, la experiencia de usuario es mala.
+
+### ¿Pero, es necesario descargar toda la app al principio?
+
+#### Descarga bajo demanda
+
+Code splitting permite dividir el bundle en fragmentos más chicos e ir descargándolos a medida que sean necesarios.
+
+Por ejemplo para pintar el login, no es necesario descargarse toda la home, con los menús, y las pantallas de configuración o preferencias de usuario
+
+---
+
+## MPA
+
+**Múltiple Page Application**, cada página descarga únicamente los
+recursos para hacer la misma funcional. 
+
+## PWA
+
+**Progressive Web Application** permite instalar una web como si
+fuera una app, por lo tanto el bundle se descarga únicamente al instalar.
+
+---
+
+### Carga Incremental Componentes
+
+En react podemos cargar los componentes a medida que se necesita utilizando **lazy** en combinación con **import**
+
+#### Pero ¿que pinta hasta que se termina de descargar el componente?
+
+**Suspense** permite definir un componente a mostrar hasta que está disponible el principal, o sea un fallback.
+
+### ¿Cómo se hace en javascript?
+
+Ecmascript( javascript del navegador) define un import dinámico utilizado import como una función. Devuelve una promesa.
+
+```JavaScript
+const loadLanguages = async () => {
+  try {
+    const englishModule = await import("./english.js")
+  }
+}
+```
+
+Nota de color: tambien se puede hacer agregando dinamicamente un tag ```<script/>``` al dom. (ya no se usa de esta forma)
+
+### ¿Cuándo usarlo?
+
+Generalmente se usa para componentes grandes o componentes menos usados.
+
+```JSX
+const Error404 = lazy(() =>
+                    import("./components/Views/Error404"))
+```
+
+¿Y si falla la descarga del componente?
 ---
 ---
 
