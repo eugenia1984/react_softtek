@@ -235,7 +235,7 @@ contraseña:
 
 - Cuestionario 2: 6 de Oct -> **100 %**
 
-- Cuestionario 3: 12 de Oct
+- Cuestionario 3: 12 de Oct -> **100 %**
 
 - Cuestionario 4: 19 de Oct
 
