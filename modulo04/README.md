@@ -811,3 +811,68 @@ datos a renderizar por props.
 
 ---
 ---
+
+# :star2:Clase 11 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 12:star2: 
+
+---
+
+## TRABAJANDO CON FORMIK
+
+---
+
+## :book: Temas:
+
+```
+- 1 - Formik: Validaciones con Yup
+```
+
+---
+
+## :star: 1 - Formik: Validaciones con Yup
+
+Yup es una librería que nos permite agregar validaciones a un formulario.
+
+Estas validaciones se hacen a partir de un esquema.
+
+Este esquema:
+
+- Puede parsear y transformar un valor para que coincida.
+ 
+- Validar los valores.
+
+**Parseo**
+```JSX
+const me = number().cast("1"); // 1
+
+const obj = object({
+  fosrtName: string().lowercase().trim(),
+})
+  .camelCase()
+  .cast('{"first_name": "jAnE}');  // {firstName: 'jane'}
+```
+
+**Validar**
+```JSX
+string()
+  .min(3,'must be at least 3 characters long')
+  .email('must be a valid email')
+  .validate('no'); // VAlidatorError
+```
+
+**Esquema**
+```JSX
+const personSchema = yup.object({
+  firstName: yup.string().defined,
+  nickName: yup.string().default('').nullable(),
+  sex: yup
+    .mixed()
+    .oneOf(['male', 'female', 'other'] as const)
+    .defined(),
+  email: yup.string().nullable().email(),
+  birthDate: yup.date().nullable().min(new Date(1900, 0, 1)),
+})
+```
+
+---
+---
+
