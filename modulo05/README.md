@@ -442,5 +442,201 @@ Una tarea posee los siguiente atributos:
 El alta de la tarea se hace con un post de los datos al servicio:
 
 [https://kellfj.sse.codesandbox.io/tasks](https://kellfj.sse.codesandbox.io/tasks) , se de enviar el Authorization header correspondiente al usuario logoneado.
+
+
+---
+---
+
+# :star2:Clase 13 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 5:star2: 
+
+---
+
+## UNIDAD 14 * CRANDO ESTILOS EN LA VISTA
+
+---
+
+## :book: Temas:
+
+
+```
+- 1 - Toast & Sweetalert
+- 2 - Listados y skeleton
+- 3 - Búsquedas con debounce
+- 4 - Formateo de fechas y ver mas
+```
+---
+
+## FeedBack al usuario
+
+Al realizar una operación queremos darle una confirmación visual al usuario del resultado de la misma, ya sea un éxito o error.
+
+Se aplica cuando se hace una operación contra el backend: login, registro, altas, modificaciones, bajas, etc.
+
+[https://fkhadra.github.io/react-toastify/introduction](https://fkhadra.github.io/react-toastify/introduction)
+
+[https://github.com/sweetalert2/sweetalert2-react-content](https://github.com/sweetalert2/sweetalert2-react-content)
+
+
+---
+
+### Loaders / Progress
+
+Son elementos visuales que indican que la página se está cargando o que la operación se está procesando.
+
+El skeleton refleja la estructura del contenido que se va a mostrar. Por lo tanto se puede aplicar sobre la estructura directamente.
+
+[https://github.com/dvtng/react-loading-skeleton#readme](https://github.com/dvtng/react-loading-skeleton#readme)
+
+```JSX
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeletons.css"
+
+function BlogPost(props) {
+  return (
+    <div>
+      <h1>{props.title || < Skeleton />}</h1>
+      {props.body || <Skeleton count={10} />}
+    </div>
+  )
+}
+```
+
+---
+
+### Radio GRoup
+
+Es un input que permite seleccionar una entre varias opciones.
+
+[https://mui.com/material-ui/react-radio-button/#direction](https://mui.com/material-ui/react-radio-button/#direction)
+
+Ejemplo de que veo:
+
+```
+o Female  o Male  o Other
+```
+
+---
+
+### Lodash
+
+Lodash es una biblioteca de funciones utilitarias, orientada a la manipulación eficiente de tipos de datos, objetos, arrays, números, etc.
+
+Con extras añadidos.
+
+
+### lodash.debounce
+
+Dentro de lodash, podemos encontrar una implementación de debounce y throttle.
+
+[https://lodash.com/docs/4.17.15#debounce](https://lodash.com/docs/4.17.15#debounce)
+
+---
+
+### URI / Direccion
+
+- Las apis rest utilizan URI para identificar recursos
+
+- **path** identifica un recurso, que puede ser un objeto o una colección/listado
+
+- **query params** generalmente se utilizan para filtrar listados.
+
+- **fragment** se utiliza para referenciar un campo dentro del recurso.
+
+
+```
+https://jon.doe@www.example.com:123/forum/questions/?tag=networking&order=newest#top
+
+https -> scheme
+jon.doe@www.example.com:123 -> authority
+jon.doe -> user onfo
+www.example.com -> host
+123 -> port
+forum/questions -> path
+?tag=networking&order=newest -> query
+top-> fragment
+```
+
+---
+
+##  Ejercicio 1:
+
+1 - Recuperar la lista de tareas del equipo, del usuario logoneado, utilizando el backend de sanbox. 
+
+[https://kellfj.sse.codesandbox.io/tasks?teamID=<teamID>](https://kellfj.sse.codesandbox.io/tasks?teamID=<teamID>)
+
+2- Mientras se está procesando la request mostrar las tarjetas como skeletons.
+
+3 - Aplicando debounce, agregar filtros a la búsqueda:
+
+a. Un select con las options de priority (“low”, “normal”, “high”)
+
+Cuando este filtro está seleccionado, se debe agregar query param```priority=<valor>``` a la
+búsqueda.
+
+b. Un radio button con la opciones de “mis tareas”, “todas”. 
+Cuando “mis tareas” esté seleccionado, enviar el query param ```authorId=<user.id>```
+
+c. Un filtro de búsqueda por texto.
+
+Cuando este campo tenga un valor se deberá aplicar el query param ```task_like=<texto>```
+
+---
+
+## Discusion
+
+Para la aplicación planteada ¿tiene sentido filtrar todo contra el servidor, o me conviene traer toda la data y filtrar localmente?
+
+---
+
+### Days.js
+
+Existen múltiples librerías para manipular fechas, dayjs es solo una de ellas
+
+- Manualmente:
+
+```JavaScript
+const datetime = new Date(createdAd.toLocaleString)
+```
+[https://day.js.org/docs/en/display/format](https://day.js.org/docs/en/display/format)
+
+
+---
+
+##  Ejercicio 2: Elipsis parte 2
+
+Dentro del componente Card, se quiere permitir expandir y contraer la descripción
+de la tarea.
+
+1 - Agregar al componente card la posibilidad de expandir y contraer el texto cuando superé los 60 caracteres.
+
+2 - Formatear la fecha con dayjs para que tenga el siguiente formato: 01/01/2022
+
+---
+
+## Ejercicio 3: Creación de tareas
+
+1 - Crear un componente que permita hacer el alta de una tarea.
+
+Una tarea posee los siguiente atributos:
+
+-task: nombre de la tarea,
+
+-createdAt : la fecha de creación es el instante en el que se crea la tarea
+
+-author: autor de la tarea, deber ser usuario logoneado
+
+-type: tipo de tarea puede tomar 3 valores, nuevo, en proceso y finalizada,
+
+-priority: la prioridad de la tarea puede tomar 3 valores, alta, normal, baja
+
+-description: la descripción de la tarea, es un texto largo que describe la tarea.
+
+El alta de la tarea se hace con un post de los datos al servicio:
+
+https://kellfj.sse.codesandbox.io/tasks , se debe enviar el Authorization header correspondiente al
+usuario logoneado.
+
+Usar un toast para mostrar el resultado de la operación.
+
 ---
 ---
