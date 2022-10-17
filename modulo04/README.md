@@ -642,4 +642,172 @@ const Error404 = lazy(() =>
 ---
 ---
 
+# :star2:Clase 7 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 4 * UNIDAD 11:star2: 
 
+---
+
+## ADAPTADO A MOBILE FIRST
+
+---
+
+## :book: Temas:
+
+```
+- 1 - CSS: Variables globales
+- 2 - Window Resize
+- 3 - Elipsis
+- 4 - Refactorizaciones
+```
+
+---
+
+## :star:  1 - CSS: Variables globales
+
+### ¿Dónde y cómo se  declaran?
+
+Las variables globales en CSS, tienden a declararse en el archivo de **index.css**.
+
+Se usa la etiqueta **:root** (la etiqueta inicial del documento HTML) y se le añaden sus propiedades.
+
+```CSS
+:root {
+  --global-primary-color: #ff452b;
+  --global-bg-color-soft: #fafafa;
+  --global-radius: 8px;
+  --global-border: 0.5px solid #e9e9e9;
+}
+
+.auth burron {
+  transition: all 0.3s ease-out;
+  background-color: var(--global-primary-color);
+  border-radius: var(--global-radius);
+}
+```
+
+- Si estás trabajando con algún preprocesador como SASS, puedes crear un archivo index.scss y
+declarar ahí variables globales que luego puedes usar a lo largo de los diferentes estilos en tu
+aplicación.
+
+index.scss
+```CSS
+/*-----------------
+User Styles
+-----------------*/
+import "user";
+```
+
+_user.scss
+```CSS
+.color-gray {
+  color: $gray-800 !important;
+}
+```
+
+_user-varaibles.scss
+```CSS
+$primary: #45ADE;
+$blue: #3b7eal;
+
+// 2 shades os gray
+$gray: #5e6e82;
+$gray-800: #4D5969;
+```
+---
+
+## :star: 2 - Window Resize
+
+Es un evento de la ventana que se dispara cuando hay un cambio de tamaño.
+
+### Suscripción al evento
+
+Mediante useEffect, podemos registrar un event handler cuando se monta el componente.
+
+### Desuscribirse al evento
+
+Importante, **el useEffect debe retornar una función que limpieza** que de-suscriba el evento
+cuando este se desmonta **para evitar la actualización de un componente desmontado**.
+
+```JSX
+const[isPhone, setIsPhone] = useState(
+  window.innerWidth<900? true:false
+);
+
+const handleResize = () => {
+  if(window.innerWidth < 900) {
+    setIsPhone(true);
+  } else {
+    setIsPhone(false);
+  }
+};
+
+useEffect(() => {
+  handleResize();
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+```
+
+¿En que diferencia la llamada con y sin listado de dependencias?
+
+
+---
+
+## :star: 3 - Elipsis
+
+Notación que indica la omisión de ciertas palabras. Se utiliza cuando el texto a mostrar excede el tamaño del contenedor.
+
+### CSS
+
+Cuando el contenedor tiene ancho fijo y el texto es una sola línea se puede agregar las elipsis por css.
+
+```JSX
+{
+  overflow: hidden; // esconder
+  white-space: nowrap; // sin quiebres
+  text-overflow: elipsis;
+  width: 50px;
+}
+```
+
+
+### JavaScript
+
+Se recorta el texto y a veces se agrega un botón para expandir la elipsis
+
+```JSX
+const limitString = (str) => {
+  if(str.length > 370) {
+    return str.slice(0, 367)+"...";
+  }
+  return str;
+}
+```
+
+---
+
+## :star: 4 - Refactorizaciones
+
+Es modificar la estructura del código sin modificar su comportamiento.
+
+**Antes de refactorizar deberías tener una suite de tests, sobre el código a modificar**.
+
+Cualquiera puede escribir código que una computadora entienda, los buenos programadores escriben código que los humanos puedan entender.
+
+Al agregar una funcionalidad si el código no está estructurado convenientemente, primero refactorizar para facilitar el cambio y luego hacer el cambio fácilmente.
+
+Hacer pequeños cambios y correr los tests, de esa forma es fácil encontrar el error si nos equivocamos.
+
+**Limpiar a medida que avanzamos**.
+
+### Custom Hooks
+
+Es una función de javascript que utiliza otros hooks y resuelve cierta lógica o administra el cambio de
+estado del componente.
+
+###  Componente Listado
+
+Al crear una lista, el elemento de la lista se puede extraer a su propio componente. Recibiendo los
+datos a renderizar por props.
+
+---
+---
