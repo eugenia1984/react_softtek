@@ -503,7 +503,7 @@ function BlogPost(props) {
 
 ---
 
-### Radio GRoup
+### Radio Group
 
 Es un input que permite seleccionar una entre varias opciones.
 
