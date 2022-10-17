@@ -149,14 +149,58 @@ Del ‘98, permite hacer todo tipo de transferencias entre servicios, en particu
 
 ---
 
-## JSON Server
+## <img src="https://img.icons8.com/color/48/000000/json--v1.png"/> JSON Server
 
 Ideal para desarrollar prototipos o pruebas de concepto, permite hacer request a una API REST, guardando las modificaciones en un archivo.
 
-###JSON Server Auth
+### <img src="https://img.icons8.com/color/48/000000/json--v1.png"/> JSON Server Auth
 
 Extiende json con login y register
 
+
+---
+---
+
+
+# :star2:Clase 12 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 5:star2: 
+
+---
+
+### UNIDAD 13. INTEGRANDO LOS REGISTROS
+
+----
+
+##:book: Temas:
+
+```
+- 1 - Registro de usuarios
+- 2 - Variables de entorno
+- 3 - Inicio de sesión
+- 4 - Creación de tareas
+```
+
+---
+
+## :star:  1 - Registro de usuarios
+
+###  <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-unique-visitor-big-data-flaticons-lineal-color-flat-icons-2.png"/> UUID
+
+**Universal Unique Identifier**, o **Global Unique Identifier**, es un número de 128 que se puede generar de forma distribuida sin utilizar una secuencia.
+
+Permite a distintas partes de un sistema generar **claves únicas (con baja probabilidad de colisión)**.
+
+- Web [https://www.uuidgenerator.net](https://www.uuidgenerator.net)
+---
+
+## :star: 2 - Variables de entorno
+
+---
+
+## :star:  3 - Inicio de sesión
+
+---
+
+## :star:  4 - Creación de tareas
 
 ---
 ---
