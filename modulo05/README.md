@@ -45,3 +45,30 @@
 ```
 
 ---
+---
+
+# :star2:Clase 11 Octubre <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 5 * UNIDAD 1:star2: 
+
+---
+
+## TRABAJANDO CON FORMIK
+
+---
+
+## :book: Temas:
+
+```
+- 1 - Presentación Módulo 5
+- 2 - Registro y obtención de datos API
+```
+
+---
+
+## :star: 1 - Presentación Módulo 5
+
+---
+
+## :star:  2 - Registro y obtención de datos API
+
+---
+---
