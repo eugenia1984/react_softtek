@@ -815,6 +815,11 @@ ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
   
 ---
   
+## Estrategia de obtencion de datos
+  
+  
+---
+  
 ## :star:  2 - Mocking
 
 ---
