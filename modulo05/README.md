@@ -451,7 +451,7 @@ El alta de la tarea se hace con un post de los datos al servicio:
 
 ---
 
-## UNIDAD 14 * CRANDO ESTILOS EN LA VISTA
+## UNIDAD 14 * CREANDO ESTILOS EN LA VISTA
 
 ---
 
@@ -637,6 +637,170 @@ https://kellfj.sse.codesandbox.io/tasks , se debe enviar el Authorization header
 usuario logoneado.
 
 Usar un toast para mostrar el resultado de la operación.
+
+---
+---
+
+# :star2:Clase 17 <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 5:star2: 
+
+---
+
+## UNIDAD 15 * ESTRUCTURANDO CON REDUX
+
+---
+
+##:book: Repaso Reducers & Store, Actions y Hooks
+
+```
+- 1 - Repaso
+- 2 - Reducers y store
+- 3 - Actions & Reducers
+- 4 - Hooks
+```
+
+---
+
+##:star:  1 - Repaso
+
+### Como hace un componente para ...
+
+○ Informar un cambio de estado a un hermano o un ancestro?
+
+○ Acceder al dato de un ancestro?
+
+### Props Drilling (esto es malo)
+
+- Informar un cambio de estado a un hermano o un ancestro?
+
+ Necesita recibir un callback por props
+
+-  Acceder al dato de un ancestro:
+
+Necesita recibir el dato por props
+
+- No escala en desarrollo
+
+-Agregar nuevo dato en hoja fuerza a modificar componentes intermedios
+
+-Pasar datos a ancestro implica modificar toda la cadena para recibir un nuevo callback
+
+
+- Complejidad de comunicar componentes a través del árbol
+
+- Muchos componentes, varios niveles de anidación
+
+- Props fluyen de arriba hacia abajo
+
+- Prop drilling no escala en desarrollo
+
+
+---
+
+##Las 3 características:
+
+- **Una sola fuente de verdad**: Todo el estado de la aplicación está centralizado en un único lugar.
+
+- **Cambios de estado mediante funciones puras**.: Los componentes no pueden aplicar las acciones, sino que se configuran funciones puras encargadas de interpretar la acción y avanzar el estado.
+
+- **Estado de solo lectura**: Los componentes pueden leer el estado de forma directa, pero para modificarlo deben disparar un acción indicando la modificación a realizar
+
+
+---
+
+## Estado Central
+
+● Evita el prop drilling
+
+● Solo se subscribe componentes que los necesitan
+
+● Solo participan en modificaciones componentes que lo necesitan
+
+---
+
+### :star: 2 - Reducers y store
+
+
+- **selectors** : para leer datos del estado cada vez que cambia
+
+- **dispatch**: para provocar cambios de estado
+
+- **reducers**: define como la acción actualiza el estado
+
+○ lógica indep. de vista
+
+○ testeo sencillo
+
+
+---
+
+### :star: 3 - Actions & Reducers
+
+### Ciclo de cambio del componente
+
+
+- **Actions**: Los componentes despachan acciones que modifican el estado central:
+
+```JSX
+const dispatch = useDispatch()
+dispatch(action)
+````
+
+
+- **State**: 
+Los reducers actualizan el estado central a partir de las acciones:
+
+
+**“nuevoEstado = previoEstado + accion”**
+
+- **View**: Los componentes utilizan selectores para leer la información que les interesa del estado central: 
+```JSX
+const dato = useSelect(selector)
+```
+
+---
+
+##:star: 4 - Hooks
+
+```
+ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
+  ^                       |     <-------- (new State)<------
+  |                       |
+  | use           (state) | 
+  |                       V
+  --------------------- VIEW
+```
+
+---
+---
+
+# :star2:Clase 18 <img src="https://img.icons8.com/clouds/40/000000/react.png"/> MODULO 5 * UNIDAD 16:star2: 
+
+---
+
+
+## TESTEAMOS NUESTROS PROYECTOS
+
+---
+
+##:book: Testing: Tests Unitarios y Mocking - Temas
+
+```
+- 1 - Test Unitarios
+- 2 - Mocking
+- 3 - Ejercicio
+```
+
+---
+
+## :star:  1 - Test Unitarios
+
+---
+
+## :star:  2 - Mocking
+
+---
+
+## :star: 3 - Ejercicio
 
 ---
 ---
