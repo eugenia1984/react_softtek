@@ -810,6 +810,11 @@ ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
   
 ---
 
+
+  - Metodologia **TDD** Test Driving Development, se crea primero el test y en base a eso s edesarrolla. Se define primero los test.
+  
+---
+  
 ## :star:  2 - Mocking
 
 ---
