@@ -649,7 +649,7 @@ Usar un toast para mostrar el resultado de la operación.
 
 ---
 
-##:book: Repaso Reducers & Store, Actions y Hooks
+## :book: Repaso Reducers & Store, Actions y Hooks
 
 ```
 - 1 - Repaso
@@ -660,7 +660,7 @@ Usar un toast para mostrar el resultado de la operación.
 
 ---
 
-##:star:  1 - Repaso
+## :star:  1 - Repaso
 
 ### Como hace un componente para ...
 
@@ -696,7 +696,7 @@ Necesita recibir el dato por props
 
 ---
 
-##Las 3 características:
+## Las 3 características:
 
 - **Una sola fuente de verdad**: Todo el estado de la aplicación está centralizado en un único lugar.
 
@@ -759,7 +759,7 @@ const dato = useSelect(selector)
 
 ---
 
-##:star: 4 - Hooks
+## :star: 4 - Hooks
 
 ```
 ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
@@ -793,7 +793,21 @@ ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
 ---
 
 ## :star:  1 - Test Unitarios
+  
+### <img src="https://img.icons8.com/external-justicon-lineal-color-justicon/40/000000/external-test-laboratory-justicon-lineal-color-justicon.png"/> ¿ Que son?
+  
+  - Son un mecanismo de comprobacion del funcionamiento del codigo que consiste en aislar una parte del mismo y verificarque funciona segun lo planificado.
+  
+  - Son pequeños tests que comprueban que uun componente funcione como es debido, segun los requerimientos que se propusieron.
 
+  ### ¿Cuales herramientas tenemos para implementar los tests unitarios?
+  
+  Hay varias opciones de herramientas y la mas recomendada por react son...
+  
+  ... **Jest** Nos permite las pruebas en un ambiente controlado que emula un navegador web, gracias a **jsdom** (implementacion ligera de un navegador que corre en Nodejs). Proporciona una gran velocidad de iteracion combinada con funciones potentes como modulos de simulacion y temporizadores para que puedas tener mas control sobre como se ejecuta el codigo.
+  
+  ... **React Testing Library** Permite probar los componentes de React sin depender de sus detalles de implementación. Este enfoque hace que las refactorizacion sea muy sencilla y tambien usar las mejores practicas para la accesibilidad. 
+  
 ---
 
 ## :star:  2 - Mocking
