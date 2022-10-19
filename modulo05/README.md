@@ -479,7 +479,7 @@ Se aplica cuando se hace una operación contra el backend: login, registro, alta
 
 ---
 
-### Loaders / Progress
+### <img src="https://img.icons8.com/color/48/000000/loading.png"/> Loaders / Progress
 
 Son elementos visuales que indican que la página se está cargando o que la operación se está procesando.
 
@@ -503,7 +503,7 @@ function BlogPost(props) {
 
 ---
 
-### Radio Group
+### <img src="https://img.icons8.com/material-rounded/24/000000/squared-menu.png"/> Radio Group
 
 Es un input que permite seleccionar una entre varias opciones.
 
