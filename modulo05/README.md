@@ -1,6 +1,5 @@
 # :star2: Módulo 5. Modelando nuestra API final
 
----
 
 ## Unidad 13. Integrando los registros
 ```
@@ -782,7 +781,7 @@ ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
 
 ---
 
-##:book: Testing: Tests Unitarios y Mocking - Temas
+## :book: Testing: Tests Unitarios y Mocking - Temas
 
 ```
 - 1 - Test Unitarios
@@ -804,9 +803,9 @@ ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
   
   Hay varias opciones de herramientas y la mas recomendada por react son...
   
-  ... **Jest** Nos permite las pruebas en un ambiente controlado que emula un navegador web, gracias a **jsdom** (implementacion ligera de un navegador que corre en Nodejs). Proporciona una gran velocidad de iteracion combinada con funciones potentes como modulos de simulacion y temporizadores para que puedas tener mas control sobre como se ejecuta el codigo.
+  ... **Jest** Nos permite las pruebas en un ambiente controlado que emula un navegador web, gracias a [**jsdom**](https://github.com/jsdom/jsdom) (implementacion ligera de un navegador que corre en Nodejs). Proporciona una gran velocidad de iteracion combinada con funciones potentes como modulos de simulacion y temporizadores para que puedas tener mas control sobre como se ejecuta el codigo.
   
-  ... **React Testing Library** Permite probar los componentes de React sin depender de sus detalles de implementación. Este enfoque hace que las refactorizacion sea muy sencilla y tambien usar las mejores practicas para la accesibilidad. 
+  ... [**React Testing Library**](https://testing-library.com/docs/react-testing-library/intro/) Permite probar los componentes de React sin depender de sus detalles de implementación. Este enfoque hace que las refactorizacion sea muy sencilla y tambien usar las mejores practicas para la accesibilidad. 
   
 ---
 
@@ -816,11 +815,104 @@ ACTION --> dispatch --> STORE --> previous State(Action) --> REDUCERS
 ---
   
 ## Estrategia de obtencion de datos
+
+### Estrategias de testing usando Jest
   
-  
+Hay varias que podemos usar y puedes leer más acerca de ellas [acá](https://reactjs.org/docs/testing-recipes.html).
+
+Nos vamos a enfocar en 3 de ellas:
+
+1. Renderizado
+
+2. Obtención de Datos
+
+3. Simulación de Módulos (Mocking)  
+
+#### Estrategia de Renderizado
+
+Nos va a permitir probar si un componente se renderiza correctamente, dadas ciertas props.
+
+![image](https://user-images.githubusercontent.com/72580574/198898804-98b03ef4-1ae1-4008-ac26-276043e92d09.png)
+
+### Estrategia de Obtención de Datos
+
+En lugar de llamar APIs reales en todas tus pruebas, puedes simular peticiones con datos falsos. Simular peticiones con datos “falsos” previene pruebas con resultados impredecibles debido a un backend no disponible y permite ejecutarlas más rápidamente.
+
+
+![image](https://user-images.githubusercontent.com/72580574/198898830-c55fbd8a-7af4-4d66-9b36-dc78d5b6430a.png)
+
 ---
   
 ## :star:  2 - Mocking
+
+#### Estrategia de Simulación de Módulos (Mocking)
+
+Algunos módulos puede que no funcionen bien dentro de un entorno de pruebas, o puede que no sean esenciales para la prueba misma. Simular estos módulos con reemplazos, puede hacer más fácil la escritura de pruebas para tu propio código.
+
+![image](https://user-images.githubusercontent.com/72580574/198898858-d66d19e9-96a4-464a-acc0-fd00c01d5a2d.png)
+
+### API Mocking
+
+#### Mocking Service Worker
+
+Intercepta las peticiones del brower utilizando un service worker.
+
+Permite definir respuestas simuladas. Funciona tanto en browser como en node, por lo que permite definir respuestas preestablecidas para cada caso de test.
+
+[https://mswjs.io/docs/](https://mswjs.io/docs/)
+
+```
+npm install mws --save-dev
+```
+
+```
+yarn add msw --dev
+```
+
+![image](https://user-images.githubusercontent.com/72580574/198898951-a85d643f-fbaf-404b-9e0d-377baca6d188.png)
+
+### Axios y Jest
+
+Las nuevas versiones de axios están distribuidas con código ecmascript.
+
+Jest al ser una herramienta de node soporta librerías de commonjs(node) por defecto, y solo transpila ecmascript de código de test y código productivo.
+
+Por esta razón es necesario indicarle a jest que transpile la librería de
+axios también.
+
+![image](https://user-images.githubusercontent.com/72580574/198898990-a964b989-36bb-414f-b613-8f572b5256b7.png)
+
+
+#### Assets y Jest
+
+En ambiente de desarrollo y producción, las importaciones de css(y otros assets) son transpilados y/o resueltos por el bundler.
+
+Jest por defecto no sabe como tratar esos recursos por lo que es necesario configurar el manejo de los mismos.
+
+![image](https://user-images.githubusercontent.com/72580574/198899012-ee60190c-b7d3-4d79-a6c0-3a06ba4123be.png)
+
+![image](https://user-images.githubusercontent.com/72580574/198899022-ac9616f0-c563-44b6-abdf-e445110e6714.png)
+
+
+#### Testing Library
+
+Es un conjunto de paquetes dedicados a testear componentes de interfaz de usuario.
+
+Permite inspeccionar y seleccionar elementos del dom, utilizando principalmente atributos de accesibilidad (ARIA).
+
+[https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+
+La API más básica permite seleccionar elementos del DOM y disparar eventos.
+
+![image](https://user-images.githubusercontent.com/72580574/198899065-590bc250-b41e-44a5-9938-03a2ef79b1cb.png)
+
+### Testing Library User-Event
+
+Al disparar eventos estos generan cambios de estado, los cuales provocan el render de los componentes, esto obliga a esperar por el rendering de dichos componentes antes de avanzar en el test (ver act, waitFor, findBy).
+
+UserEvent permite esperar a que se complete el cambio de estado resultado de la operación de un usuario. Simulando la operación de forma completa.
+
+![image](https://user-images.githubusercontent.com/72580574/198899101-f78168ce-fa95-44b2-9fdf-e67dd5ece1aa.png)
 
 ---
 
