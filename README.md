@@ -239,7 +239,7 @@ contraseña:
 
 - Cuestionario 4: 19 de Oct -> **100 %**
 
-- Cuestionario 5: 1 de Nov
+- Cuestionario 5: 1 de Nov -> **100%**
 
 - Examen sin nombre: 20Dec (trabajo final grupal)
 
