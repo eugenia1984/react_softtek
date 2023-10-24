@@ -260,3 +260,7 @@ El editar y eliminar todos no funciona. Vuelve a escribir handleAddTodo, handleC
 Actualización de la aplicación de películas con el buscador + la sección de favoritos: [https://codesandbox.io/s/movie-app-from-videos-2rys7b](https://codesandbox.io/s/movie-app-from-videos-2rys7b)
 
 ---
+
+- Seguime ne: [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
+
+---
