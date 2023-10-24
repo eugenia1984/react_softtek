@@ -261,6 +261,6 @@ Actualización de la aplicación de películas con el buscador + la sección de 
 
 ---
 
-- Seguime ne: [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
+- Seguime en: [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
 
 ---
